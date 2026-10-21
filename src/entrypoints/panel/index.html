@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Opquast</title>
+    <link rel="stylesheet" href="./panel.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header
+        class="toolbar"
+        style="background-color: rgb(43, 64, 78) !important; color: #fff !important"
+      >
+        <span id="analysis-info" class="analysis-info"></span>
+
+        <button id="relaunch" type="button" class="relaunch" hidden>
+          <span class="relaunch-icon" aria-hidden="true">↻</span>
+          <span data-i18n="relaunch">Relancer</span>
+        </button>
+
+        <label class="field" id="checklist-field">
+          <span class="sr-only" data-i18n="checklistLabel">Checklist</span>
+          <select id="checklist"></select>
+        </label>
+
+        <label class="field" id="lang-field">
+          <span class="sr-only" data-i18n="langLabel">Langue</span>
+          <select id="lang">
+            <option value="fr">FR</option>
+            <option value="en">EN</option>
+          </select>
+        </label>
+
+        <span class="spacer"></span>
+
+        <button id="settings-btn" type="button" class="settings-btn" data-i18n-title="settings">
+          <span aria-hidden="true">⚙</span> <span data-i18n="settings">Paramètres</span>
+        </button>
+      </header>
+
+      <!-- Tab bar -->
+      <nav class="tab-bar" role="tablist" aria-label="Vues" data-i18n-aria-label="viewsLabel">
+        <button
+          id="tab-scores"
+          type="button"
+          role="tab"
+          aria-selected="true"
+          aria-controls="panel-scores"
+          class="tab active"
+        >
+          Scores
+        </button>
+        <button
+          id="tab-results"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-results"
+          class="tab"
+        >
+          Résultats
+        </button>
+        <button
+          id="tab-feedbacks"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-feedbacks"
+          class="tab"
+        >
+          Feedbacks
+        </button>
+        <button
+          id="tab-about"
+          type="button"
+          role="tab"
+          aria-selected="false"
+          aria-controls="panel-about"
+          class="tab"
+        >
+          À propos
+        </button>
+      </nav>
+
+      <!-- Announces the end of an analysis to screen readers (the overlay alone says nothing) -->
+      <p id="sr-status" class="sr-only" role="status" aria-live="polite"></p>
+
+      <!-- Loading overlay -->
+      <div id="loading-overlay" class="loading-overlay">
+        <div class="loading-content">
+          <p class="loading-text" data-i18n="loading">Lancement des tests. Merci de patienter…</p>
+          <div class="spinner"></div>
+        </div>
+      </div>
+
+      <!-- Scores panel -->
+      <div
+        id="panel-scores"
+        role="tabpanel"
+        aria-labelledby="tab-scores"
+        class="panel-scores"
+        hidden
+      >
+        <div class="score-row score-global">
+          <span class="score-label-text" data-i18n="globalScore">Score global</span>
+          <div class="score-badge" id="global-score">
+            <span class="score-value">--</span><span class="score-suffix">/10</span>
+          </div>
+          <span class="score-details" id="score-details"></span>
+        </div>
+        <div class="score-breakdown" id="score-breakdown">
+          <!-- Per-checklist scores rendered dynamically -->
+        </div>
+        <a
+          href="#"
+          id="choose-checklists"
+          class="choose-checklists-link"
+          data-i18n="chooseChecklists"
+          >Choisir les checklists</a
+        >
+      </div>
+
+      <!-- Results panel -->
+      <div
+        id="panel-results"
+        role="tabpanel"
+        aria-labelledby="tab-results"
+        class="panel-results"
+        hidden
+      >
+        <div class="results-toolbar">
+          <div class="dropdown" id="display-dropdown">
+            <button
+              id="display-toggle"
+              type="button"
+              class="display-toggle"
+              data-i18n="display"
+              aria-expanded="false"
+              aria-controls="display-menu"
+            >
+              Afficher ▾
+            </button>
+            <div class="dropdown-menu" id="display-menu" hidden>
+              <div class="dropdown-section">
+                <label
+                  ><input type="checkbox" id="show-themas" checked />
+                  <span data-i18n="showThemas">Rubriques</span></label
+                >
+                <label
+                  ><input type="checkbox" id="show-tags" checked />
+                  <span data-i18n="colTags">Tags</span></label
+                >
+              </div>
+              <div class="dropdown-divider"></div>
+              <div class="dropdown-section">
+                <label
+                  ><input type="checkbox" id="show-c" checked />
+                  <span data-i18n="show_c">Conformes</span></label
+                >
+                <label
+                  ><input type="checkbox" id="show-nc" checked />
+                  <span data-i18n="show_nc">Non conformes</span></label
+                >
+                <label
+                  ><input type="checkbox" id="show-i" checked />
+                  <span data-i18n="show_i">À vérifier</span></label
+                >
+                <label
+                  ><input type="checkbox" id="show-na" checked />
+                  <span data-i18n="show_na">Non applicables</span></label
+                >
+                <label
+                  ><input type="checkbox" id="show-nt" checked />
+                  <span data-i18n="show_nt">Non testés</span></label
+                >
+              </div>
+            </div>
+          </div>
+
+          <input
+            id="search"
+            type="search"
+            data-i18n-placeholder="filterPlaceholder"
+            data-i18n-aria-label="searchLabel"
+          />
+
+          <span class="spacer"></span>
+
+          <button
+            id="export-csv"
+            type="button"
+            class="export-btn"
+            data-i18n="fbExport"
+            data-i18n-title="csvTitle"
+            disabled
+          >
+            Exporter
+          </button>
+        </div>
+        <div id="engine-warning" class="engine-warning" role="alert" hidden></div>
+        <section class="master" data-i18n-aria-label="tabResults">
+          <table class="results" id="results-table">
+            <thead>
+              <tr>
+                <th data-sort="ref" class="sortable col-num" data-i18n="colNum">N°</th>
+                <th data-sort="thema" class="sortable col-thema" data-i18n="colThema">Rubrique</th>
+                <th data-sort="description" class="sortable col-desc" data-i18n="colDesc">
+                  Description
+                </th>
+                <th class="col-tags" data-i18n="colTags">Tags</th>
+                <th data-sort="result" class="sortable col-status" data-i18n="colResult">
+                  Résultat
+                </th>
+              </tr>
+            </thead>
+            <tbody id="results-body">
+              <tr class="empty">
+                <td colspan="5" data-i18n="emptyStart">
+                  Lance une analyse pour voir les résultats.
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+      </div>
+
+      <!-- Feedbacks panel -->
+      <div
+        id="panel-feedbacks"
+        role="tabpanel"
+        aria-labelledby="tab-feedbacks"
+        class="panel-feedbacks"
+        hidden
+      >
+        <p id="feedbacks-notice" class="feedbacks-notice" role="note" hidden></p>
+        <div class="feedbacks-toolbar">
+          <span class="spacer"></span>
+          <span id="feedbacks-selection" class="feedbacks-selection"></span>
+          <button
+            id="feedbacks-transmit"
+            type="button"
+            class="export-btn"
+            data-i18n="fbBulkTransmit"
+            disabled
+          ></button>
+          <button
+            id="feedbacks-export"
+            type="button"
+            class="export-btn"
+            data-i18n="fbBulkExport"
+            disabled
+          ></button>
+          <button
+            id="feedbacks-delete"
+            type="button"
+            class="icon-btn"
+            data-i18n="fbBulkDelete"
+            disabled
+          ></button>
+        </div>
+
+        <!-- Unified feedbacks table (per-criterion journal + general app feedback) -->
+        <table id="feedbacks-table" class="feedbacks-table">
+          <thead>
+            <tr>
+              <th class="fb-col-check">
+                <input type="checkbox" id="feedbacks-select-all" data-i18n-aria-label="selectAll" />
+              </th>
+              <th class="fb-col-origin" data-i18n="fbColOrigin">Origine</th>
+              <th class="fb-col-type" data-i18n="fbColType">Type</th>
+              <th class="fb-col-date" data-i18n="fbColDate">Date</th>
+              <th class="fb-col-actions">
+                <span class="sr-only" data-i18n="fbColActions">Actions</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody id="feedbacks-tbody"></tbody>
+        </table>
+        <p id="feedbacks-empty" class="feedbacks-empty"></p>
+      </div>
+
+      <!-- About panel -->
+      <div id="panel-about" role="tabpanel" aria-labelledby="tab-about" class="panel-about" hidden>
+        <!-- Content rendered dynamically by about-view.ts -->
+      </div>
+    </div>
+
+    <!-- Modal backdrop -->
+    <div class="modal-backdrop" id="modal-backdrop" hidden></div>
+
+    <!-- Detail modal -->
+    <aside
+      class="detail-modal"
+      id="detail-modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="detail-title"
+      hidden
+    >
+      <header class="modal-header">
+        <div class="modal-nav">
+          <button type="button" id="prev-result" class="nav-btn" data-i18n-title="previousTitle">
+            <span aria-hidden="true">←</span> <span data-i18n="previous">Précédent</span>
+          </button>
+          <button type="button" id="next-result" class="nav-btn" data-i18n-title="nextTitle">
+            <span data-i18n="next">Suivant</span> <span aria-hidden="true">→</span>
+          </button>
+        </div>
+        <button type="button" id="close-modal" class="close-btn" data-i18n-title="closeEsc">
+          <span aria-hidden="true">×</span> <span data-i18n="close">Fermer</span>
+        </button>
+      </header>
+      <div class="modal-content" id="detail-content">
+        <!-- Detail content rendered dynamically -->
+      </div>
+    </aside>
+
+    <script type="module" src="./main.ts"></script>
+  </body>
+</html>

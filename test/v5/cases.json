@@ -1,0 +1,2212 @@
+[
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-zoom",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, user-scalable=no\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-zoom",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54451",
+    "num": "236",
+    "rule": "duplicate-id",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><div id=\"x\"></div><span id=\"x\"></span></body></html>"
+  },
+  {
+    "id": "54451",
+    "num": "236",
+    "rule": "duplicate-id",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><div id=\"a\"></div><span id=\"b\"></span></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><script src=\"https://cdn.example.com/lib.js\"></script></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><script src=\"https://cdn.example.com/lib.js\" integrity=\"sha384-abc\" crossorigin=\"anonymous\"></script></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "53942",
+    "num": "33",
+    "rule": "prechecked-input",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form action=\"/pay\"><label><input type=\"checkbox\" name=\"newsletter\" checked> Recevoir la newsletter</label><button type=\"submit\">Payer</button></form></body></html>"
+  },
+  {
+    "id": "53942",
+    "num": "33",
+    "rule": "prechecked-input",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form action=\"/pay\"><label><input type=\"checkbox\" name=\"newsletter\"> Recevoir la newsletter</label><button type=\"submit\">Payer</button></form></body></html>"
+  },
+  {
+    "id": "54589",
+    "num": "97",
+    "rule": "field-wo-autocomplete",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form><label>Email <input type=\"email\" name=\"email\"></label><label>Nom <input type=\"text\" name=\"lastname\"></label></form></body></html>"
+  },
+  {
+    "id": "54589",
+    "num": "97",
+    "rule": "field-wo-autocomplete",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form><label>Email <input type=\"email\" name=\"email\" autocomplete=\"email\"></label><label>Nom <input type=\"text\" name=\"lastname\" autocomplete=\"family-name\"></label></form></body></html>"
+  },
+  {
+    "id": "54551",
+    "num": "98",
+    "rule": "disabled-control",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form><input type=\"text\" name=\"q\"><button type=\"submit\" disabled>Envoyer</button></form></body></html>"
+  },
+  {
+    "id": "54551",
+    "num": "98",
+    "rule": "disabled-control",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form><input type=\"text\" name=\"q\"><button type=\"submit\">Envoyer</button></form></body></html>"
+  },
+  {
+    "id": "54480",
+    "num": "124",
+    "rule": "video-autoplay",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><video src=\"clip.mp4\" autoplay></video></body></html>"
+  },
+  {
+    "id": "54480",
+    "num": "124",
+    "rule": "video-autoplay",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><video src=\"clip.mp4\" controls></video></body></html>"
+  },
+  {
+    "id": "54519",
+    "num": "125",
+    "rule": "audio-autoplay",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><audio src=\"jingle.mp3\" autoplay></audio></body></html>"
+  },
+  {
+    "id": "54519",
+    "num": "125",
+    "rule": "audio-autoplay",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><audio src=\"jingle.mp3\" controls></audio></body></html>"
+  },
+  {
+    "id": "54056",
+    "num": "231",
+    "rule": "time-datetime",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article>Publié le <time datetime=\"2026-07-02\">2 juillet 2026</time></article></body></html>"
+  },
+  {
+    "id": "54056",
+    "num": "231",
+    "rule": "time-datetime",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article>Publié le 2 juillet 2026</article></body></html>"
+  },
+  {
+    "id": "54159",
+    "num": "237",
+    "rule": "copie bloquée (oncopy) — candidat",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article oncopy=\"return false\" onselectstart=\"return false\">Contenu protégé contre la copie.</article><p style=\"user-select:none\">Texte non sélectionnable.</p></body></html>"
+  },
+  {
+    "id": "54159",
+    "num": "237",
+    "rule": "copie non bloquée — propre",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article><h1>Un article</h1><p>Contenu librement copiable par l'utilisateur.</p></article></body></html>"
+  },
+  {
+    "id": "54415",
+    "num": "238",
+    "rule": "menu contextuel bloqué (oncontextmenu) — candidat",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><img src=\"/photo.jpg\" alt=\"photo\" oncontextmenu=\"return false\"><div oncontextmenu=\"event.preventDefault()\">zone protégée</div></body></html>"
+  },
+  {
+    "id": "54415",
+    "num": "238",
+    "rule": "menu contextuel libre — propre",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><img src=\"/photo.jpg\" alt=\"photo\"><p>Clic droit disponible partout.</p></body></html>"
+  },
+  {
+    "id": "54005",
+    "num": "155",
+    "rule": "lien accueil présent — candidat",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><header><a href=\"/logo\"><img src=\"/logo.svg\" alt=\"MonSite\"></a></header><nav><a href=\"/\">Accueil</a> <a href=\"/produits\">Produits</a> <a href=\"/contact\">Contact</a></nav></body></html>"
+  },
+  {
+    "id": "54005",
+    "num": "155",
+    "rule": "aucun lien accueil — propre",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><nav><a href=\"/produits\">Produits</a> <a href=\"/services\">Services</a> <a href=\"/contact\">Contact</a></nav><main><p>Page interne.</p></main></body></html>"
+  },
+  {
+    "id": "54507",
+    "num": "156",
+    "rule": "fil d'Ariane présent — candidat",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><nav aria-label=\"Fil d'Ariane\" class=\"breadcrumb\"><ol><li><a href=\"/\">Accueil</a></li><li><a href=\"/produits\">Produits</a></li><li>Article</li></ol></nav><main><p>Contenu.</p></main></body></html>"
+  },
+  {
+    "id": "54507",
+    "num": "156",
+    "rule": "aucun fil d'Ariane — propre",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><nav class=\"main-menu\"><ul><li><a href=\"/produits\">Produits</a></li><li><a href=\"/contact\">Contact</a></li></ul></nav><main><p>Contenu sans fil d'Ariane.</p></main></body></html>"
+  },
+  {
+    "id": "54165",
+    "num": "157",
+    "rule": "menu sans item actif — candidat",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><nav class=\"main-nav\"><ul><li><a href=\"/produits\">Produits</a></li><li><a href=\"/services\">Services</a></li><li><a href=\"/contact\">Contact</a></li></ul></nav></body></html>"
+  },
+  {
+    "id": "54165",
+    "num": "157",
+    "rule": "menu avec item actif (aria-current) — propre",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><nav class=\"main-nav\"><ul><li><a href=\"/produits\" aria-current=\"page\">Produits</a></li><li><a href=\"/services\">Services</a></li><li><a href=\"/contact\">Contact</a></li></ul></nav></body></html>"
+  },
+  {
+    "id": "54407",
+    "num": "2",
+    "rule": "copyright signal present (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><footer><p>&copy; 2026 Exemple SARL — Tous droits réservés. <a href=\"/mentions-legales\">Mentions légales</a></p></footer></body></html>"
+  },
+  {
+    "id": "54407",
+    "num": "2",
+    "rule": "no copyright/rights signal (clean)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><main><h1>Bienvenue</h1><p>Notre catalogue de produits.</p></main></body></html>"
+  },
+  {
+    "id": "54004",
+    "num": "46",
+    "rule": "terms link present (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><footer><a href=\"/cgv\">Conditions générales de vente</a></footer></body></html>"
+  },
+  {
+    "id": "54004",
+    "num": "46",
+    "rule": "no terms link (clean)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><footer><a href=\"/blog\">Blog</a> <a href=\"/faq\">Aide</a></footer></body></html>"
+  },
+  {
+    "id": "54457",
+    "num": "105",
+    "rule": "address + phone signal present (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><address>Exemple SARL, 12 rue des Lilas, 33000 Bordeaux</address><p>Tél : 05 12 34 56 78</p></body></html>"
+  },
+  {
+    "id": "54457",
+    "num": "105",
+    "rule": "no address/phone signal (clean)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><main><h1>Accueil</h1><p>Bienvenue sur notre site.</p></main></body></html>"
+  },
+  {
+    "id": "54158",
+    "num": "107",
+    "rule": "contact means present (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p><a href=\"mailto:contact@exemple.fr\">Écrivez-nous</a></p><form id=\"contact-form\" action=\"/contact\"><input name=\"msg\"><button>Envoyer</button></form></body></html>"
+  },
+  {
+    "id": "54158",
+    "num": "107",
+    "rule": "no contact means (clean)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><main><h1>Accueil</h1><p>Contenu éditorial sans moyen de contact.</p></main></body></html>"
+  },
+  {
+    "id": "53931",
+    "num": "145",
+    "rule": "plain-text phone not wrapped in tel: (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>Appelez-nous au 01 23 45 67 89 du lundi au vendredi.</p></body></html>"
+  },
+  {
+    "id": "53931",
+    "num": "145",
+    "rule": "phone wrapped in tel: link, no unlinked phone (clean → onfalse chain, tel: present)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>Appelez-nous&nbsp;: <a href=\"tel:+33123456789\">01 23 45 67 89</a></p></body></html>"
+  },
+  {
+    "id": "54555",
+    "num": "14",
+    "rule": "mathematical-alphanumeric unicode styling (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><h1>𝐓𝐢𝐭𝐥𝐞 en gras Unicode</h1></body></html>"
+  },
+  {
+    "id": "54555",
+    "num": "14",
+    "rule": "plain latin text, no hijack (clean)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><h1>Titre en gras via CSS</h1><p style=\"font-weight:bold\">Texte normal.</p></body></html>"
+  },
+  {
+    "id": "54516",
+    "num": "27",
+    "rule": "form action http:// (candidate)",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form action=\"http://example.com/login\" method=\"post\"><label>Mot de passe <input type=\"password\" name=\"pwd\"></label><button>Connexion</button></form></body></html>"
+  },
+  {
+    "id": "54516",
+    "num": "27",
+    "rule": "form action https:// (clean → onfalse: na, no insecure form)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form action=\"https://example.com/login\" method=\"post\"><label>Mot de passe <input type=\"password\" name=\"pwd\"></label><button>Connexion</button></form></body></html>"
+  },
+  {
+    "id": "54427",
+    "num": "28",
+    "rule": "link with SESSIONID in URL (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p><a href=\"/compte.php?SESSIONID=123abc456def\">Mon compte</a></p></body></html>"
+  },
+  {
+    "id": "54427",
+    "num": "28",
+    "rule": "clean links (clean → onfalse: na, no credentials in URL)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p><a href=\"/accueil\">Accueil</a> <a href=\"/produits?ref=home&page=2\">Produits</a></p></body></html>"
+  },
+  {
+    "id": "54404",
+    "num": "4",
+    "rule": "numeric date 12/01/20 (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article><p>Publié le 12/01/20 par la rédaction.</p></article></body></html>"
+  },
+  {
+    "id": "54404",
+    "num": "4",
+    "rule": "explicit date '12 janvier 2020' (clean → onfalse: c)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article><p>Publié le 12 janvier 2020 par la rédaction.</p></article></body></html>"
+  },
+  {
+    "id": "54360",
+    "num": "6",
+    "rule": "article + time element (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><article><h2>Titre</h2><time datetime=\"2020-01-12\">12 janvier 2020</time><p>Corps de l'article.</p></article></body></html>"
+  },
+  {
+    "id": "54360",
+    "num": "6",
+    "rule": "no article/time content (clean → onfalse: na)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><div><h1>Page de contact</h1><p>Texte statique sans contenu daté.</p></div></body></html>"
+  },
+  {
+    "id": "54501",
+    "num": "229",
+    "rule": "internal <style> not minified (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><style>\n  body {\n    color: #333;\n    margin: 0;\n  }\n  /* header */\n  .header {\n    display: flex;\n    padding: 10px;\n  }\n  .header .logo { width: 120px; }\n  a { text-decoration: none; }\n  a:hover { text-decoration: underline; }\n</style><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54501",
+    "num": "229",
+    "rule": "internal <style> minified (clean → onfalse: na; external CSS not analysed)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><style>body{color:#333;margin:0;padding:0}.header{display:flex;padding:10px}.header .logo{width:120px;height:40px}a{text-decoration:none;color:#06c}a:hover{text-decoration:underline}.footer{padding:20px;background:#eee}nav ul{list-style:none;margin:0}nav li{display:inline-block}</style><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54521",
+    "num": "230",
+    "rule": "internal <script> not minified (candidate)",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><script>\nfunction init() {\n  var x = document.querySelectorAll('a');\n  for (var i = 0; i < x.length; i++) {\n    x[i].addEventListener('click', function (e) {\n      console.log('clicked', e.target);\n    });\n  }\n}\ninit();\n</script><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54521",
+    "num": "230",
+    "rule": "internal <script> minified (clean → onfalse: na; external JS not analysed)",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><script>function init(){var x=document.querySelectorAll(\"a\");for(var i=0;i<x.length;i++){x[i].addEventListener(\"click\",function(e){console.log(\"clicked\",e.target)})}}init();var y=1,z=2,w=y+z;window.total=w;var q=document.title.length;window.qq=q;</script><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "53935",
+    "num": "235",
+    "rule": "fake-lists",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>- premier point<br>- second point<br></p></body></html>"
+  },
+  {
+    "id": "53935",
+    "num": "235",
+    "rule": "fake-lists",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><ul><li>premier point</li><li>second point</li></ul></body></html>"
+  },
+  {
+    "id": "54399",
+    "num": "242",
+    "rule": "table-th-scope",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><tbody><tr><th>Nom</th><th>Age</th></tr><tr><td>Alice</td><td>30</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54399",
+    "num": "242",
+    "rule": "table-th-scope",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>Aucun tableau sur cette page.</p></body></html>"
+  },
+  {
+    "id": "54400",
+    "num": "243",
+    "rule": "data-table-caption",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><tbody><tr><th>Nom</th></tr><tr><td>Alice</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54400",
+    "num": "243",
+    "rule": "data-table-caption",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><caption>Employes</caption><tbody><tr><th>Nom</th></tr><tr><td>Alice</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54450",
+    "num": "232",
+    "rule": "meta-charset",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54450",
+    "num": "232",
+    "rule": "meta-charset",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54464",
+    "num": "245",
+    "rule": "data-table-th",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><caption>Ventes</caption><tbody><tr><td><strong>Mois</strong></td><td><strong>Total</strong></td></tr><tr><td>Janvier</td><td>100</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54464",
+    "num": "245",
+    "rule": "data-table-th",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><caption>Ventes</caption><tbody><tr><th>Mois</th><td>Total</td></tr><tr><td>Janvier</td><td>100</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54513",
+    "num": "234",
+    "rule": "headings",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><h1>Titre</h1><h2>Sous-titre</h2></body></html>"
+  },
+  {
+    "id": "54513",
+    "num": "234",
+    "rule": "headings",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><h1>Titre</h1><h3>Sous-titre</h3></body></html>"
+  },
+  {
+    "id": "54524",
+    "num": "239",
+    "rule": "meta-refresh",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><meta http-equiv=refresh content='5;url=https://example.com/'><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54524",
+    "num": "239",
+    "rule": "meta-refresh",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54533",
+    "num": "244",
+    "rule": "table-layout",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><tbody><tr><td>A</td><td>B</td></tr><tr><td>C</td><td>D</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54533",
+    "num": "244",
+    "rule": "table-layout",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><caption>Donnees</caption><tbody><tr><th>H</th></tr><tr><td>x</td></tr></tbody></table></body></html>"
+  },
+  {
+    "id": "54529",
+    "num": "102",
+    "rule": "title-text",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>Ma page d'accueil</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54529",
+    "num": "102",
+    "rule": "title-text",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title></title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54438",
+    "num": "130",
+    "rule": "html-lang",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54438",
+    "num": "130",
+    "rule": "html-lang",
+    "verdict": "nc",
+    "html": "<!doctype html><html><head><meta charset=utf-8><title>t</title></head><body><p>ok</p></body></html>"
+  },
+  {
+    "id": "54436",
+    "num": "116",
+    "rule": "img-without-alt-attr",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>116 nc</title></head><body><p>Illustration decorative :</p><img src=\"deco.png\"></body></html>"
+  },
+  {
+    "id": "54436",
+    "num": "116",
+    "rule": "img-with-alt-attr",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>116 i</title></head><body><p>Illustration decorative :</p><img src=\"deco.png\" alt=\"\"></body></html>"
+  },
+  {
+    "id": "54518",
+    "num": "117",
+    "rule": "image-link-without-accessible-name",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>117 nc</title></head><body><a href=\"/accueil\"><img src=\"logo.png\" alt=\"\"></a></body></html>"
+  },
+  {
+    "id": "54518",
+    "num": "117",
+    "rule": "image-link-with-text-label",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>117 i</title></head><body><a href=\"/accueil\"><img src=\"logo.png\" alt=\"\">Accueil</a></body></html>"
+  },
+  {
+    "id": "54494",
+    "num": "118",
+    "rule": "informative-img-without-alt",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>118 nc</title></head><body><p>Graphique des ventes :</p><img src=\"chart.png\"></body></html>"
+  },
+  {
+    "id": "54494",
+    "num": "118",
+    "rule": "informative-img-with-alt",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>118 i</title></head><body><p>Graphique des ventes :</p><img src=\"chart.png\" alt=\"Ventes en hausse de 20% en 2026\"></body></html>"
+  },
+  {
+    "id": "54180",
+    "num": "119",
+    "rule": "img-present-no-client-resize",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>119 i</title></head><body><img src=\"photo.jpg\" width=\"320\" height=\"240\" alt=\"Photo\"></body></html>"
+  },
+  {
+    "id": "54180",
+    "num": "119",
+    "rule": "no-img",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>119 na</title></head><body><p>Page sans image.</p></body></html>"
+  },
+  {
+    "id": "54386",
+    "num": "120",
+    "rule": "object-without-alternative",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>120 nc</title></head><body><object data=\"animation.swf\"></object></body></html>"
+  },
+  {
+    "id": "54386",
+    "num": "120",
+    "rule": "object-with-alternative",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>120 i</title></head><body><object data=\"animation.swf\">Contenu alternatif decrivant l'animation.</object></body></html>"
+  },
+  {
+    "id": "54525",
+    "num": "121",
+    "rule": "audio-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>121 i</title></head><body><audio src=\"podcast.mp3\" controls></audio></body></html>"
+  },
+  {
+    "id": "54525",
+    "num": "121",
+    "rule": "no-audio-video",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>121 na</title></head><body><p>Page sans media temporel.</p></body></html>"
+  },
+  {
+    "id": "54413",
+    "num": "123",
+    "rule": "video-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>123 i</title></head><body><video src=\"demo.mp4\" controls></video></body></html>"
+  },
+  {
+    "id": "54413",
+    "num": "123",
+    "rule": "no-audio-video",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>123 na</title></head><body><p>Page sans media temporel.</p></body></html>"
+  },
+  {
+    "id": "54437",
+    "num": "126",
+    "rule": "marquee-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>126 i</title></head><body><marquee>Texte defilant en continu</marquee></body></html>"
+  },
+  {
+    "id": "54437",
+    "num": "126",
+    "rule": "no-moving-content",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>126 na</title></head><body><p>Contenu statique.</p></body></html>"
+  },
+  {
+    "id": "53976",
+    "num": "127",
+    "rule": "blink-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>127 i</title></head><body><blink>Texte clignotant</blink></body></html>"
+  },
+  {
+    "id": "53976",
+    "num": "127",
+    "rule": "no-animated-content",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>127 na</title></head><body><p>Contenu statique sans animation.</p></body></html>"
+  },
+  {
+    "id": "53950",
+    "num": "1",
+    "rule": "rss-feed-link-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>1 i</title><link rel=\"alternate\" type=\"application/rss+xml\" title=\"Flux RSS\" href=\"/feed.xml\"></head><body><p>Page avec flux de syndication.</p></body></html>"
+  },
+  {
+    "id": "53950",
+    "num": "1",
+    "rule": "no-rss-feed",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>1 i-absent</title></head><body><p>Page sans flux de syndication.</p></body></html>"
+  },
+  {
+    "id": "54498",
+    "num": "3",
+    "rule": "meta-description-missing",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>3 nc</title></head><body><p>Page sans meta description.</p></body></html>"
+  },
+  {
+    "id": "54498",
+    "num": "3",
+    "rule": "meta-description-filled",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>3 i</title><meta name=\"description\" content=\"Une description concise et pertinente de la page.\"></head><body><p>Page avec meta description.</p></body></html>"
+  },
+  {
+    "id": "54406",
+    "num": "5",
+    "rule": "abbr-with-title",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>5 i</title></head><body><p>Le <abbr title=\"HyperText Markup Language\">HTML</abbr> structure la page.</p></body></html>"
+  },
+  {
+    "id": "54406",
+    "num": "5",
+    "rule": "abbr-without-title",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>5 na</title></head><body><p>Le <abbr>HTML</abbr> structure la page.</p></body></html>"
+  },
+  {
+    "id": "54377",
+    "num": "154",
+    "rule": "js-popup",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Popup</title></head><body onload=\"window.open('http://example.com/')\"><p>Bienvenue</p></body></html>"
+  },
+  {
+    "id": "54377",
+    "num": "154",
+    "rule": "js-popup",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans popup</title></head><body><p>Bienvenue</p></body></html>"
+  },
+  {
+    "id": "54442",
+    "num": "159",
+    "rule": "a-img-empty-alt",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Lien icone seul</title></head><body><a href=\"/\"><img src=\"icon.png\" alt=\"\"></a></body></html>"
+  },
+  {
+    "id": "54442",
+    "num": "159",
+    "rule": "a-img-empty-alt",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Lien icone + texte</title></head><body><a href=\"/\"><img src=\"icon.png\" alt=\"\"> Accueil</a></body></html>"
+  },
+  {
+    "id": "54443",
+    "num": "164",
+    "rule": "accessibility-link",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Avec lien accessibilite</title></head><body><a href=\"/accessibilite\">Accessibilité</a></body></html>"
+  },
+  {
+    "id": "54443",
+    "num": "164",
+    "rule": "accessibility-link",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans lien accessibilite</title></head><body><a href=\"/\">Accueil</a></body></html>"
+  },
+  {
+    "id": "54514",
+    "num": "165",
+    "rule": "css-focus-style",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Focus supprime</title><style>a:focus{outline-style:none}</style></head><body><a href=\"/\">Lien</a></body></html>"
+  },
+  {
+    "id": "54514",
+    "num": "165",
+    "rule": "css-focus-style",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Focus conserve</title></head><body><a href=\"/\">Lien</a></body></html>"
+  },
+  {
+    "id": "54444",
+    "num": "185",
+    "rule": "css-display-none",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Contenu masque</title><style>.hidden{display:none}</style></head><body><p class=\"hidden\">masqué</p><p>visible</p></body></html>"
+  },
+  {
+    "id": "54444",
+    "num": "185",
+    "rule": "css-display-none",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Rien masque</title></head><body><p>visible</p></body></html>"
+  },
+  {
+    "id": "54170",
+    "num": "188",
+    "rule": "css-generated-content",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Image CSS</title><style>.logo{background-image:url(logo.png)}</style></head><body><div class=\"logo\"></div></body></html>"
+  },
+  {
+    "id": "54170",
+    "num": "188",
+    "rule": "css-generated-content",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans image CSS</title></head><body><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54173",
+    "num": "189",
+    "rule": "css-content",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Contenu CSS</title><style>.badge::before{content:\"Nouveau\"}</style></head><body><span class=\"badge\"></span></body></html>"
+  },
+  {
+    "id": "54173",
+    "num": "189",
+    "rule": "css-content",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans contenu CSS</title></head><body><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54378",
+    "num": "190",
+    "rule": "generic-font",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Police generique</title><style>body{font-family:Georgia,serif}</style></head><body><p>Texte</p></body></html>"
+  },
+  {
+    "id": "54378",
+    "num": "190",
+    "rule": "generic-font",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Police non generique</title><style>body{font-family:Arial}</style></head><body><p>Texte</p></body></html>"
+  },
+  {
+    "id": "54535",
+    "num": "191",
+    "rule": "text-align-justify",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Texte justifie</title><style>p{text-align:justify}</style></head><body><p>Texte long</p></body></html>"
+  },
+  {
+    "id": "54535",
+    "num": "191",
+    "rule": "text-align-justify",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Texte non justifie</title><style>p{text-align:left}</style></head><body><p>Texte long</p></body></html>"
+  },
+  {
+    "id": "54384",
+    "num": "192",
+    "rule": "uppercase",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Majuscules decoratives</title></head><body><p>SOLDES</p></body></html>"
+  },
+  {
+    "id": "54384",
+    "num": "192",
+    "rule": "uppercase",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Casse normale</title></head><body><p>Soldes</p></body></html>"
+  },
+  {
+    "id": "54448",
+    "num": "196",
+    "rule": "media-print",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Feuille impression</title><style media=\"print\">body{color:#000}</style></head><body><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "54448",
+    "num": "196",
+    "rule": "media-print",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans feuille impression</title></head><body><p>Contenu</p></body></html>"
+  },
+  {
+    "id": "53930",
+    "num": "139",
+    "rule": "css-underline",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Soulignement 139</title></head><body><p style=\"text-decoration:underline\">Ce texte non lien est souligne</p></body></html>"
+  },
+  {
+    "id": "53930",
+    "num": "139",
+    "rule": "css-underline",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Soulignement 139</title></head><body><p>Texte normal sans soulignement</p><a href=\"/page\" style=\"text-decoration:underline\">Un lien souligne (autorise)</a></body></html>"
+  },
+  {
+    "id": "54440",
+    "num": "146",
+    "rule": "new-window",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Nouvelle fenetre 146</title></head><body><a href=\"/page\" target=\"_blank\">Ouvrir la page dans un nouvel onglet</a></body></html>"
+  },
+  {
+    "id": "54440",
+    "num": "146",
+    "rule": "new-window",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Nouvelle fenetre 146</title></head><body><a href=\"/page\">Ouvrir la page dans le meme onglet</a></body></html>"
+  },
+  {
+    "id": "54491",
+    "num": "136",
+    "rule": "empty-link",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Lien vide 136</title></head><body><a href=\"/page\"></a></body></html>"
+  },
+  {
+    "id": "54491",
+    "num": "136",
+    "rule": "empty-link",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Lien vide 136</title></head><body><a href=\"/page\">Accueil</a></body></html>"
+  },
+  {
+    "id": "54508",
+    "num": "137",
+    "rule": "non-descriptive-link",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Intitule de lien 137</title></head><body><a href=\"/article\"><img src=\"/img/pic.png\" alt=\"\">cliquez ici</a></body></html>"
+  },
+  {
+    "id": "54508",
+    "num": "137",
+    "rule": "non-descriptive-link",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Intitule de lien 137</title></head><body><a href=\"/rapport\"><img src=\"/img/pdf.png\" alt=\"PDF\">Rapport annuel 2025</a></body></html>"
+  },
+  {
+    "id": "53971",
+    "num": "94",
+    "rule": "select-option-order",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Ordre des options 94</title></head><body><form><label for=\"pays\">Pays</label><select id=\"pays\" name=\"pays\"><option>France</option><option>Belgique</option><option>Suisse</option></select></form></body></html>"
+  },
+  {
+    "id": "53971",
+    "num": "94",
+    "rule": "select-option-order",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Ordre des options 94</title></head><body><p>Aucune liste deroulante sur cette page.</p></body></html>"
+  },
+  {
+    "id": "54414",
+    "num": "95",
+    "rule": "input-type",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Type de champ 95</title></head><body><form><label for=\"nom\">Nom</label><input type=\"text\" id=\"nom\" name=\"nom\"></form></body></html>"
+  },
+  {
+    "id": "54414",
+    "num": "95",
+    "rule": "input-type",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Type de champ 95</title></head><body><p>Aucun champ texte sur cette page.</p></body></html>"
+  },
+  {
+    "id": "54435",
+    "num": "93",
+    "rule": "select-optgroup",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Regroupement d'options 93</title></head><body><form><label for=\"ville\">Ville</label><select id=\"ville\" name=\"ville\"><option>Paris</option><option>Lyon</option><option>Marseille</option></select></form></body></html>"
+  },
+  {
+    "id": "54435",
+    "num": "93",
+    "rule": "select-optgroup",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Regroupement d'options 93</title></head><body><form><label for=\"ville\">Ville</label><select id=\"ville\" name=\"ville\"><optgroup label=\"France\"><option>Paris</option><option>Lyon</option><option>Marseille</option></optgroup></select></form></body></html>"
+  },
+  {
+    "id": "54479",
+    "num": "69",
+    "rule": "field-label",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Etiquette de champ 69</title></head><body><form><input type=\"text\" name=\"nom\"></form></body></html>"
+  },
+  {
+    "id": "54479",
+    "num": "69",
+    "rule": "field-label",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Etiquette de champ 69</title></head><body><form><label for=\"nom\">Nom</label><input type=\"text\" id=\"nom\" name=\"nom\"></form></body></html>"
+  },
+  {
+    "id": "54532",
+    "num": "212",
+    "rule": "csp",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-security-policy": "default-src 'self'"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54532",
+    "num": "212",
+    "rule": "csp",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54167",
+    "num": "211",
+    "rule": "x-frame",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "x-frame-options": "SAMEORIGIN"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54167",
+    "num": "211",
+    "rule": "x-frame",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "53939",
+    "num": "25",
+    "rule": "referrer",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "referrer-policy": "no-referrer"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "53939",
+    "num": "25",
+    "rule": "referrer",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54260",
+    "num": "206",
+    "rule": "nosniff",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "x-content-type-options": "nosniff"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54260",
+    "num": "206",
+    "rule": "nosniff",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54382",
+    "num": "210",
+    "rule": "xss",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "x-xss-protection": "1; mode=block"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54382",
+    "num": "210",
+    "rule": "xss",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54380",
+    "num": "207",
+    "rule": "content-type",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54380",
+    "num": "207",
+    "rule": "content-type",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html",
+          "charset": "utf-8",
+          "headers": {}
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54449",
+    "num": "228",
+    "rule": "header-charset",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54449",
+    "num": "228",
+    "rule": "header-charset",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54381",
+    "num": "233",
+    "rule": "utf8",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54381",
+    "num": "233",
+    "rule": "utf8",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=iso-8859-1",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=iso-8859-1"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54463",
+    "num": "213",
+    "rule": "server-leak",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "server": "Apache"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54463",
+    "num": "213",
+    "rule": "server-leak",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "server": "Apache/2.4.41 (Ubuntu)"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54531",
+    "num": "197",
+    "rule": "https-all",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "https://ex.test/a",
+          "type": "script",
+          "status": 200,
+          "content_type": "application/javascript",
+          "headers": {}
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54531",
+    "num": "197",
+    "rule": "https-all",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "http://ex.test/x.js",
+          "type": "script",
+          "status": 200,
+          "content_type": "application/javascript",
+          "headers": {}
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54506",
+    "num": "226",
+    "rule": "gzip",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "https://ex.test/a",
+          "type": "stylesheet",
+          "status": 200,
+          "content_type": "text/css",
+          "headers": {
+            "content-length": "5000",
+            "content-encoding": "gzip"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54506",
+    "num": "226",
+    "rule": "gzip",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "https://ex.test/a",
+          "type": "stylesheet",
+          "status": 200,
+          "content_type": "text/css",
+          "headers": {
+            "content-length": "5000"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54493",
+    "num": "227",
+    "rule": "cache",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "https://ex.test/a",
+          "type": "script",
+          "status": 200,
+          "content_type": "application/javascript",
+          "headers": {
+            "cache-control": "max-age=31536000"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54493",
+    "num": "227",
+    "rule": "cache",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8"
+          }
+        },
+        {
+          "uri": "https://ex.test/a",
+          "type": "script",
+          "status": 200,
+          "content_type": "application/javascript",
+          "headers": {}
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54505",
+    "num": "219",
+    "rule": "robots",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:robots": {
+          "status": 200,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "User-agent: *\nDisallow: /admin\n"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54505",
+    "num": "219",
+    "rule": "robots",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:robots": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": ""
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54492",
+    "num": "220",
+    "rule": "sitemap",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:sitemap": {
+          "status": 200,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<?xml version=\"1.0\"?><urlset><url><loc>https://ex.test/</loc></url></urlset>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54492",
+    "num": "220",
+    "rule": "sitemap",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:sitemap": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": ""
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54379",
+    "num": "222",
+    "rule": "http404",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html>introuvable</html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54379",
+    "num": "222",
+    "rule": "http404",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 200,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html>soft 404</html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54477",
+    "num": "223",
+    "rule": "custom404",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><body>Oups, page introuvable — retour a l accueil</body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54477",
+    "num": "223",
+    "rule": "custom404",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><hr><address>Apache/2.4.41 (Ubuntu) Server at ex.test Port 80</address></body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54468",
+    "num": "218",
+    "rule": "www",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:www": {
+          "status": 200,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "ok"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54468",
+    "num": "218",
+    "rule": "www",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:www": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": ""
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54462",
+    "num": "147",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/fichiers/archive.zip\">Archive</a></body></html>"
+  },
+  {
+    "id": "54462",
+    "num": "147",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
+  },
+  {
+    "id": "54499",
+    "num": "148",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/fichiers/archive.zip\">Archive</a></body></html>"
+  },
+  {
+    "id": "54499",
+    "num": "148",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
+  },
+  {
+    "id": "54504",
+    "num": "149",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/fichiers/archive.zip\">Archive</a></body></html>"
+  },
+  {
+    "id": "54504",
+    "num": "149",
+    "rule": "oqsV5DownloadLinks",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
+  },
+  {
+    "id": "54478",
+    "num": "240",
+    "rule": "oqsV5PdfLinks",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/doc/rapport.pdf\">Rapport</a></body></html>"
+  },
+  {
+    "id": "54478",
+    "num": "240",
+    "rule": "oqsV5PdfLinks",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
+  },
+  {
+    "id": "54452",
+    "num": "241",
+    "rule": "oqsV5PdfLinks",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/doc/rapport.pdf\">Rapport</a></body></html>"
+  },
+  {
+    "id": "54452",
+    "num": "241",
+    "rule": "oqsV5PdfLinks",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
+  },
+  {
+    "id": "54502",
+    "num": "168",
+    "rule": "search-field",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><form role=\"search\"><input type=\"search\" name=\"q\"></form></body></html>"
+  },
+  {
+    "id": "54502",
+    "num": "168",
+    "rule": "search-field",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><main><p>Contenu sans fonction de recherche.</p></main></body></html>"
+  },
+  {
+    "id": "53944",
+    "num": "122",
+    "rule": "video-without-subtitles",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>122 nc</title></head><body><video src=\"demo.mp4\" controls></video></body></html>"
+  },
+  {
+    "id": "53944",
+    "num": "122",
+    "rule": "video-with-subtitles",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>122 c</title></head><body><video src=\"demo.mp4\" controls><track kind=\"subtitles\" src=\"fr.vtt\" srclang=\"fr\" label=\"Francais\"></video></body></html>"
+  },
+  {
+    "id": "53944",
+    "num": "122",
+    "rule": "video-track-wrong-kind",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>122 nc kind</title></head><body><video src=\"demo.mp4\" controls><track kind=\"descriptions\" src=\"d.vtt\" srclang=\"fr\"></video></body></html>"
+  },
+  {
+    "id": "54411",
+    "num": "142",
+    "rule": "external-links-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>142 i</title></head><body><a href=\"https://autre.example/page\">Site externe</a> <a href=\"/interne\">Interne</a></body></html>"
+  },
+  {
+    "id": "54411",
+    "num": "142",
+    "rule": "no-external-links",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>142 c</title></head><body><a href=\"/a\">Un</a> <a href=\"/b\">Deux</a></body></html>"
+  },
+  {
+    "id": "54500",
+    "num": "171",
+    "rule": "sitemap-link-present",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>171 i</title></head><body><a href=\"/plan-du-site\">Plan du site</a> <a href=\"/contact\">Contact</a></body></html>"
+  },
+  {
+    "id": "54500",
+    "num": "171",
+    "rule": "no-sitemap-link",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>171 nc</title></head><body><a href=\"/contact\">Contact</a> <a href=\"/blog\">Blog</a></body></html>"
+  },
+  {
+    "id": "54476",
+    "num": "92",
+    "rule": "paste-blocked",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>92 nc</title></head><body><form><input type=\"text\" onpaste=\"return false\"></form></body></html>"
+  },
+  {
+    "id": "54476",
+    "num": "92",
+    "rule": "paste-allowed",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>92 i</title></head><body><form><input type=\"text\"><textarea></textarea></form></body></html>"
+  },
+  {
+    "id": "54385",
+    "num": "225",
+    "rule": "error404-with-nav",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><body><nav><a href=\"/\">Accueil</a><a href=\"/produits\">Produits</a></nav><p>Page introuvable</p></body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>225 c</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54385",
+    "num": "225",
+    "rule": "error404-default-server",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><head><title>404 Not Found</title></head><body><h1>Not Found</h1><hr><address>Apache/2.4.41 (Ubuntu) Server at ex.test Port 80</address></body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>225 nc</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-max-scale-10",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, maximum-scale=10\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-max-scale-1.5",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, initial-scale=1, maximum-scale=1.5\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-max-scale-1.0",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, maximum-scale=1.0\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-uppercase",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, USER-SCALABLE=NO\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-semicolons",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width; maximum-scale=1; initial-scale=1\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54103",
+    "num": "193",
+    "rule": "viewport-max-scale-below-1",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><meta name=\"viewport\" content=\"width=device-width, maximum-scale=0.5\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54451",
+    "num": "236",
+    "rule": "duplicate-id",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p id=\"a\">x</p><div><span id=\"a\">y</span></div></body></html>"
+  },
+  {
+    "id": "54451",
+    "num": "236",
+    "rule": "unique-ids",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p id=\"a\">x</p><p id=\"b\">y</p></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri-missing-other-site",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><script src=\"https://cdn.other.test/lib.js\"></script></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri-protocol-relative",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><base href=\"https://ex.test/\"><link rel=\"stylesheet\" href=\"//cdn.other.test/a.css\"></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri-present",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><script src=\"https://cdn.other.test/lib.js\" integrity=\"sha384-x\" crossorigin=\"anonymous\"></script></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54087",
+    "num": "214",
+    "rule": "sri-relative-httpdocs",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><script src=\"httpdocs/app.js\"></script></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54159",
+    "num": "237",
+    "rule": "user-select-text",
+    "verdict": "i",
+    "details": 0,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p style=\"user-select: text\">x</p></body></html>"
+  },
+  {
+    "id": "54159",
+    "num": "237",
+    "rule": "user-select-none",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p style=\"user-select: none\">x</p></body></html>"
+  },
+  {
+    "id": "53944",
+    "num": "122",
+    "rule": "video-captions-uppercase",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><video src=\"v.mp4\"><track kind=\"Captions\" src=\"c.vtt\"></video></body></html>"
+  },
+  {
+    "id": "54516",
+    "num": "27",
+    "rule": "form-action-uppercase-http",
+    "verdict": "nc",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><form action=\"HTTP://ex.test/send\"><input name=\"q\"></form></body></html>"
+  },
+  {
+    "id": "54165",
+    "num": "157",
+    "rule": "nav-only-inactive",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><nav><ul><li class=\"inactive\"><a href=\"/a\">a</a></li><li><a href=\"/b\">b</a></li></ul></nav></body></html>"
+  },
+  {
+    "id": "54165",
+    "num": "157",
+    "rule": "nav-with-active",
+    "verdict": "i",
+    "details": 0,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><nav><ul><li class=\"menu-item active\"><a href=\"/a\">a</a></li></ul></nav></body></html>"
+  },
+  {
+    "id": "54165",
+    "num": "157",
+    "rule": "nav-nested-menu",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><nav><ul class=\"menu\"><li><a href=\"/a\">a</a></li></ul></nav></body></html>"
+  },
+  {
+    "id": "54555",
+    "num": "14",
+    "rule": "fullwidth-letters",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>ＳＯＬＤＥＳ ｍｏｎｓｔｒｅｓ</p></body></html>"
+  },
+  {
+    "id": "54555",
+    "num": "14",
+    "rule": "cjk-punctuation",
+    "verdict": "i",
+    "details": 0,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>Prix：12 €（TTC）</p></body></html>"
+  },
+  {
+    "id": "54555",
+    "num": "14",
+    "rule": "japanese-page",
+    "verdict": "i",
+    "details": 0,
+    "html": "<!doctype html><html lang=\"ja\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>ＡＢＣ株式会社</p></body></html>"
+  },
+  {
+    "id": "54385",
+    "num": "225",
+    "rule": "error404-canvas-not-nav",
+    "verdict": "nc",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><body><div class=\"canvas-wrap\"><h1>Introuvable</h1></div></body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54385",
+    "num": "225",
+    "rule": "error404-main-nav-class",
+    "verdict": "c",
+    "sidecar": {
+      "responses": {
+        "oqs-v5:probe404": {
+          "status": 404,
+          "statusText": "",
+          "headers": [],
+          "content_type": null,
+          "data": "<html><body><div class=\"main-nav\"><a href=\"/\">Accueil</a></div><h1>Introuvable</h1></body></html>"
+        }
+      }
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54382",
+    "num": "210",
+    "rule": "xss-by-csp",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "content-security-policy": "default-src 'self'"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54382",
+    "num": "210",
+    "rule": "xss-disabled-only",
+    "verdict": "nc",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=utf-8",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=utf-8",
+            "x-xss-protection": "0"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54381",
+    "num": "233",
+    "rule": "utf8-quoted-charset",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html; charset=\"UTF-8\"",
+          "charset": "utf-8",
+          "headers": {
+            "content-type": "text/html; charset=\"UTF-8\""
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54532",
+    "num": "212",
+    "rule": "csp-mixed-case-header",
+    "verdict": "c",
+    "sidecar": {
+      "resources": [
+        {
+          "uri": "https://ex.test/",
+          "type": "main_frame",
+          "status": 200,
+          "content_type": "text/html",
+          "charset": "utf-8",
+          "headers": {
+            "Content-Security-Policy": "default-src 'self'"
+          }
+        }
+      ]
+    },
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>x</p></body></html>"
+  },
+  {
+    "id": "54404",
+    "num": "4",
+    "rule": "phone-not-date",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>Appelez le 06.12.34.56.78</p></body></html>"
+  },
+  {
+    "id": "54404",
+    "num": "4",
+    "rule": "date-beside-link",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>Publié le 12/03/2024 par <a href=\"/a\">Anne</a></p></body></html>"
+  },
+  {
+    "id": "54589",
+    "num": "97",
+    "rule": "autocomplete-off",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><form><input type=\"email\" name=\"email\" autocomplete=\"off\"></form></body></html>"
+  },
+  {
+    "id": "54589",
+    "num": "97",
+    "rule": "bracket-name",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><form><input type=\"text\" name=\"user[email]\"></form></body></html>"
+  },
+  {
+    "id": "54589",
+    "num": "97",
+    "rule": "autocomplete-set",
+    "verdict": "i",
+    "details": 0,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><form><input type=\"email\" name=\"email\" autocomplete=\"email\"></form></body></html>"
+  },
+  {
+    "id": "54411",
+    "num": "142",
+    "rule": "external-protocol-relative",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title><base href=\"https://ex.test/\"></head><body><a href=\"//other.test/page\">ailleurs</a></body></html>"
+  },
+  {
+    "id": "54004",
+    "num": "46",
+    "rule": "terms-english",
+    "verdict": "i",
+    "details": 1,
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><footer><a href=\"/legal/terms-of-use\">Terms of use</a></footer></body></html>"
+  },
+  {
+    "id": "53931",
+    "num": "145",
+    "rule": "phone-international-unlinked",
+    "verdict": "i",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>Call +44 20 7946 0958</p></body></html>"
+  },
+  {
+    "id": "53931",
+    "num": "145",
+    "rule": "version-not-phone",
+    "verdict": "c",
+    "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><p>Version 1.2.3 du 2024</p></body></html>"
+  }
+]

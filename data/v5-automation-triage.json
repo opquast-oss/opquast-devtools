@@ -1,0 +1,3327 @@
+{
+  "meta": {
+    "checklist": "900-opquast-v5",
+    "total": 245,
+    "generated_from": "tmp/triage/batch-*.json (7 thema batches)",
+    "categories": {
+      "FULL-AUTO": "deterministic DOM check, verdict c/nc",
+      "SEMI-AUTO": "engine flags candidate elements, human decides (verdict i + details)",
+      "SIDECAR": "deterministic but needs HTTP response headers / reconstructed events",
+      "MANUAL": "semantic/visual/business judgment, no exploitable DOM signal",
+      "ALREADY-AUTO": "already automated (inherited from V3)"
+    },
+    "implemented": {
+      "overlay": 115,
+      "v3_inherited": 0,
+      "total_automated": 115,
+      "checklist_total": 245,
+      "coverage_pct": 47,
+      "overlay_tested": 115,
+      "test_cases": 191,
+      "_note": "V5 decoupled from V3 (19 inherited rulesets baked into the overlay). #143 reclassified MANUAL (heuristic dropped).",
+      "blocked_remaining": 4,
+      "blocked": [
+        "135",
+        "152",
+        "221",
+        "224"
+      ]
+    }
+  },
+  "rules": [
+    {
+      "num": "1",
+      "id": "53950",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "RSS_PRESENCE"
+      ],
+      "approach": "Engine flags RSS/atom feed presence and links to external social accounts as candidates; human judges whether a 'new content' channel truly exists.",
+      "notes": "Rule allows external social account (off-page) as alternative -> not fully decidable on one page.",
+      "description": "Il est possible de connaître les nouveaux contenus ou services.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "2",
+      "id": "54407",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine flags per page the presence of a copyright signal (c symbol, 'copyright'/'droits de copie' text, or a link to a rights page); human confirms it covers copy/reuse rights.",
+      "notes": "Textual signal exists but semantic scope (copy AND reuse rights) needs review.",
+      "description": "Les informations relatives aux droits de copie et de réutilisation sont disponibles depuis toutes les pages.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "3",
+      "id": "54498",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "META_DESCRIPTION_FILLED"
+      ],
+      "approach": "Presence of a filled meta[name=description] is FULL-AUTO deterministic, but 'describes the content' requires editorial judgment -> list candidates, human validates relevance.",
+      "notes": "Two-part control: presence (auto) + describes content (manual).",
+      "description": "Le code source de chaque page contient une métadonnée qui en décrit le contenu.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "4",
+      "id": "54404",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine regexp-flags date-like strings with a numeric month or 2-digit year (bad format) as candidates; human confirms they are dates and not user-input datepickers.",
+      "notes": "Distinguishing dates from other numbers and excluding form inputs is not deterministic.",
+      "description": "Les dates sont présentées dans des formats explicites.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "5",
+      "id": "54406",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "ABBR_W_FILLED_TITLE_ATTR",
+        "ACRONYM_W_FILLED_TITLE_ATTR"
+      ],
+      "approach": "Engine flags abbr/acronym elements with/without a filled title attr as candidates; cannot detect inline parenthetical meaning or glossary links, nor identify sigles in plain prose.",
+      "notes": "Rule accepts several mechanisms (title attr, parentheses, link) and needs visual identification of sigles.",
+      "description": "La première occurrence d'une abréviation ou d'un acronyme dans le corps de chaque page donne accès à sa signification.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "6",
+      "id": "54360",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine flags <time> elements and date-like strings as publication-date candidates; human judges which contents require a date and whether one is shown.",
+      "notes": "Rubric-listed SEMI example; 'contenus qui le necessitent' is editorial.",
+      "description": "La date de publication des contenus qui le nécessitent est indiquée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "7",
+      "id": "54455",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires semantic judgment of whether specialised vocabulary is explained via a glossary/section/tooltip; no deterministic DOM signal identifies domain jargon.",
+      "notes": "",
+      "description": "Un lexique ou un glossaire adapté au public visé explique le vocabulaire sectoriel ou technique.",
+      "implemented": false
+    },
+    {
+      "num": "8",
+      "id": "54454",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires identifying advertising/sponsored blocks (no reliable DOM signal) and judging the disambiguation label; content-meaning task.",
+      "notes": "",
+      "description": "Les contenus publicitaires ou sponsorisés sont identifiés comme tels.",
+      "implemented": false
+    },
+    {
+      "num": "9",
+      "id": "54359",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires locating public spaces (comments/forums) and judging presence of moderation terms; editorial/semantic.",
+      "notes": "",
+      "description": "Les conditions de modération des espaces publics sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "10",
+      "id": "54405",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires a multi-step submit workflow with a preview/confirmation step; not a single-page DOM check.",
+      "notes": "",
+      "description": "Les contenus ou fichiers destinés à des espaces publics peuvent être vérifiés avant leur envoi définitif.",
+      "implemented": false
+    },
+    {
+      "num": "11",
+      "id": "54423",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires locating public spaces and a report-abuse procedure; semantic, no deterministic signal.",
+      "notes": "",
+      "description": "Les espaces publics proposent au moins un moyen de signaler les abus.",
+      "implemented": false
+    },
+    {
+      "num": "12",
+      "id": "54409",
+      "thema": "Contenus",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json.",
+      "notes": "",
+      "description": "Chaque graphique est accompagné de ses données numériques.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "13",
+      "id": "54456",
+      "thema": "Contenus",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires running search queries and judging result-count/pagination text across states; multi-step + semantic.",
+      "notes": "",
+      "description": "La page des résultats de recherche indique le nombre de résultats, le nombre de pages de résultats, et le nombre de résultats par page.",
+      "implemented": false
+    },
+    {
+      "num": "14",
+      "id": "54555",
+      "thema": "Contenus",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine regexp-flags text containing non-alphabetic Unicode used to simulate formatting (e.g. mathematical alphanumeric ranges); human confirms it is a formatting hijack vs legitimate script.",
+      "notes": "Risk of false positives on legitimate non-Latin scripts -> human confirmation.",
+      "description": "Les contenus ne détournent pas de caractères pour simuler une mise en forme visuelle.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "15",
+      "id": "53921",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "presence of privacy-policy link/info on every page — editorial/semantic, no reliable DOM signal (link-text matching too fragile)",
+      "notes": "could weakly list footer links matching 'confidentialité/vie privée' but deciding the right one is content judgment",
+      "description": "La politique de confidentialité et de respect de la vie privée est disponible depuis toutes les pages.",
+      "implemented": false
+    },
+    {
+      "num": "16",
+      "id": "54489",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "presence of text describing access/rectification procedure — editorial content",
+      "notes": "",
+      "description": "La procédure d'accès et de rectification des données personnelles est décrite.",
+      "implemented": false
+    },
+    {
+      "num": "17",
+      "id": "54534",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "account creation possible without third-party identity — requires walking the signup flow",
+      "notes": "could list social-login buttons but 'possible without' needs whole flow",
+      "description": "La création de compte est possible sans recours à un système d'identification tiers.",
+      "implemented": false
+    },
+    {
+      "num": "18",
+      "id": "54471",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "email-confirmation activation — behavioral, requires mailbox",
+      "notes": "",
+      "description": "La création d'un compte est soumise à un processus de confirmation.",
+      "implemented": false
+    },
+    {
+      "num": "19",
+      "id": "54527",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "presence of 2FA/strong-auth on login — behavioral flow",
+      "notes": "",
+      "description": "Un mécanisme de prévention des usurpations de compte ou d'identité est proposé.",
+      "implemented": false
+    },
+    {
+      "num": "20",
+      "id": "53940",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "account closable online via similar process — behavioral flow",
+      "notes": "",
+      "description": "Les comptes ou abonnements ouverts en ligne peuvent être fermés par le même moyen.",
+      "implemented": false
+    },
+    {
+      "num": "21",
+      "id": "54420",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "export of personal content from private area — behavioral, authenticated flow",
+      "notes": "",
+      "description": "Si un espace personnel ou abonné est proposé, il est possible de télécharger les contenus personnels.",
+      "implemented": false
+    },
+    {
+      "num": "22",
+      "id": "54424",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "same credentials across all services — cross-service behavioral test",
+      "notes": "",
+      "description": "La connexion à tous les services proposés est possible avec les mêmes identifiants.",
+      "implemented": false
+    },
+    {
+      "num": "23",
+      "id": "54472",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "global logout / active-session invalidation — multi-device behavioral",
+      "notes": "logout links are DOM-visible but rule targets global session revocation",
+      "description": "Il est possible de se déconnecter des espaces privés.",
+      "implemented": false
+    },
+    {
+      "num": "24",
+      "id": "54425",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "'+' email aliases accepted — requires submitting forms/receiving mail",
+      "notes": "",
+      "description": "Les alias mail contenant le signe + sont acceptés",
+      "implemented": false
+    },
+    {
+      "num": "25",
+      "id": "53939",
+      "thema": "Données personnelles",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check Referrer-Policy response header (preferred values: no-referrer/same-origin/strict-origin/strict-origin-when-cross-origin)",
+      "notes": "deterministic, header only",
+      "description": "Les entêtes envoyés par le serveur spécifient la politique de communication des referrers.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "26",
+      "id": "54553",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "no account-existence disclosure on signup/login/reset — behavioral, message-content judgment",
+      "notes": "",
+      "description": "Aucune information n’est exposée sur l’existence d’un compte utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "27",
+      "id": "54516",
+      "thema": "Données personnelles",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "list forms + their action scheme (flag non-https action) and page transport; human judges which carry sensitive data",
+      "notes": "mixed: form action https is DOM-visible, http→https redirect needs sidecar, 'sensitive' is human judgment",
+      "description": "Les échanges de données sensibles sont sécurisés et signalés comme tels.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "28",
+      "id": "54427",
+      "thema": "Données personnelles",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "flag links/URLs with credentials pattern (user:pass@host) and session ids in query (e.g. SESSIONID=), human confirms",
+      "notes": "credential-in-URL pattern is DOM/regexp-detectable; full check (in-URL POST data, cookie-off behavior) is behavioral",
+      "description": "Les données sensibles ne sont pas transmises en clair dans les URL.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "29",
+      "id": "54154",
+      "thema": "Données personnelles",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "cookie purpose & refusal consequences explained — editorial content",
+      "notes": "",
+      "description": "L'objectif des cookies et les limitations inhérentes à leur refus sont expliqués.",
+      "implemented": false
+    },
+    {
+      "num": "30",
+      "id": "54509",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires driving a full checkout flow to confirm purchase without account creation — a process test with no static DOM signal.",
+      "description": "L'achat d'un produit ou service est possible sans création de compte.",
+      "implemented": false
+    },
+    {
+      "num": "31",
+      "id": "54419",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires navigating from cart back to product details — interaction/process, no reliable static DOM signal.",
+      "description": "Le détail de chaque article est consultable depuis le panier.",
+      "implemented": false
+    },
+    {
+      "num": "32",
+      "id": "53998",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires finalizing an order and inspecting the cart for auto-added items — process/business judgment.",
+      "description": "Aucun produit ni service annexe n'est ajouté au panier de commande sans que cette action soit déclenchée par l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "33",
+      "id": "53942",
+      "thema": "E-Commerce",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "On a checkout page the engine can flag pre-checked checkboxes (input[type=checkbox][@checked]) as opt-out candidates; a human confirms which are annex-service subscriptions.",
+      "notes": "Needs to be evaluated on the actual checkout/cart page; distinguishing annex-service checkboxes from legitimate ones needs judgment.",
+      "description": "L'inscription à des services annexes n'est pas activée par défaut.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "34",
+      "id": "54064",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Presence of availability info is free-text content spread across product/cart/summary pages — semantic judgment.",
+      "description": "La disponibilité des produits est indiquée avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "35",
+      "id": "54146",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Estimated delivery time is free-text content on the order summary — no exploitable DOM signal.",
+      "description": "Le délai de livraison estimé est indiqué avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "36",
+      "id": "54045",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Delivery-fee information is free-text content — semantic judgment, no DOM marker.",
+      "description": "Les frais de livraison estimés sont indiqués avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "37",
+      "id": "53945",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Retrieval terms for dematerialized goods are free-text content checked manually.",
+      "description": "Les modalités de récupération d'un bien dématérialisé sont précisées avant la commande.",
+      "implemented": false
+    },
+    {
+      "num": "38",
+      "id": "53923",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires a test order to verify quantities/items can be edited before validation — interaction/process.",
+      "description": "La modification de la quantité de chaque article, l'ajout et la suppression d'un ou plusieurs articles restent possibles avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "39",
+      "id": "53924",
+      "thema": "E-Commerce",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Criterion already automated per already-auto.json; not re-triaged.",
+      "description": "La nature et les caractéristiques quantifiables des produits et services sont indiquées.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "40",
+      "id": "53992",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Promotion validity period/conditions are free-text content — semantic judgment.",
+      "description": "La période et les conditions de validité des offres spéciales et promotions sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "41",
+      "id": "54390",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Detailed subtotal presence requires a test order and content judgment on the summary page.",
+      "description": "Le sous-total détaillé est indiqué avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "42",
+      "id": "53926",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Financing conditions are free-text business content — no DOM signal.",
+      "description": "Les conditions de financement sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "43",
+      "id": "54063",
+      "thema": "E-Commerce",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Criterion already automated per already-auto.json; not re-triaged.",
+      "description": "Les conditions de fonctionnement du service après-vente sont indiquées.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "44",
+      "id": "54114",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Debit/encashment conditions are free-text business content — semantic judgment.",
+      "description": "Les conditions de débit ou d'encaissement sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "45",
+      "id": "54011",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Warranty conditions are free-text business content — semantic judgment.",
+      "description": "Les conditions de garantie sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "46",
+      "id": "54004",
+      "thema": "E-Commerce",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine can list links whose text/href heuristically match 'conditions générales / CGV / CGU / conditions de vente'; human confirms target and cross-page presence.",
+      "notes": "Matching is text-heuristic and 'available from every page' is cross-page, so only candidate detection is deterministic.",
+      "description": "Les conditions de vente ou d'utilisation sont disponibles depuis toutes les pages.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "47",
+      "id": "53988",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Delivery-zone information is free-text business content — no DOM signal.",
+      "description": "Les informations relatives à la zone de livraison des produits ou de réalisation des services sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "48",
+      "id": "54202",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Accepted payment methods/procedures are free-text content — semantic judgment.",
+      "description": "Les moyens de paiement acceptés et les procédures correspondantes sont indiqués.",
+      "implemented": false
+    },
+    {
+      "num": "49",
+      "id": "53925",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Payment-provider identity (name or logo) is content/visual — recognizing a bank logo is semantic judgment, no reliable DOM marker.",
+      "description": "L'identité des prestataires impliqués dans les transactions est précisée.",
+      "implemented": false
+    },
+    {
+      "num": "50",
+      "id": "54376",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Litigation recourse text lives inside CGV prose — content judgment.",
+      "description": "Les recours en cas de litige sont indiqués dans les conditions générales de vente ou d'utilisation.",
+      "implemented": false
+    },
+    {
+      "num": "51",
+      "id": "54408",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Return address/conditions are free-text content across several possible pages — semantic judgment.",
+      "description": "L'adresse et les conditions de retour des produits sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "52",
+      "id": "54428",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Who bears return-shipping cost is free-text content before validation — semantic judgment.",
+      "description": "La charge des frais de retour est indiquée avant la validation définitive de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "53",
+      "id": "54429",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Complaint-filing procedure is free-text content — semantic judgment.",
+      "description": "Le mode de dépôt et la procédure de traitement des réclamations sont indiqués.",
+      "implemented": false
+    },
+    {
+      "num": "54",
+      "id": "54375",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Refund/cancellation conditions are free-text content — semantic judgment.",
+      "description": "Les conditions de remboursement et de résiliation sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "55",
+      "id": "54017",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Required hardware/software is free-text content on/around the product page — semantic judgment.",
+      "description": "Les matériels et logiciels nécessaires au fonctionnement du service sont indiqués avant la validation de la commande.",
+      "implemented": false
+    },
+    {
+      "num": "56",
+      "id": "53986",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Tax detail + pre-tax amount appear in the order summary/invoice as content/numbers — semantic judgment, and invoice is off-page.",
+      "description": "Les prix affichés mentionnent le détail des taxes et suppléments éventuels ainsi que le montant hors taxes.",
+      "implemented": false
+    },
+    {
+      "num": "57",
+      "id": "54398",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires a checkout/account interaction to confirm a separate delivery address can be entered — process test.",
+      "description": "Une adresse de livraison différente de l'adresse de facturation peut être spécifiée.",
+      "implemented": false
+    },
+    {
+      "num": "58",
+      "id": "54517",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires progressing an order to the payment step and counting available methods — process test.",
+      "description": "Au moins deux moyens de paiement sont acceptés.",
+      "implemented": false
+    },
+    {
+      "num": "59",
+      "id": "54515",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Opt-in vs opt-out for storing bank data is a checkout-process/consent behaviour — not statically decidable.",
+      "description": "Les données bancaires ne sont mémorisées qu'après consentement explicite de l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "60",
+      "id": "54473",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Editing/deleting stored bank data is an account-flow interaction — process test.",
+      "description": "Les données bancaires mémorisées peuvent être modifiées ou supprimées.",
+      "implemented": false
+    },
+    {
+      "num": "61",
+      "id": "54430",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Transaction reference on the post-validation confirmation page requires completing an order — process test.",
+      "description": "La référence de la transaction est affichée au client après la validation de sa commande.",
+      "implemented": false
+    },
+    {
+      "num": "62",
+      "id": "54487",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Availability/download of invoices in the user account requires an authenticated account flow.",
+      "description": "Les factures émises sont également disponibles en ligne.",
+      "implemented": false
+    },
+    {
+      "num": "63",
+      "id": "54482",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Confirmation of an invoice email is off-DOM (mailbox verification).",
+      "description": "Chaque facturation fait l'objet d'un mail de confirmation.",
+      "implemented": false
+    },
+    {
+      "num": "64",
+      "id": "54431",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires identifying order/label/award mentions in prose then checking each has a source link — semantic content judgment.",
+      "description": "Les mentions d'appartenance à un ordre ou groupe professionnel, d'un label ou d'une récompense sont accompagnées d'un lien vers la source.",
+      "implemented": false
+    },
+    {
+      "num": "65",
+      "id": "54460",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Visual + textual differentiation of unavailable products is a content/visual judgment on product listings.",
+      "description": "Les produits indisponibles font l'objet d'une différenciation visuelle et textuelle.",
+      "implemented": false
+    },
+    {
+      "num": "66",
+      "id": "54512",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Post-order confirmation email with transaction ref is off-DOM (mailbox verification).",
+      "description": "Un mail indiquant la référence de la transaction et les données de la commande est envoyé suite à la validation.",
+      "implemented": false
+    },
+    {
+      "num": "67",
+      "id": "53949",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Acknowledgment of receipt for a complaint is off-DOM (send a complaint, check mailbox).",
+      "description": "Chaque réclamation fait l'objet d'un accusé de réception.",
+      "implemented": false
+    },
+    {
+      "num": "68",
+      "id": "54541",
+      "thema": "E-Commerce",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Product provenance is free-text content on product sheets — semantic judgment.",
+      "description": "La provenance des produits est indiquée.",
+      "implemented": false
+    },
+    {
+      "num": "69",
+      "id": "54479",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "INPUT_W_TYPE_TEXT_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR",
+        "SELECT_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR",
+        "TEXTAREA_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR",
+        "LABEL_W_FOR_ATTR_UNKNOWN",
+        "LABEL_W_FOR_ATTR_EMPTY"
+      ],
+      "approach": "Rich per-type family flags any field lacking every accessible-name source (for/id label, title, aria-label/labelledby) -> deterministic nc candidates. But 'etiquette qui lui est propre' + label actually describes the field is relevance judgment (control text explicitly says manual). Engine lists candidates, human confirms relevance -> i+details.",
+      "notes": "Association test is deterministic; label pertinence is the manual part -> SEMI not FULL.",
+      "description": "Chaque champ de formulaire est associé dans le code source à une étiquette qui lui est propre.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "70",
+      "id": "54095",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [
+        "INPUT_W_TYPE_TEXT_W_ARIA-DESCRIBEDBY_ATTR",
+        "FIELDSET_WO_LEGEND"
+      ],
+      "approach": "aria-describedby / fieldset+legend presence is detectable, but the criterion only triggers when complementary info exists (help text, error hints) — identifying that complementary info exists is pure content judgment with no reliable DOM signal.",
+      "notes": "No deterministic way to know a field HAS complementary info to associate.",
+      "description": "Les informations complétant l'étiquette d'un champ sont associées à celui-ci dans le code source.",
+      "implemented": false
+    },
+    {
+      "num": "71",
+      "id": "54488",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Requires knowing which fields are truly mandatory (required attr often absent; needs submission testing) AND that the label TEXT states obligation. Both are content/runtime, no reliable DOM decision.",
+      "notes": "required attr exists in catalog but rule is about label wording, not the attr.",
+      "description": "L'étiquette de chaque champ de formulaire indique si la saisie est obligatoire.",
+      "implemented": false
+    },
+    {
+      "num": "72",
+      "id": "54432",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Needs to know which fields impose a specific input format (discovered by submitting bad values) and whether the label text states it. Pure content/runtime judgment.",
+      "notes": "",
+      "description": "Le format de saisie des champs de formulaire qui le nécessitent est indiqué",
+      "implemented": false
+    },
+    {
+      "num": "73",
+      "id": "54433",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Case-sensitivity is discovered by submitting upper/lower variants at runtime; no DOM signal at all.",
+      "notes": "",
+      "description": "L'utilisateur est averti lorsqu'une saisie est sensible à la casse.",
+      "implemented": false
+    },
+    {
+      "num": "74",
+      "id": "54536",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Character-limit indication must be in the label text; requires content judgment. No maxlength expression in catalog and rule is about the label wording anyway.",
+      "notes": "No MAXLENGTH expr exists.",
+      "description": "L'étiquette de chaque champ de formulaire qui le nécessite indique les limites de nombre de caractères.",
+      "implemented": false
+    },
+    {
+      "num": "75",
+      "id": "54523",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [
+        "INPUT_W_TYPE_PASSWORD"
+      ],
+      "approach": "Double-entry confirmation only applies to password-CREATION contexts. Engine can count password inputs but cannot reliably distinguish creation (2 fields) from login (1 field) as a UX/error-prevention pattern — needs human context.",
+      "notes": "Two-password heuristic too weak to be reliable.",
+      "description": "La création d'un mot de passe par l'utilisateur fait l'objet d'un mécanisme de prévention des erreurs de saisie.",
+      "implemented": false
+    },
+    {
+      "num": "76",
+      "id": "54528",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Show-password toggle is a JS/UI mechanism; no reliable DOM marker. Manual check per control text.",
+      "notes": "",
+      "description": "Les caractères saisis dans un champ de mot de passe peuvent être affichés en clair.",
+      "implemented": false
+    },
+    {
+      "num": "77",
+      "id": "54434",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Visual proximity/position of label vs field across screen sizes — CSS layout/visual judgment, no deterministic DOM signal.",
+      "notes": "",
+      "description": "Chaque étiquette de formulaire est visuellement rattachée au champ qu'elle décrit.",
+      "implemented": false
+    },
+    {
+      "num": "78",
+      "id": "53943",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Visual proximity of contextual info to the field — layout/visual judgment.",
+      "notes": "",
+      "description": "Les informations contextuelles se rapportant à un champ de formulaire lui sont visuellement rattachées.",
+      "implemented": false
+    },
+    {
+      "num": "79",
+      "id": "54485",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires submitting errors and observing that erroneous fields are flagged via their label — runtime + visual.",
+      "notes": "",
+      "description": "En cas de rejet des données saisies dans un formulaire, les champs contenant les données rejetées sont indiqués à l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "80",
+      "id": "54474",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires provoking rejection and reading whether the error message explains the cause — runtime + content.",
+      "notes": "",
+      "description": "En cas de rejet des données saisies dans un formulaire, les raisons du rejet sont indiquées à l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "81",
+      "id": "54374",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires provoking rejection and verifying the form is redisplayed with prior input intact — runtime behavior.",
+      "notes": "",
+      "description": "En cas de rejet des données saisies dans un formulaire, toutes les données saisies peuvent être modifiées par l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "82",
+      "id": "53977",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Whether custom error messages are in the same language as the form labels — linguistic/content judgment.",
+      "notes": "",
+      "description": "Les messages d'erreur personnalisés sont exprimés dans la langue du formulaire.",
+      "implemented": false
+    },
+    {
+      "num": "83",
+      "id": "54467",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Multi-page form recap before final submit — requires completing a multi-step process at runtime; process identification is content.",
+      "notes": "",
+      "description": "Lors de la saisie d'un formulaire réparti sur plusieurs pages, un récapitulatif global est affiché avant l'envoi définitif.",
+      "implemented": false
+    },
+    {
+      "num": "84",
+      "id": "54391",
+      "thema": "Formulaires",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Criterion 84 listed in already-auto.json.",
+      "notes": "Pre-automated; not re-triaged.",
+      "description": "La page affichée après l'envoi d'un formulaire permet de reprendre directement la navigation.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "85",
+      "id": "54061",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires submitting the form and reading the confirmation page for explicit success/failure — runtime + content.",
+      "notes": "",
+      "description": "La soumission d'un formulaire est suivie d'un message indiquant la réussite ou non de l'action souhaitée.",
+      "implemented": false
+    },
+    {
+      "num": "86",
+      "id": "53938",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Whether required documents/data are listed before a complex process starts — content + process judgment.",
+      "notes": "",
+      "description": "L'utilisateur est averti au début d'un processus complexe de la nature des données et documents exigés.",
+      "implemented": false
+    },
+    {
+      "num": "87",
+      "id": "54526",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Presence of a step list in a complex process — needs to identify the process and read the steps; content judgment.",
+      "notes": "",
+      "description": "Les processus complexes sont accompagnés de la liste de leurs étapes.",
+      "implemented": false
+    },
+    {
+      "num": "88",
+      "id": "53978",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Current-step indication in title/step path — content judgment about a complex process.",
+      "notes": "",
+      "description": "L'étape en cours d'un processus complexe est indiquée.",
+      "implemented": false
+    },
+    {
+      "num": "89",
+      "id": "53927",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Ability to return to a previous step — runtime navigation testing.",
+      "notes": "",
+      "description": "Chaque étape d'un processus complexe permet de revenir à l'étape précédente.",
+      "implemented": false
+    },
+    {
+      "num": "90",
+      "id": "54475",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Warning about data loss when using browser history — runtime behavior with the back button.",
+      "notes": "",
+      "description": "L'utilisateur est averti de la perte d'information en cas d'utilisation de l'historique de son navigateur dans un processus complexe.",
+      "implemented": false
+    },
+    {
+      "num": "91",
+      "id": "54269",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Data persistence across step navigation — runtime behavior.",
+      "notes": "",
+      "description": "La navigation dans un processus complexe ne provoque pas la perte des données précédemment soumises.",
+      "implemented": false
+    },
+    {
+      "num": "92",
+      "id": "54476",
+      "thema": "Formulaires",
+      "category": "SIDECAR",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Copy/paste blocking is implemented via event handlers (onpaste/oncopy/oncut inline or bound listeners returning false). Detecting paste-prevention is event-listener based — the sidecar can surface bound handlers; inline attrs are DOM-visible.",
+      "notes": "Reliability limited (paste can be blocked many ways: keydown preventDefault, CSS user-select); low confidence.",
+      "description": "Le copier coller est possible dans les champs de formulaire.",
+      "implemented": false
+    },
+    {
+      "num": "93",
+      "id": "54435",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "SELECT_W_3_OPTIONS_WO_OPTGROUP",
+        "OPTGROUP_WO_FILLED_AND_UNIQUE_LABEL_ATTR",
+        "OPTGROUP_WO_LABEL_ATTR"
+      ],
+      "approach": "Engine reliably lists selects with 3+ options and no optgroup (candidates that might need grouping) and validates that existing optgroups carry a filled/unique label attr. Whether options SHOULD be grouped is human judgment -> i+details.",
+      "notes": "optgroup label presence/uniqueness is deterministic; the 'should be grouped' trigger is manual.",
+      "description": "Les éléments d'une liste déroulante qui peuvent être regroupés le sont de manière appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "94",
+      "id": "53971",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "SELECT_W_3_OPTIONS"
+      ],
+      "approach": "Engine lists every select with several options; human verifies the options are in an identifiable order (alpha/numeric/chrono/thematic). Control text itself says the order check is manual/visual -> i+details.",
+      "notes": "Classic candidate-listing SEMI.",
+      "description": "Les listes d'options de formulaires sont présentées dans un ordre identifiable.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "95",
+      "id": "54414",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "INPUT_W_TYPE_TEXT",
+        "INPUT_W_TYPE_EMAIL",
+        "INPUT_W_TYPE_TEL",
+        "INPUT_W_TYPE_NUMBER",
+        "INPUT_W_TYPE_SEARCH",
+        "INPUT_W_TYPE_URL"
+      ],
+      "approach": "Engine lists generic text inputs (candidates that may warrant a specialised type email/url/tel/number/search/password/date/time) and can confirm which typed inputs already exist. Deciding whether a text field's purpose demands a specialised type is content judgment -> i+details.",
+      "notes": "Type presence is deterministic; mapping field purpose->expected type is manual.",
+      "description": "Les champs de saisie de type mail, URL, téléphone, nombre, recherche, mots de passe, heure et date sont dotés du type approprié.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "96",
+      "id": "54548",
+      "thema": "Formulaires",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Ability to resend a 2FA code — runtime/content judgment on the login flow, no DOM signal.",
+      "notes": "",
+      "description": "Les procédures d’authentification à double facteur peuvent être relancées.",
+      "implemented": false
+    },
+    {
+      "num": "97",
+      "id": "54589",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Presence of an autocomplete attr with a normalized value is a deterministic attribute check, but which fields are 'concerned' (name/email/address purpose) is content — so engine flags candidate fields lacking autocomplete for human decision. No catalog expr exists for autocomplete.",
+      "notes": "No AUTOCOMPLETE expression in catalog; would need NEW. Scoping to concerned fields prevents FULL.",
+      "description": "Les champs permettant l'autocomplétion sont signalés dans le code source.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "98",
+      "id": "54551",
+      "thema": "Formulaires",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Presence of the disabled attribute on buttons/inputs is a deterministic DOM check, so engine can flag button/input[disabled] candidates. But the rule targets buttons disabled DYNAMICALLY during form filling and whether they remain perceivable to AT — dynamic state + AT rendering is manual. No disabled expr in catalog.",
+      "notes": "No DISABLED expression exists; dynamic-during-input scope + screen-reader restitution keep the final verdict human.",
+      "description": "Les boutons désactivés ne sont pas masqués aux lecteurs d'écran.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "99",
+      "id": "54388",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: whether the homepage summarises the site's content/services; no DOM signal.",
+      "notes": "",
+      "description": "La page d'accueil expose la nature des contenus et services proposés.",
+      "implemented": false
+    },
+    {
+      "num": "100",
+      "id": "54458",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: presence of an audience/content warning for restricted audiences; meaning-dependent and conditional.",
+      "notes": "",
+      "description": "Si les contenus ou services sont réservés ou destinés à un public spécifique, ce public est mentionné au moins sur la page d'accueil.",
+      "implemented": false
+    },
+    {
+      "num": "101",
+      "id": "54416",
+      "thema": "Identification et contact",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json.",
+      "notes": "",
+      "description": "L'identité de l'auteur, de la société ou de l'organisation est indiquée.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "102",
+      "id": "54529",
+      "thema": "Identification et contact",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "TITLE_W_TEXT"
+      ],
+      "approach": "Engine extracts each page <title>; judging that it contains the site name requires knowing the site name -> list titles, human validates.",
+      "notes": "Presence of title is auto; 'identifies the site' needs external knowledge of the site name.",
+      "description": "Le titre de chaque page permet d'identifier le site.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "103",
+      "id": "54522",
+      "thema": "Identification et contact",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json.",
+      "notes": "",
+      "description": "Le titre de chaque page permet d'identifier son contenu.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "104",
+      "id": "54503",
+      "thema": "Identification et contact",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json.",
+      "notes": "",
+      "description": "Le code source des pages contient un appel valide à une icône de favori.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "105",
+      "id": "54457",
+      "thema": "Identification et contact",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine flags per page candidate signals: tel: links, <address> element, and postal/phone-like regexp matches; human confirms a complete address + phone is present.",
+      "notes": "No tel:/address expr in catalog; needs NEW xpath/regexp. Meaning of 'complete' is manual.",
+      "description": "L’adresse complète et le numéro de téléphone des sociétés et organisations sont disponibles depuis toutes les pages.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "106",
+      "id": "54049",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Registration numbers vary by country and must be judged on legal pages; too noisy/semantic for a deterministic check.",
+      "notes": "",
+      "description": "Le numéro d'immatriculation délivré aux sociétés ou organisations au terme des procédures légales d'enregistrement en vigueur dans leur pays est indiqué.",
+      "implemented": false
+    },
+    {
+      "num": "107",
+      "id": "54158",
+      "thema": "Identification et contact",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "A_W_MAILTO_HREF_ATTRIBUTE",
+        "NEW"
+      ],
+      "approach": "Engine flags candidate contact means (mailto: links, tel: links, contact forms); human counts >=2 and confirms they are reachable.",
+      "notes": "Any contact means counts -> candidates are DOM-detectable; effective reachability is manual.",
+      "description": "Au moins deux moyens de contact sont proposés.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "108",
+      "id": "54204",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Requires detecting a stated (figured) response-time text near contact forms; semantic content presence.",
+      "notes": "",
+      "description": "Les délais de réponse aux demandes d'information sont indiqués.",
+      "implemented": false
+    },
+    {
+      "num": "109",
+      "id": "54155",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: presence of service opening hours and pricing; meaning-dependent.",
+      "notes": "",
+      "description": "Les horaires et tarifs de fonctionnement des services mis à la disposition des utilisateurs sont indiqués.",
+      "implemented": false
+    },
+    {
+      "num": "110",
+      "id": "54497",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires sending a real request and checking for an acknowledgement email; email round-trip, not a page DOM check.",
+      "notes": "",
+      "description": "Chaque demande d'information fait l'objet d'un accusé de réception.",
+      "implemented": false
+    },
+    {
+      "num": "111",
+      "id": "54461",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Concerns the content of emails sent to users, not a web page; out of engine scope.",
+      "notes": "",
+      "description": "Tous les mails fournissent au moins un moyen de contact.",
+      "implemented": false
+    },
+    {
+      "num": "112",
+      "id": "53928",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Requires judging that contact info addresses the after-sales/complaints role specifically; role attribution is semantic.",
+      "notes": "",
+      "description": "Il existe au moins un moyen de contacter le service après-vente ou le support.",
+      "implemented": false
+    },
+    {
+      "num": "113",
+      "id": "54387",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires identifying a way to contact the moderator of public spaces and verifying it works; semantic + interaction.",
+      "notes": "",
+      "description": "Il existe au moins un moyen de contacter le modérateur des espaces publics.",
+      "implemented": false
+    },
+    {
+      "num": "114",
+      "id": "53929",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: whether the person/service responsible for content is named; content-meaning task.",
+      "notes": "",
+      "description": "L'identité de la personne ou du service responsables des contenus est indiquée.",
+      "implemented": false
+    },
+    {
+      "num": "115",
+      "id": "54372",
+      "thema": "Identification et contact",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Conditional and semantic: detect claims of standards/referentials compliance then verify a link to each; meaning-dependent.",
+      "notes": "",
+      "description": "Si un ou plusieurs standards ou référentiels sont déclarés comme respectés, un lien est proposé vers chacun d’eux.",
+      "implemented": false
+    },
+    {
+      "num": "116",
+      "id": "54436",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "IMG_WO_ALT_ATTR",
+        "IMG_W_EMPTY_ALT_ATTR_AND_W_TITLE_ATTR",
+        "IMG_W_FILLED_ALT_ATTR"
+      ],
+      "approach": "Engine lists img/object/canvas/svg and their alt state; deciding an image is decorative (→ must have empty alt) vs informative is human judgment. Flag imgs missing alt (nc) and those with empty alt as candidates.",
+      "notes": "Decorative vs informative is the human call; alt presence/emptiness is DOM-deterministic.",
+      "description": "Chaque image décorative est dotée d'une alternative textuelle appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "117",
+      "id": "54518",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "A_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR",
+        "A_WO_TEXT_W_IMG",
+        "A_W_IMG_W_FILLED_ALT_ATTR",
+        "AREA_WO_FILLED_ALT_ATTR"
+      ],
+      "approach": "Engine detects link>img with no text and its alt state; whether the alt correctly conveys the link target/role is human.",
+      "notes": "a>img alt emptiness is DOM; pertinence is human.",
+      "description": "Chaque image-lien est dotée d'une alternative textuelle appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "118",
+      "id": "54494",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "IMG_WO_ALT_ATTR",
+        "IMG_W_FILLED_ALT_ATTR",
+        "AREA_WO_FILLED_ALT_ATTR",
+        "OBJECT_W_TYPE_IMAGE_W_ALT"
+      ],
+      "approach": "Engine flags informative images/areas/objects missing alt (nc candidates) and lists filled-alt ones; whether alt reproduces the conveyed information is human.",
+      "notes": "Which images are informative + alt adequacy are human calls.",
+      "description": "Chaque image porteuse d'information est dotée d'une alternative textuelle appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "119",
+      "id": "54180",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_IMG_RESIZE",
+        "IMG_W_REAL_DIMENSIONS",
+        "IMG_WO_DIMENSIONS"
+      ],
+      "approach": "Engine can compare rendered/attribute dimensions against the image natural dimensions and flag CSS/attr down-scaling of large images as candidates; confirming these are true thumbnails needs a human.",
+      "notes": "naturalWidth vs displayed is DOM-detectable but srcset/responsive edge cases → conservative SEMI.",
+      "description": "Les vignettes et aperçus ne sont pas des images de taille supérieure redimensionnées côté client.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "120",
+      "id": "54386",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "OBJECT_WO_ALTERNATIVE",
+        "EMBED_WO_ALTERNATIVE",
+        "OBJECT_W_TYPE_IMAGE_W_ALT"
+      ],
+      "approach": "Engine detects object/embed lacking alternative content (nc candidates); adequacy of the alternative is human.",
+      "notes": "Presence of alternative content is DOM; pertinence human.",
+      "description": "Les objets inclus sont dotés d'une alternative textuelle appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "121",
+      "id": "54525",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "AUDIO",
+        "VIDEO"
+      ],
+      "approach": "Engine lists pages containing audio/video; presence of a nearby transcription or link to one is editorial/human.",
+      "notes": "No DOM signal for transcription; engine only lists media candidates.",
+      "description": "Chaque contenu audio et vidéo est accompagné de sa transcription textuelle.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "122",
+      "id": "53944",
+      "thema": "Images et médias",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "VIDEO_W_TRACK"
+      ],
+      "approach": "Detect video elements and whether they carry a <track kind=subtitles/captions>; video without track = nc, with = c.",
+      "notes": "Rubric explicitly lists video track as FULL-AUTO; applicability (video with speech) is the only caveat.",
+      "description": "Les vidéos comportent des sous-titres synchronisés.",
+      "implemented": false
+    },
+    {
+      "num": "123",
+      "id": "54413",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "VIDEO",
+        "AUDIO"
+      ],
+      "approach": "Engine lists media players; whether the duration is indicated in the immediate context is human (no dedicated attribute/text signal).",
+      "notes": "Duration text is free-form; only candidate listing is automatable.",
+      "description": "La durée des contenus vidéo ou audio est indiquée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "124",
+      "id": "54480",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "VIDEO",
+        "NEW"
+      ],
+      "approach": "The autoplay attribute on video is DOM-deterministic (nc), but autoplay triggered later via JS or unpredictable events needs the events sidecar / human.",
+      "notes": "autoplay attr = deterministic; JS-triggered playback is not, so c-verdict not guaranteed → SEMI.",
+      "description": "Les vidéos sont déclenchées par l'utilisateur.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "125",
+      "id": "54519",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "AUDIO",
+        "JS_AUDIO",
+        "NEW"
+      ],
+      "approach": "audio autoplay attribute is DOM-deterministic (nc); JS-triggered sound needs events sidecar / human.",
+      "notes": "Same shape as 124 for audio.",
+      "description": "Les sons sont déclenchés par l'utilisateur.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "126",
+      "id": "54437",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "BLINK",
+        "MARQUEE",
+        "IMG_ANIMATED",
+        "AUDIO"
+      ],
+      "approach": "Engine flags blink/marquee/animated-gif/audio as animation candidates; whether a pause/stop control exists is behavioral/human.",
+      "notes": "Presence of animation is detectable; 'can be paused' is behavioral.",
+      "description": "Les animations, sons et clignotements peuvent être mis en pause.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "127",
+      "id": "53976",
+      "thema": "Images et médias",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "IMG_ANIMATED",
+        "BLINK",
+        "MARQUEE"
+      ],
+      "approach": "Engine flags animated content as candidates; whether an intro animation blocks access to content is behavioral/human.",
+      "notes": "Blocking behavior not DOM-determinable.",
+      "description": "Le déroulement des animations ne bloque pas la navigation ou l'accès aux contenus.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "128",
+      "id": "54465",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "",
+      "notes": "Editorial: verify every phone number carries the +international prefix. Reliable extraction of free-text phone numbers is not deterministic; no catalog signal.",
+      "description": "L'indicatif international est disponible pour tous les numéros de téléphone.",
+      "implemented": false
+    },
+    {
+      "num": "129",
+      "id": "54403",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "",
+      "notes": "Editorial: explicit country mention in every postal address. No DOM/HTTP signal; requires human reading of address blocks.",
+      "description": "Le pays est précisé pour toutes les adresses postales.",
+      "implemented": false
+    },
+    {
+      "num": "130",
+      "id": "54438",
+      "thema": "Internationalisation",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "HTML_W_LANG_ATTR",
+        "HTML_W_LANG_ATTR_VALID"
+      ],
+      "approach": "check html lang attribute present (or inherited) + valid BCP-47 subtag",
+      "notes": "DOM-only deterministic. htmlLanguage=presence, htmlValidLanguage/htmlElementLanguage=validity. 'Pertinence' (code matches actual content language) is a minor judgment residue but the BP core is fully automatable.",
+      "description": "Le code source de chaque page indique la langue principale du contenu.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "131",
+      "id": "54373",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "",
+      "notes": "Requires detecting that a link's TARGET page is in a different language and judging whether the user is warned (label/icon/context). Needs cross-page language detection + editorial judgment; no signal.",
+      "description": "La langue principale de la page cible d'un lien est identifiable lorsqu'elle diffère de celle de la page d'origine.",
+      "implemented": false
+    },
+    {
+      "num": "132",
+      "id": "54439",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "",
+      "notes": "Detecting inline runs of foreign-language text (to check for a lang attr) requires automatic language detection, not a deterministic DOM signal. Conservative → MANUAL.",
+      "description": "Chaque changement de langue est signalé.",
+      "implemented": false
+    },
+    {
+      "num": "133",
+      "id": "54466",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "",
+      "notes": "Requires following translation links and confirming they land on the translation of the CURRENT page (not the homepage). Navigation + editorial equivalence judgment; no signal.",
+      "description": "Les liens d'accès aux versions traduites pointent directement vers la traduction de la page courante.",
+      "implemented": false
+    },
+    {
+      "num": "134",
+      "id": "54060",
+      "thema": "Internationalisation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "",
+      "notes": "Editorial: each language-switch link must be written in its target language. Requires per-link language judgment; no deterministic signal.",
+      "description": "Les liens vers les versions équivalentes des contenus sont rédigés dans leur langue cible.",
+      "implemented": false
+    },
+    {
+      "num": "135",
+      "id": "54389",
+      "thema": "Internationalisation",
+      "category": "SIDECAR",
+      "confidence": "med",
+      "reuse": [
+        "HTTP_CONTENT_LANGUAGE"
+      ],
+      "approach": "content negotiation: send varying Accept-Language headers, compare returned Content-Language / served language",
+      "notes": "Deterministic but needs multiple HTTP requests with different Accept-Language and observation of the negotiated response. httpLanguage covers Content-Language; full negotiation test is partly NEW.",
+      "description": "Le serveur respecte l'ordre préférentiel de langues des outils de consultation.",
+      "implemented": false,
+      "deferred": "négociation de langue: nécessite requêtes Accept-Language variées + comparaison, non fiable"
+    },
+    {
+      "num": "136",
+      "id": "54491",
+      "thema": "Liens",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "A_WO_TEXT",
+        "A_WO_TEXT_W_IMG",
+        "A_NOT_ANCHOR_WO_TEXT",
+        "A_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR"
+      ],
+      "approach": "Detect empty links (no text, image-link with empty/missing alt) -> nc; deterministic DOM",
+      "notes": "Classic empty-link family; c/nc decidable in DOM",
+      "description": "Chaque lien est doté d'un intitulé dans le code source.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "137",
+      "id": "54508",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "A_W_INVALID_TEXT_W_IMG_W_INVALID_ALT_ATTR",
+        "A_W_TEXT_WO_IMG_NOT_UNIQUE"
+      ],
+      "approach": "Flag generic/non-descriptive link text ('cliquez ici','en savoir plus','lire la suite') + duplicate labels; human judges relevance",
+      "notes": "Whether label describes function is editorial -> i+details",
+      "description": "Le libellé de chaque lien décrit sa fonction ou la nature du contenu vers lequel il pointe.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "138",
+      "id": "54176",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "In already-auto.json",
+      "notes": "",
+      "description": "Les liens de même nature ont des couleurs, des formes et des comportements identiques sur toutes les pages.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "139",
+      "id": "53930",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_UNDERLINE"
+      ],
+      "approach": "List underlined text not inside <a> (and links not underlined); human confirms nature",
+      "notes": "Underline reserved to links -> i+details",
+      "description": "Le soulignement est réservé aux liens.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "140",
+      "id": "54520",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "In already-auto.json",
+      "notes": "",
+      "description": "Les liens sont visuellement différenciés du reste du contenu.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "141",
+      "id": "54421",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "CTIE_VISITED_LINKS_STYLE"
+      ],
+      "approach": "In already-auto.json (:visited selector detection)",
+      "notes": "",
+      "description": "Les liens visités et non visités sont visuellement différenciés.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "142",
+      "id": "54411",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "CTIE_LINKS_EXTERNAL",
+        "MORE_EXT_THEN_INT_LINKS"
+      ],
+      "approach": "List external vs internal links (by domain); human checks visual/textual/behavioural differentiation",
+      "notes": "Differentiation itself is visual -> i+details",
+      "description": "Les liens internes et externes sont différenciés.",
+      "implemented": false
+    },
+    {
+      "num": "143",
+      "id": "53972",
+      "thema": "Liens",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "List internal links; human marks those to auth-restricted content and checks differentiation",
+      "notes": "Restricted-target set is business knowledge; engine only lists candidates",
+      "description": "Les liens internes vers les contenus à accès limité sont différenciés.",
+      "implemented": false
+    },
+    {
+      "num": "144",
+      "id": "54036",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "A_W_MAILTO_HREF_ATTRIBUTE"
+      ],
+      "approach": "In already-auto.json (mailto/external-app links)",
+      "notes": "",
+      "description": "Les liens provoquant l'ouverture d'un logiciel externe ont un libellé explicite.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "145",
+      "id": "53931",
+      "thema": "Liens",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Detect a[href^='tel:'] present / phone-like text not wrapped in tel: link -> c/nc",
+      "notes": "Rubric: tel: protocol on phone links is FULL-AUTO; A_W_HREF_NOT_HTTP partially covers tel hrefs",
+      "description": "Les numéros de téléphone sont activables via le protocole approprié.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "146",
+      "id": "54440",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "A_W_TARGET_ATTR_BLANK",
+        "TARGET_BLANK",
+        "JS_WINDOW_OPEN",
+        "JS_NEW_WINDOW"
+      ],
+      "approach": "Flag target=_blank links and window.open usages; human checks explicit warning present",
+      "notes": "New-window trigger is DOM-detectable; warning presence is editorial",
+      "description": "L'utilisateur est averti des ouvertures de nouvelles fenêtres.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "147",
+      "id": "54462",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "RESOURCE_DOWNLOADABLE",
+        "RESOURCE_PDF",
+        "CTIE_PDF"
+      ],
+      "approach": "List download links (by extension/type); human checks format is indicated in context",
+      "notes": "Candidate listing automatable; format-mention judged by human",
+      "description": "Le format des fichiers proposés en téléchargement est indiqué.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "148",
+      "id": "54499",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "RESOURCE_DOWNLOADABLE"
+      ],
+      "approach": "List internal download links; human checks file size is indicated",
+      "notes": "Size may need HTTP content-length; mention is editorial -> i+details",
+      "description": "La taille des fichiers internes proposés en téléchargement est indiquée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "149",
+      "id": "54504",
+      "thema": "Liens",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "RESOURCE_DOWNLOADABLE"
+      ],
+      "approach": "List download links; human checks language of file indicated when differing",
+      "notes": "Language-diff is semantic; engine only lists candidates",
+      "description": "La langue des fichiers en téléchargement est précisée lorsqu'elle diffère de celle de la page d'origine.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "150",
+      "id": "53968",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "In already-auto.json",
+      "notes": "",
+      "description": "Le nommage des fichiers internes proposés en téléchargement permet d'en identifier le contenu et la provenance.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "151",
+      "id": "54422",
+      "thema": "Liens",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "In already-auto.json",
+      "notes": "",
+      "description": "La mise en place de liens entrants n’est ni interdite ni restreinte.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "152",
+      "id": "54144",
+      "thema": "Liens",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "INLINKS"
+      ],
+      "approach": "Crawl internal links, check HTTP status codes (no 404)",
+      "notes": "Needs HTTP status via sidecar",
+      "description": "Tous les liens internes sont valides.",
+      "implemented": false,
+      "deferred": "validité de tous les liens internes: crawl lourd (des dizaines de requêtes) + plomberie DOM, différé perf/risque"
+    },
+    {
+      "num": "153",
+      "id": "54057",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Immediate access, no interstitial/ad/warning gate",
+      "notes": "Behavioural/business judgment, no reliable DOM signal",
+      "description": "Si les contenus ou services ne sont pas réservés à un public spécifique, leur accès est immédiat.",
+      "implemented": false
+    },
+    {
+      "num": "154",
+      "id": "54377",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "JS_POPUP",
+        "JS_WINDOW_OPEN",
+        "JS_NEW_WINDOW"
+      ],
+      "approach": "Flag popup/window.open triggers fired on load/navigation; human confirms",
+      "notes": "Popup-on-navigation is behavioural; JS usage is a signal only",
+      "description": "La navigation ne provoque pas l'ouverture de popups.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "155",
+      "id": "54005",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Flag presence of an explicit home link (href to '/' or home) distinct from logo link",
+      "notes": "Presence detectable; 'explicit + distinct from logo' needs human check",
+      "description": "Il est possible de revenir à la page d'accueil depuis toutes les pages.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "156",
+      "id": "54507",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Detect breadcrumb markup (nav[aria-label~=breadcrumb]/ol.breadcrumb); human confirms relevance",
+      "notes": "Single-page presence check; pertinence judged by human",
+      "description": "Chaque page affiche une information permettant de connaître son emplacement dans l'arborescence.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "157",
+      "id": "54165",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Flag menus lacking an active-item marker (aria-current / .active/.current class)",
+      "notes": "Active-item signalling detectable as candidates; visual differentiation judged by human",
+      "description": "Les items actifs de menu sont signalés.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "158",
+      "id": "54441",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Same-nature nav blocks at same location across all pages",
+      "notes": "Cross-page consistency -> single-page engine cannot compare",
+      "description": "Les blocs de navigation de même nature sont affichés aux mêmes emplacements sur toutes les pages.",
+      "implemented": false
+    },
+    {
+      "num": "159",
+      "id": "54442",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "A_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR",
+        "A_WO_TEXT_W_IMG_W_INVALID_ALT_ATTR"
+      ],
+      "approach": "Flag nav icons (img/a/button/input) without accessible name; human checks legend is explicit",
+      "notes": "Missing name deterministic; 'explicit/pertinent' is human judgment",
+      "description": "Les icônes de navigation sont accompagnées d'une légende explicite.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "160",
+      "id": "54417",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Close buttons visually attached/contiguous to their content",
+      "notes": "Visual proximity, no DOM-deterministic signal",
+      "description": "Les mécanismes de fermeture de fenêtres sont visuellement rattachés à leur contenu.",
+      "implemented": false
+    },
+    {
+      "num": "161",
+      "id": "54112",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Close mechanisms available immediately on display",
+      "notes": "Behavioural (modal/floating video) judgment",
+      "description": "Les mécanismes de fermetures de fenêtres sont immédiatement disponibles.",
+      "implemented": false
+    },
+    {
+      "num": "162",
+      "id": "54192",
+      "thema": "Navigation",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "In already-auto.json",
+      "notes": "",
+      "description": "Les nouvelles fenêtres dimensionnées et les fenêtres modales sont dotées d'un bouton de fermeture explicite.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "163",
+      "id": "54469",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Close mechanisms at same location across all pages",
+      "notes": "Cross-page consistency -> MANUAL",
+      "description": "Les mécanismes de fermetures de fenêtres sont affichés aux mêmes emplacements sur toutes les pages.",
+      "implemented": false
+    },
+    {
+      "num": "164",
+      "id": "54443",
+      "thema": "Navigation",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "ACCESSIBILITY_LINK"
+      ],
+      "approach": "Detect skip links (access to menu/content/search) at start of source",
+      "notes": "Rubric: presence of a skip link is FULL-AUTO; effectiveness/first-tab is extra",
+      "description": "Chaque page contient des liens d'accès rapide placés au début du code source.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "165",
+      "id": "54514",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_FOCUS_STYLE",
+        "CSS_FOCUS_COLOR"
+      ],
+      "approach": "Flag CSS removing focus indicator (outline:none / outline:0) without replacement",
+      "notes": "Outline suppression detectable in CSS; masking judged by human",
+      "description": "Le focus clavier n'est ni supprimé ni masqué.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "166",
+      "id": "54483",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Full keyboard operability of all interactive content",
+      "notes": "Requires interactive keyboard testing",
+      "description": "La navigation au clavier permet d'interagir avec l’intégralité des contenus et services.",
+      "implemented": false
+    },
+    {
+      "num": "167",
+      "id": "54174",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [
+        "ACCESSKEY_ATTR"
+      ],
+      "approach": "Predictable keyboard order across pages",
+      "notes": "Cross-page + behavioural; positive tabindex only a weak signal",
+      "description": "La navigation au clavier s'effectue dans un ordre prévisible.",
+      "implemented": false
+    },
+    {
+      "num": "168",
+      "id": "54502",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "INPUT_W_TYPE_SEARCH"
+      ],
+      "approach": "Detect internal search field/form (input[type=search], role=search); human confirms it is the site search",
+      "notes": "Presence detectable; 'internal search engine' needs confirmation",
+      "description": "Un moteur de recherche interne est proposé.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "169",
+      "id": "53937",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Each results page reachable via a web address",
+      "notes": "Behavioural: run a search then inspect URL",
+      "description": "Chaque page de résultats de recherche peut être atteinte via une adresse web.",
+      "implemented": false
+    },
+    {
+      "num": "170",
+      "id": "53947",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Relaunch search from results page with pre-filled editable form",
+      "notes": "Behavioural/interaction; pre-fill state not statically determinable",
+      "description": "Il est possible de relancer une recherche depuis sa page de résultats.",
+      "implemented": false
+    },
+    {
+      "num": "171",
+      "id": "54500",
+      "thema": "Navigation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "IMPLICIT_SITEMAP"
+      ],
+      "approach": "Detect a link to a sitemap page on the page; human confirms",
+      "notes": "Single-page presence check of sitemap link",
+      "description": "Un plan du site est disponible depuis chaque page.",
+      "implemented": false
+    },
+    {
+      "num": "172",
+      "id": "54113",
+      "thema": "Navigation",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "Time limits on actions/access are indicated",
+      "notes": "Semantic/behavioural, no DOM signal",
+      "description": "Les limites de temps imposées à une action ou un accès sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "173",
+      "id": "54496",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Double opt-in: requires subscribing and receiving a confirmation email; email round-trip + interaction.",
+      "notes": "",
+      "description": "L'inscription aux newsletters est soumise à un processus de confirmation.",
+      "implemented": false
+    },
+    {
+      "num": "174",
+      "id": "54446",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires receiving an actual newsletter email to check for an unsubscribe link; out of page-DOM scope.",
+      "notes": "",
+      "description": "Un lien de désinscription est présent dans chaque newsletter.",
+      "implemented": false
+    },
+    {
+      "num": "175",
+      "id": "54418",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Requires triggering the unsubscribe flow and confirming no confirmation email is sent; interaction + email.",
+      "notes": "",
+      "description": "La désinscription depuis une newsletter ne demande pas de confirmation par courriel.",
+      "implemented": false
+    },
+    {
+      "num": "176",
+      "id": "54054",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Requires finding a reachable unsubscribe form/page in navigation and confirming the unsubscribe is effective; interaction dominates the weak 'desinscription' text signal.",
+      "notes": "",
+      "description": "La désinscription aux newsletters est possible depuis le site.",
+      "implemented": false
+    },
+    {
+      "num": "177",
+      "id": "54259",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: whether the latest sent newsletter is available online via a link in the subscription context.",
+      "notes": "",
+      "description": "La dernière newsletter envoyée est disponible en ligne.",
+      "implemented": false
+    },
+    {
+      "num": "178",
+      "id": "54445",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: whether newsletter archives are available online; meaning-dependent.",
+      "notes": "",
+      "description": "Les archives de newsletters sont disponibles en ligne.",
+      "implemented": false
+    },
+    {
+      "num": "179",
+      "id": "54371",
+      "thema": "Newsletter",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Semantic: presence of an explicit (ideally figured) sending-frequency statement before subscribing.",
+      "notes": "",
+      "description": "La fréquence d'envoi des newsletters est consultable avant l'abonnement.",
+      "implemented": false
+    },
+    {
+      "num": "180",
+      "id": "54138",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Cross-page visual/brand consistency requires rendering and human comparison; no DOM signal.",
+      "notes": "",
+      "description": "La charte graphique est cohérente sur toutes les pages.",
+      "implemented": false
+    },
+    {
+      "num": "181",
+      "id": "54470",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Information conveyed by colour alone requires visual comparison of colour vs greyscale; engine has no rendering.",
+      "notes": "",
+      "description": "L'information n'est pas véhiculée uniquement par la couleur.",
+      "implemented": false
+    },
+    {
+      "num": "182",
+      "id": "54511",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Colour contrast ratio requires computed rendered colours; legacy DOM engine has no rendering. Rubric names this MANUAL.",
+      "notes": "",
+      "description": "Les contenus sont présentés avec un contraste suffisant par rapport à leur arrière-plan.",
+      "implemented": false
+    },
+    {
+      "num": "183",
+      "id": "54059",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Whether meaning survives CSS-off requires visual comparison; no reliable DOM signal.",
+      "notes": "",
+      "description": "Le contenu et le sens de chaque page ne sont pas altérés lorsque les styles sont désactivés.",
+      "implemented": false
+    },
+    {
+      "num": "184",
+      "id": "54396",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "References to a content's shape/position are editorial/semantic; no DOM signal.",
+      "notes": "",
+      "description": "Un contenu n'est pas désigné uniquement par sa forme ou par sa position à l'écran.",
+      "implemented": false
+    },
+    {
+      "num": "185",
+      "id": "54444",
+      "thema": "Présentation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_DISPLAY_NONE",
+        "CSS_VISIBILITY_HIDDEN",
+        "CSS_TEXT_INDENT_NEGATIVE"
+      ],
+      "approach": "Engine detects content hidden via display:none/visibility:hidden/off-screen techniques and flags it; whether that content should be exposed to a screen reader is human.",
+      "notes": "Hidden-technique detection is DOM; intent is human.",
+      "description": "Un contenu qui doit être restitué dans un lecteur d'écran ne lui est pas dissimulé.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "186",
+      "id": "54410",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Clickable target size (44/48px) needs computed layout geometry the legacy DOM engine does not render.",
+      "notes": "",
+      "description": "La taille des éléments cliquables est suffisante.",
+      "implemented": false
+    },
+    {
+      "num": "187",
+      "id": "54447",
+      "thema": "Présentation",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "Detecting text embedded in images requires visual/OCR judgment (logos/banners excluded); no DOM signal.",
+      "notes": "",
+      "description": "Les textes pouvant être mis en forme via des styles ne sont pas remplacés par des images.",
+      "implemented": false
+    },
+    {
+      "num": "188",
+      "id": "54170",
+      "thema": "Présentation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_CONTENT",
+        "CSS_BACKGROUND_IMAGE"
+      ],
+      "approach": "Engine flags CSS-generated content (content: property, CSS background images) as candidates; whether an appropriate HTML alternative exists is human.",
+      "notes": "Presence of generated content is DOM; alternative adequacy human.",
+      "description": "Les contenus générés via les styles sont dotés d'une alternative appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "189",
+      "id": "54173",
+      "thema": "Présentation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "CSS_CONTENT"
+      ],
+      "approach": "Engine can flag icon-font usage (CSS content with private-use glyphs / <i class> patterns) as candidates; alternative adequacy is human.",
+      "notes": "Icon-font detection is heuristic; alternative is human.",
+      "description": "Les pictogrammes typographiques sont dotés d'une alternative appropriée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "190",
+      "id": "54378",
+      "thema": "Présentation",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "CSS_GENERIC_FONT",
+        "CSS_SERIF_FONT"
+      ],
+      "approach": "Parse every font/font-family declaration and verify a generic family (serif/sans-serif/monospace/cursive/fantasy) is present as the last item — deterministic.",
+      "notes": "Pure CSS parse; relevance of the chosen generic is a minor caveat.",
+      "description": "Une famille générique de police est indiquée comme dernier élément de substitution.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "191",
+      "id": "54535",
+      "thema": "Présentation",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "CSS_TEXT_ALIGN_JUSTIFY",
+        "ALIGN_ATTR"
+      ],
+      "approach": "Detect text-align:justify in CSS and align=\"justify\" in HTML — deterministic nc.",
+      "notes": "Direct DOM/CSS presence check.",
+      "description": "Les styles ne justifient pas le texte.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "192",
+      "id": "54384",
+      "thema": "Présentation",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "CSS_UPPERCASE"
+      ],
+      "approach": "Engine can flag all-caps text runs and whether uppercasing is done via CSS text-transform vs literal capitals; whether literal caps are legitimate (acronyms/names) is human.",
+      "notes": "CSS text-transform detection is DOM; typographic legitimacy is human.",
+      "description": "Les mises en majuscules à des fins décoratives sont effectuées à l'aide des styles.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "193",
+      "id": "54103",
+      "thema": "Présentation",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Detect meta viewport with user-scalable=no or maximum-scale<=1 — deterministic nc. No existing expr, needs a new viewport check.",
+      "notes": "DOM meta viewport parse; deterministic.",
+      "description": "Les fonctionnalités de zoom ne sont pas bloquées.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "194",
+      "id": "54484",
+      "thema": "Présentation",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json.",
+      "notes": "",
+      "description": "Un ou plusieurs mécanismes dédiés à l’adaptation aux terminaux mobiles sont proposés.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "195",
+      "id": "54490",
+      "thema": "Présentation",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Listed in already-auto.json (print stylesheet detection, cf CSS_MEDIA_PRINT).",
+      "notes": "",
+      "description": "Des styles dédiés à l'impression sont proposés.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "196",
+      "id": "54448",
+      "thema": "Présentation",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "CSS_MEDIA_PRINT"
+      ],
+      "approach": "Engine detects a print stylesheet/@media print; whether nav blocks are actually hidden in print output needs print-preview inspection by a human.",
+      "notes": "Print CSS presence is DOM; effective hiding of nav is judgment.",
+      "description": "Le contenu de chaque page est disponible à l'impression sans blocs de navigation.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "197",
+      "id": "54531",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check page + subresource request URLs all use https (transport scheme of actual requests)",
+      "notes": "http:// subresources are DOM-visible (see 200) but 'all pages use HTTPS' needs actual request scheme",
+      "description": "Toutes les pages utilisent le protocole HTTPS.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "198",
+      "id": "54510",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "TLS certificate signed & valid — requires TLS handshake/chain inspection, not in DOM nor HTTP headers",
+      "notes": "sidecar carries headers+events, not cert chain; a 10-yr DOM engine cannot validate certs",
+      "description": "Les certificats de sécurité sont signés et en cours de validité.",
+      "implemented": false
+    },
+    {
+      "num": "199",
+      "id": "54481",
+      "thema": "Sécurité",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "Strict-Transport-Security header (already automated)",
+      "notes": "in already-auto.json",
+      "description": "Les pages utilisant HTTPS ont un entête de transport strict.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "200",
+      "id": "54392",
+      "thema": "Sécurité",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "scan src/href of img/script/link/etc. for http:// (mixed content) on an https page — deterministic nc",
+      "notes": "prompt lists mixed-content as a FULL-AUTO example",
+      "description": "Les pages utilisant le protocole HTTPS ne proposent pas de ressources HTTP.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "201",
+      "id": "54459",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "all password operations doable online (reset/change) — behavioral flow",
+      "notes": "",
+      "description": "Les opérations relatives aux mots de passe peuvent être effectuées intégralement en ligne.",
+      "implemented": false
+    },
+    {
+      "num": "202",
+      "id": "54043",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "user can choose/change password — behavioral flow",
+      "notes": "",
+      "description": "Les mots de passe peuvent être choisis ou changés par l'utilisateur.",
+      "implemented": false
+    },
+    {
+      "num": "203",
+      "id": "54495",
+      "thema": "Sécurité",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "password-strength feedback device (already automated)",
+      "notes": "in already-auto.json",
+      "description": "Un dispositif sensibilise l'utilisateur sur le degré de sécurisation du mot de passe qu'il choisit.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "204",
+      "id": "54530",
+      "thema": "Sécurité",
+      "category": "ALREADY-AUTO",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "password reset available (already automated)",
+      "notes": "in already-auto.json",
+      "description": "Les mots de passe peuvent être réinitialisés.",
+      "implemented": "v3-inherited"
+    },
+    {
+      "num": "205",
+      "id": "54383",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "passwords never emailed in clear — behavioral, requires mailbox inspection",
+      "notes": "",
+      "description": "Les mots de passe ne sont pas communiqués en clair.",
+      "implemented": false
+    },
+    {
+      "num": "206",
+      "id": "54260",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check X-Content-Type-Options response header = nosniff",
+      "notes": "deterministic, header only",
+      "description": "Les entêtes envoyés par le serveur désactivent la détection automatique du type MIME de chaque ressource.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "207",
+      "id": "54380",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check Content-Type response header present per resource",
+      "notes": "header only; matching value to resource type is deterministic per-response",
+      "description": "Le serveur indique le type MIME de chaque ressource.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "208",
+      "id": "54412",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "transaction-security information stated in help/FAQ — editorial content",
+      "notes": "",
+      "description": "Les informations sur la sécurité des transactions sont indiquées.",
+      "implemented": false
+    },
+    {
+      "num": "209",
+      "id": "54136",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "med",
+      "reuse": [],
+      "approach": "no directory autoindex listing — requires active probing of index-less directories, beyond header inspection",
+      "notes": "could be sidecar if engine actively fetches dirs, but not a standard DOM/header capability",
+      "description": "Le serveur n'envoie pas la liste des fichiers des répertoires n'ayant pas de page d'index.",
+      "implemented": false
+    },
+    {
+      "num": "210",
+      "id": "54382",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check X-XSS-Protection response header = 1; mode=block",
+      "notes": "deterministic, header only",
+      "description": "Le serveur envoie les informations d'activation de protection cross site scripting.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "211",
+      "id": "54167",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check X-Frame-Options response header = deny or sameorigin",
+      "notes": "deterministic, header only",
+      "description": "Le serveur envoie les informations indiquant les domaines autorisés à intégrer ses pages dans des cadres.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "212",
+      "id": "54532",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check presence of Content-Security-Policy response header",
+      "notes": "deterministic, header only",
+      "description": "Un mécanisme de sécurité restreint l'origine des contenus.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "213",
+      "id": "54463",
+      "thema": "Sécurité",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "check Server / X-Powered-By response headers do not leak software/language versions",
+      "notes": "header presence/value is deterministic; 'reveals too much' is a light heuristic",
+      "description": "Le serveur ne communique pas d'informations sur les logiciels et langages utilisés.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "214",
+      "id": "54087",
+      "thema": "Sécurité",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "xpath: external script[@src]/link[@href] must carry an @integrity (SRI) attribute — presence is DOM-deterministic",
+      "notes": "integrity presence is FULL-AUTO; classifying a resource as 'tierce/third-party' (cross-origin) is a domain compare, still deterministic",
+      "description": "Le contrôle d'intégrité des ressources tierces est présent et valide.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "215",
+      "id": "53994",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "secured operation offers >=2 strong-auth methods — behavioral flow",
+      "notes": "",
+      "description": "Les opérations sécurisées peuvent être validées par au moins deux moyens.",
+      "implemented": false
+    },
+    {
+      "num": "216",
+      "id": "54547",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "low",
+      "reuse": [],
+      "approach": "browser address bar not hidden — window.open with location=no; mostly behavioral/JS",
+      "notes": "reconstructed events might catch window.open features, but unreliable; conservative MANUAL",
+      "description": "L'affichage de la barre d'adresse du navigateur n'est pas bloqué.",
+      "implemented": false
+    },
+    {
+      "num": "217",
+      "id": "54591",
+      "thema": "Sécurité",
+      "category": "MANUAL",
+      "confidence": "high",
+      "reuse": [],
+      "approach": "SPF/DKIM/DMARC DNS records + mail-header signatures — DNS/email layer, no DOM/HTTP signal",
+      "notes": "",
+      "description": "Le domaine de messagerie est authentifié",
+      "implemented": false
+    },
+    {
+      "num": "218",
+      "id": "54468",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "HTTP_WWW"
+      ],
+      "approach": "request the host with and without the www prefix; both must resolve to the site",
+      "notes": "httpWithAndWoWww already models this; needs HTTP resolution of both hostnames.",
+      "description": "L'adresse du site fonctionne avec et sans préfixe www.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "219",
+      "id": "54505",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "ROBOTS_PRESENCE"
+      ],
+      "approach": "fetch /robots.txt at site root (fallback: meta name=robots in DOM)",
+      "notes": "Needs a resource fetch of /robots.txt. robotsPresence covers presence; meta-robots fallback is DOM.",
+      "description": "La racine du site contient des instructions pour les robots d'indexation.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "220",
+      "id": "54492",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "ROBOTS_W_VALID_SITEMAP",
+        "IMPLICIT_SITEMAP"
+      ],
+      "approach": "fetch /sitemap.xml at root, or the sitemap: directive in robots.txt",
+      "notes": "Needs resource fetch of sitemap.xml / robots.txt. robotsSitemap + implicitSitemap cover the detection.",
+      "description": "Le site propose un fichier sitemap indiquant les contenus à explorer.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "221",
+      "id": "54247",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "request with a mobile User-Agent and detect a forced 3xx redirect (Location to m./mobile site or app store)",
+      "notes": "Deterministic given a UA-varied request + redirect headers, but no existing catalog expression. Signal = mobile-UA redirect chain.",
+      "description": "Le serveur ne force pas la redirection vers la version ou l'application mobile.",
+      "implemented": false,
+      "deferred": "redirection mobile: fetch() MV3 ne peut PAS définir le User-Agent (entête interdit) → bloqué"
+    },
+    {
+      "num": "222",
+      "id": "54379",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "HTTP_404",
+        "RESOURCE_404"
+      ],
+      "approach": "request a random non-existent URL; assert HTTP status 404",
+      "notes": "Pure HTTP status-code check. http404/httpResource404 already model it.",
+      "description": "Le serveur envoie un code HTTP 404 pour les ressources non trouvées.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "223",
+      "id": "54477",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "med",
+      "reuse": [
+        "404_DEFAULT"
+      ],
+      "approach": "fetch a 404 response body and detect the default server page (Apache/IIS/Nginx) vs a custom page",
+      "notes": "html404 detects the default 404 page. Needs the 404 response (sidecar); 'coherent with the site' is a light judgment residue → med.",
+      "description": "Le serveur envoie une page d'erreur 404 personnalisée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "224",
+      "id": "54486",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "med",
+      "reuse": [
+        "RESOURCE_403"
+      ],
+      "approach": "obtain a 403 response and detect the default server error page vs a custom one",
+      "notes": "httpResource403 flags 403 resources. Needs a 403 response; custom-vs-default has a small judgment residue as in 223.",
+      "description": "Le serveur envoie une page d'interdiction 403 personnalisée.",
+      "implemented": false,
+      "deferred": "page 403: impossible de déclencher un 403 de façon déterministe → bloqué"
+    },
+    {
+      "num": "225",
+      "id": "54385",
+      "thema": "Serveur et performances",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "engine fetches the custom 404 page; human confirms the main navigation menu is present",
+      "notes": "Sidecar supplies the 404 page body, but identifying 'the main nav menu' on the error page is a judgment → SEMI.",
+      "description": "Le menu principal de navigation figure sur les pages d'erreur personnalisées.",
+      "implemented": false
+    },
+    {
+      "num": "226",
+      "id": "54506",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "HTTP_GZIP",
+        "HTTP_GZIP_ZIPPED_RESOURCES",
+        "HTTP_GZIP_JSON"
+      ],
+      "approach": "check Content-Encoding (gzip/br) on text resources (HTML/CSS/JS), skip already-compressed formats and <1Ko items",
+      "notes": "Deterministic on response headers + resource weights. httpGzip family already models the exclusions.",
+      "description": "Le serveur transmet des contenus compressés aux clients qui les acceptent.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "227",
+      "id": "54493",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "HTTP_CACHE",
+        "STATIC_ONE_MONTH_CACHE"
+      ],
+      "approach": "check Cache-Control / Expires headers on the page and its linked CSS/JS/image resources",
+      "notes": "httpCache + staticOneMonthCache cover cache-header detection across resources.",
+      "description": "Le serveur envoie les informations permettant la mise en cache des contenus.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "228",
+      "id": "54449",
+      "thema": "Serveur et performances",
+      "category": "SIDECAR",
+      "confidence": "high",
+      "reuse": [
+        "HTTP_CHARSET"
+      ],
+      "approach": "check charset in the Content-Type response header",
+      "notes": "httpCharset reads the header. 'Charset matches actual bytes' is a small residue but the BP core (charset present in header) is fully sidecar-automatable.",
+      "description": "Les entêtes envoyés par le serveur contiennent les informations relatives au jeu de caractères employé.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "229",
+      "id": "54501",
+      "thema": "Serveur et performances",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "inspect internal <style> content for newlines/indentation/comments as minification candidates; human confirms",
+      "notes": "'Internes' = inline stylesheets (DOM-available). Minification is heuristic (whitespace/comments) → conservative SEMI. No catalog expression.",
+      "description": "Les feuilles de style internes sont minifiées.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "230",
+      "id": "54521",
+      "thema": "Serveur et performances",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "inspect internal <script> content for newlines/indentation as minification candidates; human confirms",
+      "notes": "'Internes' = inline scripts (DOM-available). Minification heuristic → SEMI. No catalog expression.",
+      "description": "Les scripts internes sont minifiés.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "231",
+      "id": "54056",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Detecting <time datetime> markup is deterministic, but matching each displayed publication/update date to marked-up time elements requires a human to identify the dates. New expr for <time> element.",
+      "notes": "time element presence is DOM; mapping to dates is human.",
+      "description": "La date de publication ou de mise à jour des contenus est mise à disposition sous forme programmatique.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "232",
+      "id": "54450",
+      "thema": "Structure et code",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "META_CHARSET_VALID",
+        "META_CHARSET_REAL"
+      ],
+      "approach": "Detect presence of meta charset / meta http-equiv Content-Type with a charset — deterministic.",
+      "notes": "Direct DOM presence check.",
+      "description": "Le code source de chaque page contient une métadonnée qui définit le jeu de caractères.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "233",
+      "id": "54381",
+      "thema": "Structure et code",
+      "category": "SIDECAR",
+      "confidence": "med",
+      "reuse": [
+        "HTTP_CHARSET",
+        "CHARSET_UNICODE",
+        "META_CHARSET_REAL"
+      ],
+      "approach": "Requires the HTTP Content-Type charset header (sidecar) and consistency with the meta charset; meta part is DOM but the rule's authority is the HTTP header.",
+      "notes": "HTTP header needed → sidecar.",
+      "description": "Le codage de caractères utilisé est UTF-8.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "234",
+      "id": "54513",
+      "thema": "Structure et code",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "H1",
+        "H1_TO_H6_HIERACHICAL_ERROR",
+        "HEADINGS_ERROR",
+        "H2_WO_H1"
+      ],
+      "approach": "Presence of an h1, presence of h2-h6, and no gaps in the descending heading sequence are all deterministic (including hidden/JS-generated headings in the DOM).",
+      "notes": "Classic deterministic heading-structure check.",
+      "description": "Le contenu de chaque page est organisé selon une structure de titres et sous-titres hiérarchisée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "235",
+      "id": "53935",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "FAKE_UNORDERED_LIST",
+        "FAKE_ORDERED_LIST",
+        "DIV_W_FAKE_LIST",
+        "P_W_FAKE_LIST"
+      ],
+      "approach": "Engine flags list-like blocks (bullet/number markers, line breaks) not marked up with ul/ol/dl; human confirms they are genuine lists. Rubric's canonical SEMI example.",
+      "notes": "Fake-list heuristics exist; confirmation is human.",
+      "description": "Les éléments visuellement présentés sous forme de liste sont balisés de façon appropriée dans le code source.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "236",
+      "id": "54451",
+      "thema": "Structure et code",
+      "category": "FULL-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Duplicate id detection across the DOM is trivially deterministic. No dedicated expr found → new check.",
+      "notes": "Pure DOM uniqueness check.",
+      "description": "Chaque identifiant HTML n'est utilisé qu'une seule fois par page.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "237",
+      "id": "54159",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine can flag copy-blocking techniques (oncopy/onselectstart handlers, CSS user-select:none) as candidates; confirming copy is actually blocked is behavioral/human.",
+      "notes": "Handler/CSS detection is DOM-ish; effect is behavioral.",
+      "description": "La copie du contenu n'est pas bloquée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "238",
+      "id": "54415",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "NEW"
+      ],
+      "approach": "Engine can flag oncontextmenu handlers that suppress the context menu as candidates; confirming the block is behavioral/human.",
+      "notes": "Event-handler detection is DOM-ish; effect is behavioral.",
+      "description": "L'accès au menu contextuel n'est pas bloqué.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "239",
+      "id": "54524",
+      "thema": "Structure et code",
+      "category": "FULL-AUTO",
+      "confidence": "med",
+      "reuse": [
+        "META_REFRESH",
+        "META_REFRESH_WO_DELAY",
+        "JS_REFRESH",
+        "HTTP_REFRESH"
+      ],
+      "approach": "meta http-equiv=refresh detection is deterministic nc; JS/HTTP redirects covered by JS_REFRESH/HTTP_REFRESH sidecar. Rubric names meta refresh as FULL-AUTO.",
+      "notes": "Meta refresh deterministic; JS redirects are the residual caveat.",
+      "description": "Aucune redirection ou rafraîchissement automatique côté client n'est imposée.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "240",
+      "id": "54478",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "RESOURCE_PDF"
+      ],
+      "approach": "Engine lists internal PDF links as candidates; whether the PDF text is selectable requires opening the document (outside DOM) → human.",
+      "notes": "Engine cannot read PDF internals; only lists candidates.",
+      "description": "Le texte des documents PDF internes est sélectionnable.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "241",
+      "id": "54452",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "RESOURCE_PDF"
+      ],
+      "approach": "Engine lists internal PDFs as candidates; verifying a heading/bookmark structure inside the PDF is outside DOM → human.",
+      "notes": "PDF internals not accessible to the engine.",
+      "description": "Les documents PDF internes sont dotés d'une structure de titres.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "242",
+      "id": "54399",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "TD_WO_TH_OR_W_TH_WO_SCOPE_ATTR",
+        "TD_WO_HEADERS_ATTR_W_TH_WITH_ID",
+        "TH_WO_SCOPE_ATTR_WO_ID",
+        "TABLE_FOR_DATA"
+      ],
+      "approach": "Rich family checks th usage, scope values, and id/headers association deterministically; the residual judgment is confirming the table is a data table (vs layout) and header pertinence.",
+      "notes": "Linkage is deterministic; data-vs-layout applicability is the human catch.",
+      "description": "Les cellules des tableaux de données sont reliées à leurs entêtes.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "243",
+      "id": "54400",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "high",
+      "reuse": [
+        "TABLE_FOR_DATA_WO_CAPTION",
+        "CAPTION_WO_TEXT",
+        "TABLE_FOR_DATA_WO_FILLED_AND_UNIQUE_CAPTION"
+      ],
+      "approach": "Presence of a caption on a data table is deterministic (control itself says partially automatable); relevance of the caption text is human.",
+      "notes": "Caption presence auto; pertinence human.",
+      "description": "Les titres des tableaux de données sont renseignés.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "244",
+      "id": "54533",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "TABLE_LAYOUT"
+      ],
+      "approach": "Engine flags layout tables (no th/data association); whether the linearized order stays understandable is human.",
+      "notes": "Layout-table detection is DOM; linearized comprehension is human.",
+      "description": "La linéarisation des tableaux utilisés pour la mise en page ne nuit pas à la compréhension des contenus.",
+      "implemented": "overlay",
+      "tested": true
+    },
+    {
+      "num": "245",
+      "id": "54464",
+      "thema": "Structure et code",
+      "category": "SEMI-AUTO",
+      "confidence": "low",
+      "reuse": [
+        "TABLE_W_FAKE_TH",
+        "TABLE_W_FAKE_TH_LINE",
+        "TABLE_W_FAKE_TH_COLUMN"
+      ],
+      "approach": "Engine flags fake table headers / non-semantic tabular markup; detecting data tables rendered as images is visual → human.",
+      "notes": "Fake-th detection is DOM; table-as-image is visual.",
+      "description": "Les tableaux de données ne sont pas simulés.",
+      "implemented": "overlay",
+      "tested": true
+    }
+  ]
+}

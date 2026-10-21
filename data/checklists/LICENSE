@@ -1,0 +1,20 @@
+Opquast referential — checklist content
+Copyright (c) Opquast
+
+The checklist content in this directory (and its build-time copy under
+public/checklists/**) — criterion titles, sections, tags and phases — is taken
+from the Opquast referential "Qualité Numérique", distributed
+under the Creative Commons Attribution-ShareAlike 4.0 International license
+(CC BY-SA 4.0).
+
+  Full text:  ../../LICENSES/CC-BY-SA-4.0.txt
+  Reference:  https://checklists.opquast.com/fr/qualite-numerique/licence/
+
+Required attribution:
+  "Référentiel Opquast - Qualité Numérique" by Opquast, used under CC BY-SA 4.0.
+
+The content is redistributed verbatim (not adapted); only the display name of
+a checklist may be translated. The ShareAlike obligation
+applies to any adaptation of the referential itself.
+
+SPDX-License-Identifier: CC-BY-SA-4.0

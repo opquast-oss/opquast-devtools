@@ -1,0 +1,1082 @@
+{
+  "54406": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "5",
+    "thema": "Contenus",
+    "description": "The first occurrence of an abbreviation or an acronym in the body of any page gives access to an explanation of its meaning.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54442": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "159",
+    "thema": "Navigation",
+    "description": "Navigation icons are provided with an explicit legend.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54471": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "18",
+    "thema": "Données personnelles",
+    "description": "Account creation is subject to a confirmation process.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54472": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "23",
+    "thema": "Données personnelles",
+    "description": "It is possible to log out from private areas.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54473": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "60",
+    "thema": "E-Commerce",
+    "description": "Stored bank details can be modified or deleted.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54474": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "80",
+    "thema": "Formulaires",
+    "description": "If any data entered in the form are rejected, the reason(s) why are indicated to the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54475": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "90",
+    "thema": "Formulaires",
+    "description": "The user is warned when they will lose information if they go back using their browser’s history during a complex process.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54476": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "92",
+    "thema": "Formulaires",
+    "description": "Copy-and-paste is possible in the form’s fields.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54477": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "223",
+    "thema": "Serveur et performances",
+    "description": "The server sends a customised 404 Not found error page",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54478": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "240",
+    "thema": "Structure et code",
+    "description": "The text of internal PDF documents can be selected.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54479": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "69",
+    "thema": "Formulaires",
+    "description": "Each form field has its own label associated with it in the source code.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54480": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "124",
+    "thema": "Images et médias",
+    "description": "Videos are user-triggered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54481": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "199",
+    "thema": "Sécurité",
+    "description": "Pages using HTTPS have a strict transport header.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54482": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "63",
+    "thema": "E-Commerce",
+    "description": "Each invoice is subject to a confirmation email.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54483": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "166",
+    "thema": "Navigation",
+    "description": "Keyboard navigation allows users to interact with all content and services.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54484": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "194",
+    "thema": "Présentation",
+    "description": "There is at least one mechanism dedicated to adaptation to mobile devices.",
+    "tags": [
+      "Basics",
+      "Mobile"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54485": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "79",
+    "thema": "Formulaires",
+    "description": "If any data entered in the form are rejected, the fields containing the rejected data are indicated for the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54486": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "224",
+    "thema": "Serveur et performances",
+    "description": "The server sends a customised 403 “Forbidden” error page.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54487": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "62",
+    "thema": "E-Commerce",
+    "description": "The invoices issued are also available online",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54488": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "71",
+    "thema": "Formulaires",
+    "description": "Each form field’s label indicates whether or not it is a required field.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54490": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "195",
+    "thema": "Présentation",
+    "description": "Styles dedicated to printing are offered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54491": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "136",
+    "thema": "Liens",
+    "description": "Each link has a title in the source code.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54492": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "220",
+    "thema": "Serveur et performances",
+    "description": "The website provides a sitemap file listing the content to be crawled.",
+    "tags": [
+      "Basics",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54493": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "227",
+    "thema": "Serveur et performances",
+    "description": "The server sends information to enable the caching of contents",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54494": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "118",
+    "thema": "Images et médias",
+    "description": "Each information-carrying image has an appropriate text alternative.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54495": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "203",
+    "thema": "Sécurité",
+    "description": "A mechanism raises the user's awareness regarding their password's level of security",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54496": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "173",
+    "thema": "Newsletter",
+    "description": "Subscribing to newsletters is subject to a confirmation process.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54497": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "110",
+    "thema": "Identification et contact",
+    "description": "Each request for information is followed by an acknowledgement receipt.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54498": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "3",
+    "thema": "Contenus",
+    "description": "Each page’s source code contains metadata that describes the content.",
+    "tags": [
+      "Basics",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54499": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "148",
+    "thema": "Liens",
+    "description": "The size of the internal files available for downloading is indicated.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54500": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "171",
+    "thema": "Navigation",
+    "description": "The site map is available from every page.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54501": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "229",
+    "thema": "Serveur et performances",
+    "description": "Style sheets are minified.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54502": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "168",
+    "thema": "Navigation",
+    "description": "An internal search engine is provided.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54503": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "104",
+    "thema": "Identification et contact",
+    "description": "The source code of the pages contains a valid call to a favourite icon (“favicon”)",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54504": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "149",
+    "thema": "Liens",
+    "description": "The language of downloadable files is mentioned when it differs from the original page.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54505": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "219",
+    "thema": "Serveur et performances",
+    "description": "The website’s root contains instructions for web crawlers.",
+    "tags": [
+      "Basics",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54506": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "226",
+    "thema": "Serveur et performances",
+    "description": "The server transmits compressed contents to the clients which accept them.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54507": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "156",
+    "thema": "Navigation",
+    "description": "Each page displays information indicating its location in the tree structure.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54508": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "137",
+    "thema": "Liens",
+    "description": "Each link’s label describes either its function or the nature of the content of its target.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54509": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "30",
+    "thema": "E-Commerce",
+    "description": "A product or service can be purchased without creating an account.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54510": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "198",
+    "thema": "Sécurité",
+    "description": "Security certificates are signed and currently valid",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54511": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "182",
+    "thema": "Présentation",
+    "description": "Content is presented with sufficient contrast to its background.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54512": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "66",
+    "thema": "E-Commerce",
+    "description": "An email providing the transaction’s reference number and the order details is sent after order placement.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54513": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "234",
+    "thema": "Structure et code",
+    "description": "Each page’s content is organized according to a hierarchical structure of headings and sub-headings.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54514": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "165",
+    "thema": "Navigation",
+    "description": "Keyboard focus isn't removed or masked.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54515": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "59",
+    "thema": "E-Commerce",
+    "description": "Personal banking information is only stored after the explicit consent of the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54516": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "27",
+    "thema": "Données personnelles",
+    "description": "Exchanges of sensitive data are securely transmitted and reported as such.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54517": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "58",
+    "thema": "E-Commerce",
+    "description": "At least two payment methods are accepted.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54518": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "117",
+    "thema": "Images et médias",
+    "description": "Each image link has an appropriate text alternative.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54519": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "125",
+    "thema": "Images et médias",
+    "description": "Sounds are user-triggered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54520": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "140",
+    "thema": "Liens",
+    "description": "Links are visually differentiated from the rest of the content.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54521": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "230",
+    "thema": "Serveur et performances",
+    "description": "Scripts of the website are minified.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54522": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "103",
+    "thema": "Identification et contact",
+    "description": "Each page provides a title that enables one to identify its content",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54523": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "75",
+    "thema": "Formulaires",
+    "description": "The creation of a password by the user is subject to a mechanism for the prevention of input errors.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54524": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "239",
+    "thema": "Structure et code",
+    "description": "No automatic redirection or auto-refresh is imposed on the client side.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54525": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "121",
+    "thema": "Images et médias",
+    "description": "Each audio and video content is accompanied by a text transcription.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54526": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "87",
+    "thema": "Formulaires",
+    "description": "Complex processes are accompanied by a list of their steps.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54528": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "76",
+    "thema": "Formulaires",
+    "description": "The characters entered in a password field can be displayed in an un-encrypted text.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54531": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "197",
+    "thema": "Sécurité",
+    "description": "All pages use the HTTPS protocol.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54532": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "212",
+    "thema": "Sécurité",
+    "description": "A security mechanism restricts the origin of content.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54534": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "17",
+    "thema": "Données personnelles",
+    "description": "Account creation is possible without the need to use a third-party identification system.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54541": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "68",
+    "thema": "E-Commerce",
+    "description": "The origin of the products is indicated.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54547": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "216",
+    "thema": "Sécurité",
+    "description": "The browser address bar display is not blocked.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54548": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "96",
+    "thema": "Formulaires",
+    "description": "Two-factor authentication procedures can be restarted.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54591": {
+    "checklist": {
+      "id": 901,
+      "name": "Opquast Basics"
+    },
+    "name": "217",
+    "thema": "Sécurité",
+    "description": "The email domain is authenticated",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  }
+}

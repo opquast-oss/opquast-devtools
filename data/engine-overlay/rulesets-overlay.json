@@ -1,0 +1,2512 @@
+{
+  "53924": {
+    "INPUT_W_TYPE_CHECKBOX": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type CHECKBOX n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type CHECKBOX a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_FILE": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type FILE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type FILE a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_PASSWORD": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type PASSWORD n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type PASSWORD a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_RADIO": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type RADIO n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type RADIO a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_TEXT": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type TEXT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type TEXT a été détecté",
+        "result": "i"
+      }
+    },
+    "SELECT": {
+      "onfalse": {
+        "comment": "Aucun élément SELECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément SELECT a été détecté",
+        "result": "i"
+      }
+    },
+    "TEXTAREA": {
+      "onfalse": {
+        "comment": "Aucun élément TEXTAREA n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément TEXTAREA a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "53930": {
+    "CSS_UNDERLINE": {
+      "onfalse": {
+        "comment": "Aucun élément autre que A souligné",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément autre que A souligné",
+        "result": "nc"
+      }
+    }
+  },
+  "53931": {
+    "OQS_V5_UNLINKED_PHONE": {
+      "onfalse": {
+        "chain": {
+          "OQS_V5_TEL_LINK": {
+            "onfalse": {
+              "comment": "Aucun numéro de téléphone détecté sur la page",
+              "result": "c"
+            },
+            "ontrue": {
+              "comment": "Des numéros de téléphone sont activés via tel: — confirmer que tous les numéros affichés le sont",
+              "result": "i"
+            }
+          }
+        },
+        "comment": "Aucun numéro de téléphone potentiel non balisé détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un numéro de téléphone potentiel non activé via le protocole tel: détecté",
+        "result": "i"
+      }
+    }
+  },
+  "53935": {
+    "FAKE_UNORDERED_LIST": {
+      "onfalse": {
+        "chain": {
+          "FAKE_ORDERED_LIST": {
+            "onfalse": {
+              "comment": "Aucune liste simulée n'a été détectée",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins une liste ordonnée simulée a été détectée",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Aucune liste non ordonnée simulée n'a été détectée",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins une liste non ordonnée simulée a été détectée",
+        "result": "nc"
+      }
+    }
+  },
+  "53939": {
+    "OQS_V5_REFERRER_HEADER": {
+      "onfalse": {
+        "comment": "La politique de communication du referer est spécifiée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun entête Referrer-Policy",
+        "result": "nc"
+      }
+    }
+  },
+  "53942": {
+    "OQS_V5_PRECHECKED_INPUT": {
+      "onfalse": {
+        "comment": "Aucune case à cocher ou bouton radio coché par défaut n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une case à cocher ou un bouton radio coché par défaut (opt-out) a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "53944": {
+    "OQS_V5_VIDEO_WO_SUBTITLES": {
+      "onfalse": {
+        "comment": "Aucune vidéo dépourvue de piste de sous-titres",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une vidéo ne comporte pas de piste de sous-titres synchronisés (élément track kind=subtitles ou captions)",
+        "result": "nc"
+      }
+    }
+  },
+  "53950": {
+    "RSS_PRESENCE": {
+      "onfalse": {
+        "comment": "Absence de syndication",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Présence de syndication",
+        "result": "i"
+      }
+    }
+  },
+  "53968": {
+    "APPLET": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "53971": {
+    "SELECT_W_3_OPTIONS": {
+      "onfalse": {
+        "comment": "Aucun élément SELECT avec 3 OPTION ou plus n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément SELECT avec 3 OPTION ou plus a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "53976": {
+    "IMG_ANIMATED": {
+      "onfalse": {
+        "comment": "Aucune image animée n'a été détectée",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins une image animée a été détectée",
+        "result": "i"
+      }
+    },
+    "BLINK": {
+      "onfalse": {
+        "comment": "Aucun élément BLINK n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément BLINK a été détecté",
+        "result": "i"
+      }
+    },
+    "MARQUEE": {
+      "onfalse": {
+        "comment": "Aucun élément MARQUEE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément MARQUEE a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54004": {
+    "OQS_V5_TERMS_LINK": {
+      "onfalse": {
+        "comment": "Aucun lien vers des conditions générales/de vente/d'utilisation détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un lien vers des conditions de vente/d'utilisation détecté — confirmer la cible et la présence sur toutes les pages",
+        "result": "i"
+      }
+    }
+  },
+  "54005": {
+    "OQS_V5_HOME_LINK": {
+      "onfalse": {
+        "comment": "Aucun lien explicite vers la page d'accueil n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un lien candidat vers la page d'accueil a été détecté ; vérifier qu'il est explicite et distinct de l'éventuel lien sur le logo",
+        "result": "i"
+      }
+    }
+  },
+  "54036": {
+    "BLINK": {
+      "onfalse": {
+        "comment": "Aucun élément BLINK n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément BLINK a été détecté",
+        "result": "nc"
+      }
+    }
+  },
+  "54056": {
+    "OQS_V5_TIME_DATETIME": {
+      "onfalse": {
+        "comment": "Aucun élément TIME doté d'un attribut DATETIME n'a été détecté — si des dates de publication ou de mise à jour sont affichées, vérifier qu'elles sont balisées avec TIME[datetime]",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément TIME doté d'un attribut DATETIME a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54063": {
+    "LEGEND": {
+      "onfalse": {
+        "comment": "Aucun élément LEGEND n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "LEGEND_WO_FILLED_AND_UNIQUE_TEXT": {
+            "onfalse": {
+              "comment": "Aucun élément LEGEND vide ou non unique n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément LEGEND vide ou non unique a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément LEGEND a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54087": {
+    "OQS_V5_EXT_RESOURCE_WO_SRI": {
+      "onfalse": {
+        "comment": "Aucune ressource externe (script/link) sans attribut integrity",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une ressource externe sans attribut integrity",
+        "result": "nc"
+      }
+    }
+  },
+  "54103": {
+    "OQS_V5_VIEWPORT_ZOOM_BLOCKED": {
+      "onfalse": {
+        "comment": "Le zoom n'est pas bloqué par la métadonnée viewport",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Le zoom est bloqué (user-scalable=no / maximum-scale=1)",
+        "result": "nc"
+      }
+    }
+  },
+  "54158": {
+    "OQS_V5_CONTACT_MEANS": {
+      "onfalse": {
+        "comment": "Aucun moyen de contact (mailto:, tel:, formulaire de contact) détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un moyen de contact détecté — confirmer qu'au moins deux moyens joignables sont proposés",
+        "result": "i"
+      }
+    }
+  },
+  "54159": {
+    "OQS_V5_COPY_BLOCK": {
+      "onfalse": {
+        "comment": "Aucune technique de blocage de la copie (oncopy/oncut/onselectstart/CSS user-select) n'a été détectée",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins une technique susceptible de bloquer la copie du contenu a été détectée ; vérifier manuellement que la copie reste possible via le navigateur",
+        "result": "i"
+      }
+    }
+  },
+  "54165": {
+    "OQS_V5_NAV_WO_ACTIVE": {
+      "onfalse": {
+        "comment": "Aucun menu de navigation dépourvu de marqueur d'item actif n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un menu de navigation dépourvu de marqueur d'item actif (aria-current/.active/.current) a été détecté ; vérifier la différenciation visuelle de l'item actif",
+        "result": "i"
+      }
+    }
+  },
+  "54167": {
+    "OQS_V5_XFRAME_HEADER": {
+      "onfalse": {
+        "comment": "Les entêtes indiquent les domaines autorisés à intégrer la page",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Ni X-Frame-Options ni CSP frame-ancestors",
+        "result": "nc"
+      }
+    }
+  },
+  "54170": {
+    "CSS_BACKGROUND_IMAGE": {
+      "onfalse": {
+        "comment": "Aucune image ajoutée par CSS n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins une image ajoutée par CSS a été détecté",
+        "result": "i"
+      }
+    },
+    "OQS_V5_GENERATED_CONTENT": {
+      "onfalse": {
+        "comment": "Aucun contenu généré par CSS n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu généré par CSS a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54173": {
+    "OQS_V5_GENERATED_CONTENT": {
+      "onfalse": {
+        "comment": "Aucun contenu généré par CSS n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu généré par CSS a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54180": {
+    "IMG": {
+      "onfalse": {
+        "comment": "Aucune image n'a été détectée",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "CSS_IMG_RESIZE": {
+            "onfalse": {
+              "comment": "Aucune image redimensionnée côté client (WIDTH/HEIGHT) n'a été détectée",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins une image redimensionnée côté client a été détectée",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins une image a été détectée",
+        "result": "i"
+      }
+    }
+  },
+  "54192": {
+    "APPLET": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET a été détecté",
+        "result": "i"
+      }
+    },
+    "AREA_NOT_ANCHOR": {
+      "onfalse": {
+        "comment": "Aucun élément AREA ni vide, ni ancre n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément AREA ni vide, ni ancre a été détecté",
+        "result": "i"
+      }
+    },
+    "A_NOT_ANCHOR": {
+      "onfalse": {
+        "comment": "Aucun élément A non ancre n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément A non ancre a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54260": {
+    "OQS_V5_NOSNIFF_HEADER": {
+      "onfalse": {
+        "comment": "La détection automatique du type MIME est désactivée (nosniff)",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Pas de X-Content-Type-Options: nosniff",
+        "result": "nc"
+      }
+    }
+  },
+  "54360": {
+    "OQS_V5_PUBLICATION_DATE": {
+      "onfalse": {
+        "comment": "Aucun contenu de type article/time détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Contenu de type article/time détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54377": {
+    "JS_POPUP": {
+      "onfalse": {
+        "comment": "Aucune pop-up n'a été détectée",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins une pop-up a été détectée",
+        "result": "nc"
+      }
+    }
+  },
+  "54378": {
+    "CSS_GENERIC_FONT": {
+      "onfalse": {
+        "comment": "Aucune CSS ne se terminant par une police non générique n'a été détectée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une CSS se terminant par une police non générique a été détectée",
+        "result": "nc"
+      }
+    }
+  },
+  "54379": {
+    "OQS_V5_HTTP_404": {
+      "onfalse": {
+        "comment": "Le serveur renvoie bien un code 404 pour une ressource inexistante",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Le serveur ne renvoie pas de code 404 pour une ressource inexistante",
+        "result": "nc"
+      }
+    }
+  },
+  "54380": {
+    "OQS_V5_CONTENTTYPE_HEADER": {
+      "onfalse": {
+        "comment": "Le serveur indique le type MIME (Content-Type)",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun entête Content-Type",
+        "result": "nc"
+      }
+    }
+  },
+  "54381": {
+    "OQS_V5_UTF8_HEADER": {
+      "onfalse": {
+        "comment": "Le codage de caractères est UTF-8",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Le codage de caractères n'est pas UTF-8",
+        "result": "nc"
+      }
+    }
+  },
+  "54382": {
+    "OQS_V5_XSS_HEADER": {
+      "onfalse": {
+        "comment": "La protection XSS est activée par les entêtes",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun entête X-XSS-Protection",
+        "result": "nc"
+      }
+    }
+  },
+  "54384": {
+    "CSS_UPPERCASE": {
+      "onfalse": {
+        "comment": "Aucune suite de majuscules décoratives n'a été détectée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une suite de majuscules décoratives a été détectée",
+        "result": "nc"
+      }
+    }
+  },
+  "54385": {
+    "OQS_V5_ERROR404_NAV": {
+      "onfalse": {
+        "comment": "La page d'erreur 404 personnalisée comporte une navigation principale",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "La page d'erreur 404 ne comporte pas de navigation principale (page par défaut du serveur ou page personnalisée sans menu)",
+        "result": "nc"
+      }
+    }
+  },
+  "54386": {
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "OBJECT_WO_ALTERNATIVE": {
+            "onfalse": {
+              "comment": "Les éléments OBJECT disposent d'un contenu alternatif",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément OBJECT sans alternative a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "EMBED_WO_ALTERNATIVE": {
+            "onfalse": {
+              "comment": "Les éléments EMBED disposent d'une alternative",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément EMBED sans alternative a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément EMBED a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54391": {
+    "APPLET": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED a été détecté",
+        "result": "i"
+      }
+    },
+    "IMG_ANIMATED": {
+      "onfalse": {
+        "comment": "Aucun élément animé",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément animé",
+        "result": "i"
+      }
+    },
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54392": {
+    "OQS_V5_MIXED_CONTENT": {
+      "onfalse": {
+        "comment": "Aucune ressource chargée via HTTP sur une page HTTPS n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une ressource (image, script, CSS, média…) est chargée via HTTP sur une page HTTPS",
+        "result": "nc"
+      }
+    }
+  },
+  "54399": {
+    "TABLE": {
+      "onfalse": {
+        "comment": "Aucun élément TABLE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "TH_WO_FILLED_AND_UNIQUE_ID_WO_SCOPE_ATTR": {
+            "onfalse": {
+              "chain": {
+                "TD_WO_TH_OR_W_TH_WO_SCOPE_ATTR": {
+                  "onfalse": {
+                    "comment": "Aucun élément TD dont le HEADERS ne correspond à aucun TH n'a été détecté",
+                    "result": "i"
+                  },
+                  "ontrue": {
+                    "comment": "Au moins un élément TD dont le HEADERS ne correspond à aucun TH a été détecté",
+                    "result": "nc"
+                  }
+                }
+              },
+              "comment": "Aucun élément TH sans ID unique ni SCOPE n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément TH sans ID unique ni SCOPE a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément TABLE a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54400": {
+    "TABLE_FOR_DATA": {
+      "onfalse": {
+        "comment": "Aucun élément TABLE contenant un élément THEAD, TFOOT ou TH n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "TABLE_FOR_DATA_WO_CAPTION": {
+            "onfalse": {
+              "comment": "Aucun élément TABLE de données sans CAPTION n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément TABLE de données sans CAPTION a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément TABLE contenant un élément THEAD, TFOOT ou TH a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54404": {
+    "OQS_V5_DATE_NUMERIC_FORMAT": {
+      "onfalse": {
+        "comment": "Aucune date en format ambigu détectée (dates explicites ou absence de dates)",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une date en format numérique détectée (mois numérique et/ou année sur 2 chiffres) — confirmer que c'est bien une date affichée et non un champ de saisie",
+        "result": "i"
+      }
+    }
+  },
+  "54406": {
+    "ABBR_W_FILLED_TITLE_ATTR": {
+      "onfalse": {
+        "comment": "Aucun élément ABBR détecté (vérifier manuellement la présence d'acronymes non balisés)",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément ABBR avec TITLE non vide a été détecté",
+        "result": "i"
+      }
+    },
+    "ACRONYM_W_FILLED_TITLE_ATTR": {
+      "onfalse": {
+        "comment": "Aucun élément ACRONYM détecté (vérifier manuellement la présence d'acronymes non balisés)",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément ACRONYM avec un TITLE non vide a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54407": {
+    "OQS_V5_COPYRIGHT_SIGNAL": {
+      "onfalse": {
+        "comment": "Aucune mention de droits de copie/réutilisation ni lien vers une page de droits/mentions détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Un signal de droits de copie/réutilisation (©, mention ou lien) a été détecté — confirmer qu'il couvre la copie et la réutilisation",
+        "result": "i"
+      }
+    }
+  },
+  "54409": {
+    "IMG": {
+      "onfalse": {
+        "comment": "Aucun élément IMG n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "CSS_IMG_RESIZE": {
+            "onfalse": {
+              "comment": "Aucun élément IMG avec un WIDTH ou HEIGHT redimensionné",
+              "result": "c"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément IMG avec un WIDTH ou HEIGHT redimensionné",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément IMG a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54411": {
+    "OQS_V5_EXTERNAL_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien externe détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Des liens externes ont été détectés ; vérifier qu'ils sont différenciés des liens internes (mention textuelle, icône ou comportement)",
+        "result": "i"
+      }
+    }
+  },
+  "54413": {
+    "AUDIO": {
+      "onfalse": {
+        "comment": "Aucun contenu audio n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu audio a été détecté",
+        "result": "i"
+      }
+    },
+    "VIDEO": {
+      "onfalse": {
+        "comment": "Aucun contenu vidéo n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu vidéo a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54414": {
+    "INPUT_W_TYPE_TEXT": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type TEXT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément INPUT de type TEXT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54415": {
+    "OQS_V5_CONTEXTMENU_BLOCK": {
+      "onfalse": {
+        "comment": "Aucun gestionnaire ONCONTEXTMENU n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un gestionnaire ONCONTEXTMENU susceptible de bloquer le menu contextuel a été détecté ; vérifier manuellement que le menu contextuel reste accessible",
+        "result": "i"
+      }
+    }
+  },
+  "54421": {
+    "JS_EVENT_CLICK": {
+      "onfalse": {
+        "comment": "Aucun ONCLICK sur un élément focusable n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un ONCLICK sur un élément focusable a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54422": {
+    "APPLET_IN_A": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET dans un A n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET dans un A a été détecté",
+        "result": "i"
+      }
+    },
+    "APPLET_IN_BUTTON": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET dans un BUTTON n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET dans un BUTTON a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED_IN_A": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED dans un A n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED dans un A a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED_IN_BUTTON": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED dans un BUTTON n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED dans un BUTTON a été détecté",
+        "result": "i"
+      }
+    },
+    "IMG_IN_A": {
+      "onfalse": {
+        "comment": "Aucun élément IMG dans un A n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément IMG dans un A a été détecté",
+        "result": "i"
+      }
+    },
+    "IMG_IN_BUTTON": {
+      "onfalse": {
+        "comment": "Aucun élément IMG dans un BUTTON n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément IMG dans un BUTTON a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT_IN_A": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT dans un A n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT dans un A a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT_IN_BUTTON": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT dans un BUTTON n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT dans un BUTTON a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54427": {
+    "OQS_V5_URL_CREDENTIALS": {
+      "onfalse": {
+        "comment": "Aucun lien ne transmet d'identifiant de session ou de crédentiaux en clair dans l'URL",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un lien transmet un identifiant de session / des crédentiaux en clair dans l'URL — à confirmer",
+        "result": "i"
+      }
+    }
+  },
+  "54435": {
+    "SELECT_W_3_OPTIONS": {
+      "onfalse": {
+        "comment": "Aucun élément SELECT avec 3 OPTION ou plus n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "SELECT_W_3_OPTIONS_WO_OPTGROUP": {
+            "onfalse": {
+              "comment": "Aucun élément SELECT avec 3 OPTION ou plus et sans OPTGROUP n'a été détecté",
+              "result": "c"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément SELECT avec 3 OPTION ou plus et sans OPTGROUP a été détecté",
+              "result": "i"
+            }
+          }
+        },
+        "comment": "Au moins un élément SELECT avec 3 OPTION ou plus a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54436": {
+    "IMG": {
+      "onfalse": {
+        "comment": "Aucune image n'a été détectée",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "IMG_WO_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Toutes les images possèdent un attribut ALT",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins une image sans attribut ALT a été détectée — une image décorative doit porter un attribut ALT présent mais vide",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins une image a été détectée",
+        "result": "i"
+      }
+    }
+  },
+  "54437": {
+    "BLINK": {
+      "onfalse": {
+        "comment": "Aucun élément BLINK n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément BLINK a été détecté",
+        "result": "i"
+      }
+    },
+    "MARQUEE": {
+      "onfalse": {
+        "comment": "Aucun élément MARQUEE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément MARQUEE a été détecté",
+        "result": "i"
+      }
+    },
+    "IMG_ANIMATED": {
+      "onfalse": {
+        "comment": "Aucune image animée n'a été détectée",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins une image animée a été détectée",
+        "result": "i"
+      }
+    },
+    "AUDIO": {
+      "onfalse": {
+        "comment": "Aucun contenu audio n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu audio a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54438": {
+    "HTML_W_LANG_ATTR": {
+      "onfalse": {
+        "comment": "Aucun attribut LANG sur l'élément HTML n'a été détecté",
+        "result": "nc"
+      },
+      "ontrue": {
+        "chain": {
+          "HTML_W_LANG_ATTR_VALID": {
+            "onfalse": {
+              "comment": "L'attribut LANG de l'élément HTML est vide, absent ou incorrect",
+              "result": "nc"
+            },
+            "ontrue": {
+              "comment": "L'attribut LANG de l'élément HTML est correct",
+              "result": "c"
+            }
+          }
+        },
+        "comment": "Un attribut LANG sur l'élément HTML a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54440": {
+    "A_W_TARGET_ATTR_BLANK": {
+      "onfalse": {
+        "comment": "Aucun élément A avec un TARGET blank n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément A avec un TARGET blank a été détecté",
+        "result": "i"
+      }
+    },
+    "JS_NEW_WINDOW": {
+      "onfalse": {
+        "comment": "Aucun événement clavier ou souris n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un événement clavier ou souris a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54442": {
+    "A_W_IMG_W_EMPTY_ALT_ATTR": {
+      "onfalse": {
+        "comment": "Aucun élément A avec un IMG ayant un attribut ALT vide n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "A_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément IMG seul enfant d'un élément A et avec un attribut ALT vide n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément IMG seul enfant d'un élément A et avec un attribut ALT vide a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément A avec un IMG ayant un attribut ALT vide a été détecté",
+        "result": "i"
+      }
+    },
+    "BUTTON_W_IMG_W_EMPTY_ALT_ATTR": {
+      "onfalse": {
+        "comment": "Aucun élément BUTTON avec un IMG ayant un attribut ALT vide n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "BUTTON_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément IMG seul enfant d'un élément BUTTON et avec un attribut ALT vide n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément IMG seul enfant d'un élément BUTTON et avec un attribut ALT vide a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément BUTTON avec un IMG ayant un attribut ALT vide a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54443": {
+    "ACCESSIBILITY_LINK": {
+      "onfalse": {
+        "comment": "Le lien accessibilité est absent",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Le lien accessibilité est présent",
+        "result": "c"
+      }
+    }
+  },
+  "54444": {
+    "CSS_DISPLAY_NONE": {
+      "onfalse": {
+        "comment": "Aucun élément en display none n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément en display none a été détecté",
+        "result": "i"
+      }
+    },
+    "CSS_VISIBILITY_HIDDEN": {
+      "onfalse": {
+        "comment": "Aucun élément en visibility hidden n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément en visibility hidden a été détecté",
+        "result": "i"
+      }
+    },
+    "CSS_TEXT_INDENT_NEGATIVE": {
+      "onfalse": {
+        "comment": "Aucun texte indenté négativement dans les styles n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un texte indenté négativement dans les styles a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54449": {
+    "OQS_V5_CHARSET_HEADER": {
+      "onfalse": {
+        "comment": "Les entêtes précisent le codage de caractères",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun charset dans le Content-Type des entêtes",
+        "result": "nc"
+      }
+    }
+  },
+  "54450": {
+    "META_CHARSET_VALID": {
+      "onfalse": {
+        "comment": "Aucune métadonnée précisant le CHARSET n'a été détectée",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Une métadonnée précisant le CHARSET est présente",
+        "result": "c"
+      }
+    }
+  },
+  "54451": {
+    "OQS_V5_DUPLICATE_ID": {
+      "onfalse": {
+        "comment": "Aucun identifiant HTML dupliqué",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un identifiant HTML est utilisé plusieurs fois",
+        "result": "nc"
+      }
+    }
+  },
+  "54452": {
+    "OQS_V5_PDF_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien PDF",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Liens PDF à vérifier (structure de titres ?)",
+        "result": "i"
+      }
+    }
+  },
+  "54457": {
+    "OQS_V5_CONTACT_ADDRESS": {
+      "onfalse": {
+        "comment": "Aucun signal d'adresse postale ou de téléphone détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Un signal de contact (lien tel:, élément ADDRESS, motif téléphone/code postal) a été détecté — confirmer que l'adresse complète et le téléphone sont présents",
+        "result": "i"
+      }
+    }
+  },
+  "54462": {
+    "OQS_V5_DOWNLOAD_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien de téléchargement",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Liens de téléchargement à vérifier (le format est-il indiqué ?)",
+        "result": "i"
+      }
+    }
+  },
+  "54463": {
+    "OQS_V5_SERVER_LEAK": {
+      "onfalse": {
+        "comment": "Aucune version logicielle divulguée dans les entêtes",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Une version logicielle est divulguée (Server/X-Powered-By)",
+        "result": "nc"
+      }
+    }
+  },
+  "54464": {
+    "TABLE_FOR_DATA2": {
+      "onfalse": {
+        "comment": "Aucun élément TABLE de données n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "TABLE_FOR_DATA2_W_TH": {
+            "onfalse": {
+              "chain": {
+                "TABLE_W_FAKE_TH": {
+                  "onfalse": {
+                    "comment": "Aucun élément TABLE avec des TH simulés n'a été détecté",
+                    "result": "i"
+                  },
+                  "ontrue": {
+                    "comment": "Au moins un élément TABLE avec des TH simulés a été détecté",
+                    "result": "nc"
+                  }
+                }
+              },
+              "comment": "Au moins un élément TABLE de données sans TH a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Aucun élément TABLE de données sans TH n'a été détecté",
+              "result": "c"
+            }
+          }
+        },
+        "comment": "Au moins un élément TABLE de données a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54468": {
+    "OQS_V5_WWW_VARIANT": {
+      "onfalse": {
+        "comment": "Le site répond avec et sans préfixe www",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "La variante www/non-www ne répond pas",
+        "result": "nc"
+      }
+    }
+  },
+  "54476": {
+    "OQS_V5_PASTE_BLOCK": {
+      "onfalse": {
+        "comment": "Aucun blocage inline du copier/coller détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un champ de formulaire bloque le copier/coller via un gestionnaire inline (onpaste/oncopy/oncut/onselectstart ou user-select:none)",
+        "result": "nc"
+      }
+    }
+  },
+  "54477": {
+    "OQS_V5_CUSTOM_404": {
+      "onfalse": {
+        "comment": "La page 404 est personnalisée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "La page 404 est la page par défaut du serveur",
+        "result": "nc"
+      }
+    }
+  },
+  "54478": {
+    "OQS_V5_PDF_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien PDF",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Liens PDF à vérifier (texte sélectionnable ?)",
+        "result": "i"
+      }
+    }
+  },
+  "54479": {
+    "DATALIST": {
+      "onfalse": {
+        "comment": "Aucun élément DATALIST n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "DATALIST_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément DATALIST sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément DATALIST sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément DATALIST a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_CHECKBOX": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type CHECKBOX n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_CHECKBOX_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type CHECKBOX sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type CHECKBOX sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type CHECKBOX a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_COLOR": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type COLOR n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_COLOR_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type COLOR sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type COLOR sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type COLOR a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_DATE": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type DATE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_DATE_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type DATE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type DATE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type DATE a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_EMAIL": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type EMAIL n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_EMAIL_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type EMAIL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type EMAIL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type EMAIL a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_FILE": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type FILE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_FILE_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type FILE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type FILE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type FILE a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_NUMBER": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type NUMBER n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_NUMBER_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type NUMBER sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type NUMBER sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type NUMBER a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_PASSWORD": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type PASSWORD n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_PASSWORD_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type PASSWORD sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type PASSWORD sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type PASSWORD a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_RADIO": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type RADIO n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_RADIO_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type RADIO sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type RADIO sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type RADIO a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_RANGE": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type RANGE n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_RANGE_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type RANGE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type RANGE sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type RANGE a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_SEARCH": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type SEARCH n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_SEARCH_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type SEARCH sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type SEARCH sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type SEARCH a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_TEL": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type TEL n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_TEL_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type TEL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type TEL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type TEL a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_TEXT": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type TEXT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_TEXT_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type TEXT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type TEXT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type TEXT a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_TIME": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type TIME n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_TIME_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type TIME sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type TIME sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type TIME a été détecté",
+        "result": "i"
+      }
+    },
+    "INPUT_W_TYPE_URL": {
+      "onfalse": {
+        "comment": "Aucun élément INPUT de type URL n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "INPUT_W_TYPE_URL_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément INPUT de type URL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément INPUT de type URL sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément INPUT de type URL a été détecté",
+        "result": "i"
+      }
+    },
+    "KEYGEN": {
+      "onfalse": {
+        "comment": "Aucun élément KEYGEN n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "KEYGEN_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément KEYGEN sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément KEYGEN sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément KEYGEN a été détecté",
+        "result": "i"
+      }
+    },
+    "METER": {
+      "onfalse": {
+        "comment": "Aucun élément METER n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "METER_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément METER sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément METER sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément METER a été détecté",
+        "result": "i"
+      }
+    },
+    "OPTGROUP": {
+      "onfalse": {
+        "comment": "Aucun élément OPTGROUP n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "OPTGROUP_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément OPTGROUP sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément OPTGROUP sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément OPTGROUP a été détecté",
+        "result": "i"
+      }
+    },
+    "OUTPUT": {
+      "onfalse": {
+        "comment": "Aucun élément OUTPUT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "OUTPUT_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément OUTPUT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément OUTPUT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément OUTPUT a été détecté",
+        "result": "i"
+      }
+    },
+    "PROGRESS": {
+      "onfalse": {
+        "comment": "Aucun élément PROGRESS n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "PROGRESS_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément PROGRESS sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément PROGRESS sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément PROGRESS a été détecté",
+        "result": "i"
+      }
+    },
+    "SELECT": {
+      "onfalse": {
+        "comment": "Aucun élément SELECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "SELECT_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément SELECT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément SELECT sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément SELECT a été détecté",
+        "result": "i"
+      }
+    },
+    "TEXTAREA": {
+      "onfalse": {
+        "comment": "Aucun élément TEXTAREA n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "TEXTAREA_WO_TITLE_ATTR_WO_LABEL_WO_ARIA-LABEL_ATTR_WO_ARIA-LABELLEDBY_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément TEXTAREA sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément TEXTAREA sans attribut TITLE, ni LABEL, ni attribut ARIA-LABEL, ni attribut ARIA-LABELLEDBY a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément TEXTAREA a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54480": {
+    "OQS_V5_VIDEO_AUTOPLAY": {
+      "onfalse": {
+        "comment": "Aucune vidéo avec l'attribut AUTOPLAY n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins une vidéo avec l'attribut AUTOPLAY a été détecté — la vidéo est déclenchée automatiquement au chargement de la page",
+        "result": "nc"
+      }
+    }
+  },
+  "54490": {
+    "CSS_MEDIA_PRINT": {
+      "onfalse": {
+        "comment": "Aucune CSS pour l'impression n'a été détectée",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Au moins une CSS pour l'impression a été détectée",
+        "result": "c"
+      }
+    }
+  },
+  "54491": {
+    "A_WO_TEXT": {
+      "onfalse": {
+        "comment": "Aucun élément A vide n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "A_NOT_ANCHOR_WO_TEXT": {
+            "onfalse": {
+              "comment": "Aucun élément A vide n'a été détecté",
+              "result": "c"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément A vide a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément A vide a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54492": {
+    "OQS_V5_SITEMAP": {
+      "onfalse": {
+        "comment": "Un sitemap.xml est proposé",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun sitemap.xml",
+        "result": "nc"
+      }
+    }
+  },
+  "54493": {
+    "OQS_V5_CACHE": {
+      "onfalse": {
+        "comment": "Les ressources statiques envoient des entêtes de cache",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une ressource statique sans entête de cache",
+        "result": "nc"
+      }
+    }
+  },
+  "54494": {
+    "IMG": {
+      "onfalse": {
+        "comment": "Aucune image n'a été détectée",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "IMG_WO_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Toutes les images possèdent un attribut ALT",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins une image sans attribut ALT a été détectée — une image porteuse d'information doit avoir une alternative textuelle",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins une image a été détectée",
+        "result": "i"
+      }
+    },
+    "AREA": {
+      "onfalse": {
+        "comment": "Aucun élément AREA n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "AREA_WO_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Tous les éléments AREA possèdent un attribut ALT",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément AREA sans attribut ALT a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément AREA a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "OBJECT_WO_ALTERNATIVE": {
+            "onfalse": {
+              "comment": "Les éléments OBJECT disposent d'un contenu alternatif",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément OBJECT sans alternative a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54495": {
+    "FORM": {
+      "onfalse": {
+        "comment": "Aucun élément FORM n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément FORM a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54498": {
+    "META_DESCRIPTION_FILLED": {
+      "onfalse": {
+        "comment": "Aucun élément META DESCRIPTION non vide n'a été détecté",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Un élément META DESCRIPTION non vide a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54499": {
+    "OQS_V5_DOWNLOAD_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien de téléchargement",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Liens de téléchargement à vérifier (la taille est-elle indiquée ?)",
+        "result": "i"
+      }
+    }
+  },
+  "54500": {
+    "OQS_V5_SITEMAP_LINK": {
+      "onfalse": {
+        "comment": "Aucun lien vers un plan du site détecté automatiquement — à vérifier manuellement",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Un lien vers un plan du site candidat a été détecté ; vérifier qu'il donne accès, directement ou indirectement, à l'ensemble des pages du site",
+        "result": "i"
+      }
+    }
+  },
+  "54501": {
+    "OQS_V5_INLINE_CSS_NOT_MINIFIED": {
+      "onfalse": {
+        "comment": "Aucune feuille de style interne non minifiée détectée (les CSS externes ne sont pas analysés par le moteur)",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une feuille de style interne (<style>) non minifiée détectée (sauts de ligne/indentation/commentaires)",
+        "result": "i"
+      }
+    }
+  },
+  "54502": {
+    "OQS_V5_SEARCH_FIELD": {
+      "onfalse": {
+        "comment": "Aucun moteur de recherche interne détecté sur la page — non conforme (si une recherche existe via un autre mécanisme, corriger manuellement)",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Un champ de recherche a été détecté — confirmer qu'il s'agit du moteur de recherche interne du site",
+        "result": "i"
+      }
+    }
+  },
+  "54503": {
+    "FAVICON": {
+      "onfalse": {
+        "comment": "Aucun appel valide à un favicon n'a été détecté",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Un appel valide à un favicon a été détecté",
+        "result": "c"
+      }
+    }
+  },
+  "54504": {
+    "OQS_V5_DOWNLOAD_LINKS": {
+      "onfalse": {
+        "comment": "Aucun lien de téléchargement",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Liens de téléchargement à vérifier (la langue est-elle indiquée si différente ?)",
+        "result": "i"
+      }
+    }
+  },
+  "54505": {
+    "OQS_V5_ROBOTS_TXT": {
+      "onfalse": {
+        "comment": "Un robots.txt valide est présent à la racine",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucun robots.txt valide à la racine",
+        "result": "nc"
+      }
+    }
+  },
+  "54506": {
+    "OQS_V5_GZIP": {
+      "onfalse": {
+        "comment": "Les contenus texte sont compressés",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une ressource texte non compressée",
+        "result": "nc"
+      }
+    }
+  },
+  "54507": {
+    "OQS_V5_BREADCRUMB": {
+      "onfalse": {
+        "comment": "Aucun fil d'Ariane n'a été détecté dans le code",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Un fil d'Ariane candidat a été détecté ; vérifier sa présence systématique et sa mise en forme identifiable",
+        "result": "i"
+      }
+    }
+  },
+  "54508": {
+    "A_W_TEXT_W_IMG": {
+      "onfalse": {
+        "comment": "Aucun élément A avec texte et contenant un IMG n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "chain": {
+          "A_W_INVALID_TEXT_W_IMG_W_INVALID_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Aucun élément A avec texte générique et contenant un IMG avec un attribut ALT générique n'a été détecté",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un élément A avec texte générique et contenant un IMG avec un attribut ALT générique a été détecté",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un élément A avec texte et contenant un IMG a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54513": {
+    "H1": {
+      "onfalse": {
+        "comment": "Aucun élément H1 n'a été détecté",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément H1 a été détecté",
+        "result": "c"
+      }
+    },
+    "H1_TO_H6_HIERACHICAL_ERROR": {
+      "onfalse": {
+        "comment": "Aucune interruption dans la hiérarchie des titres n'a été détectée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins une interruption dans la hiérarchie des titres a été détectée",
+        "result": "nc"
+      }
+    }
+  },
+  "54514": {
+    "CSS_FOCUS_STYLE": {
+      "onfalse": {
+        "comment": "Aucun outline supprimé",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "L'utilisation de la propriété OUTLINE avec la valeur 0 ou NONE constitue un risque. Vérifiez que cette utilisation n'enfreint pas les règles d'accessibilité.",
+        "result": "nc"
+      }
+    }
+  },
+  "54516": {
+    "OQS_V5_FORM_INSECURE_ACTION": {
+      "onfalse": {
+        "comment": "Aucun formulaire ne poste vers une URL http:// non sécurisée",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un formulaire poste vers une URL http:// non sécurisée",
+        "result": "nc"
+      }
+    }
+  },
+  "54518": {
+    "A_W_IMG_W_EMPTY_ALT_ATTR": {
+      "onfalse": {
+        "comment": "Aucun lien contenant une image à l'attribut ALT vide n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "A_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Les liens-images comportent un intitulé",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un lien-image sans texte dont l'image a un ALT vide a été détecté — le lien n'a pas d'intitulé accessible",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un lien contenant une image à l'attribut ALT vide a été détecté",
+        "result": "i"
+      }
+    },
+    "BUTTON_W_IMG_W_EMPTY_ALT_ATTR": {
+      "onfalse": {
+        "comment": "Aucun bouton contenant une image à l'attribut ALT vide n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "BUTTON_WO_TEXT_W_IMG_W_EMPTY_ALT_ATTR": {
+            "onfalse": {
+              "comment": "Les boutons-images comportent un intitulé",
+              "result": "i"
+            },
+            "ontrue": {
+              "comment": "Au moins un bouton-image sans texte dont l'image a un ALT vide a été détecté — le contrôle n'a pas d'intitulé accessible",
+              "result": "nc"
+            }
+          }
+        },
+        "comment": "Au moins un bouton contenant une image à l'attribut ALT vide a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54519": {
+    "OQS_V5_AUDIO_AUTOPLAY": {
+      "onfalse": {
+        "comment": "Aucun contenu audio avec l'attribut AUTOPLAY n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu audio avec l'attribut AUTOPLAY a été détecté — le son est déclenché automatiquement au chargement de la page",
+        "result": "nc"
+      }
+    }
+  },
+  "54521": {
+    "OQS_V5_INLINE_JS_NOT_MINIFIED": {
+      "onfalse": {
+        "comment": "Aucun script interne non minifié détecté (les scripts externes ne sont pas analysés par le moteur)",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un script interne (<script>) non minifié détecté (sauts de ligne/indentation)",
+        "result": "i"
+      }
+    }
+  },
+  "54522": {
+    "APPLET": {
+      "onfalse": {
+        "comment": "Aucun élément APPLET n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément APPLET a été détecté",
+        "result": "i"
+      }
+    },
+    "AREA_NOT_ANCHOR": {
+      "onfalse": {
+        "comment": "Aucun élément AREA ni vide, ni ancre n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément AREA ni vide, ni ancre a été détecté",
+        "result": "i"
+      }
+    },
+    "A_NOT_ANCHOR": {
+      "onfalse": {
+        "comment": "Aucun élément A non ancre n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément A non ancre a été détecté",
+        "result": "i"
+      }
+    },
+    "EMBED": {
+      "onfalse": {
+        "comment": "Aucun élément EMBED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément EMBED a été détecté",
+        "result": "i"
+      }
+    },
+    "OBJECT": {
+      "onfalse": {
+        "comment": "Aucun élément OBJECT n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément OBJECT a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54524": {
+    "META_REFRESH": {
+      "onfalse": {
+        "comment": "Aucun élément META avec un attribut HTTP-EQUIV ayant la valeur refresh n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "chain": {
+          "META_REFRESH_WO_DELAY": {
+            "onfalse": {
+              "comment": "Aucun élément META avec un attribut HTTP-EQUIV ayant la valeur refresh sans délai n'a été détecté",
+              "result": "nc"
+            },
+            "ontrue": {
+              "comment": "Un META avec un attribut HTTP-EQUIV ayant la valeur refresh sans délai est présent",
+              "result": "c"
+            }
+          }
+        },
+        "comment": "Un META avec un attribut HTTP-EQUIV ayant la valeur refresh est présent",
+        "result": "i"
+      }
+    }
+  },
+  "54525": {
+    "AUDIO": {
+      "onfalse": {
+        "comment": "Aucun contenu audio n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu audio a été détecté",
+        "result": "i"
+      }
+    },
+    "VIDEO": {
+      "onfalse": {
+        "comment": "Aucun contenu vidéo n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un contenu vidéo a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54529": {
+    "TITLE_W_TEXT": {
+      "onfalse": {
+        "comment": "TITLE est vide",
+        "result": "nc"
+      },
+      "ontrue": {
+        "comment": "TITLE est rempli",
+        "result": "i"
+      }
+    }
+  },
+  "54531": {
+    "OQS_V5_HTTPS_ALL": {
+      "onfalse": {
+        "comment": "La page et ses ressources sont servies en HTTPS",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "La page ou une ressource utilise HTTP",
+        "result": "nc"
+      }
+    }
+  },
+  "54532": {
+    "OQS_V5_CSP_HEADER": {
+      "onfalse": {
+        "comment": "Un mécanisme de sécurité (CSP) restreint l'origine des contenus",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Aucune Content-Security-Policy dans les entêtes",
+        "result": "nc"
+      }
+    }
+  },
+  "54533": {
+    "TABLE_LAYOUT": {
+      "onfalse": {
+        "comment": "Aucun élément TABLE de mise en page n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un élément TABLE de mise en page a été détecté",
+        "result": "i"
+      }
+    }
+  },
+  "54535": {
+    "CSS_TEXT_ALIGN_JUSTIFY": {
+      "onfalse": {
+        "comment": "Aucun texte justifié n'a été détecté",
+        "result": "c"
+      },
+      "ontrue": {
+        "comment": "Au moins un texte justifié a été détecté",
+        "result": "nc"
+      }
+    }
+  },
+  "54551": {
+    "OQS_V5_DISABLED_CONTROL": {
+      "onfalse": {
+        "comment": "Aucun bouton ou champ utilisant l'attribut DISABLED n'a été détecté",
+        "result": "na"
+      },
+      "ontrue": {
+        "comment": "Au moins un bouton ou champ utilise l'attribut DISABLED",
+        "result": "i"
+      }
+    }
+  },
+  "54555": {
+    "OQS_V5_UNICODE_HIJACK": {
+      "onfalse": {
+        "comment": "Aucun caractère Unicode détourné (mathématique/pleine chasse) détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Des caractères Unicode non alphabétiques simulant une mise en forme détectés — confirmer qu'il s'agit d'un détournement et non d'une écriture légitime",
+        "result": "i"
+      }
+    }
+  },
+  "54589": {
+    "OQS_V5_FIELD_WO_AUTOCOMPLETE": {
+      "onfalse": {
+        "comment": "Aucun champ susceptible de concerner des données personnelles et dépourvu de l'attribut AUTOCOMPLETE n'a été détecté",
+        "result": "i"
+      },
+      "ontrue": {
+        "comment": "Au moins un champ susceptible de concerner des données personnelles ne dispose pas de l'attribut AUTOCOMPLETE",
+        "result": "i"
+      }
+    }
+  }
+}

@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+# Fast, container-friendly quality gate on push: type-check + lint + format check + unit tests.
+# The Playwright suites (test:v5 / golden:v5) are intentionally NOT run here — keep them manual/CI.
+#
+# Opt-in (not active by default). Enable once per clone:
+#   git config core.hooksPath .githooks
+set -euo pipefail
+
+# Regenerate first: the type-check and the tests import generated files, which may be stale or
+# absent (fresh clone).
+echo "[pre-push] sync assets…"
+npm run --silent sync-assets >/dev/null
+
+echo "[pre-push] compile…"
+npm run --silent compile
+
+echo "[pre-push] lint…"
+npm run --silent lint
+
+echo "[pre-push] format check…"
+npm run --silent format:check
+
+echo "[pre-push] unit tests…"
+npm run --silent test
+
+echo "[pre-push] OK"

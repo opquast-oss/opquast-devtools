@@ -1,0 +1,61 @@
+{
+  "name": "opquast-devtools",
+  "description": "Opquast web quality checks in the browser DevTools (Chrome + Firefox, Manifest V3)",
+  "version": "0.7.0",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "sync-assets": "node scripts/sync-assets.mjs",
+    "derive-basics": "node scripts/derive-basics.mjs",
+    "postinstall": "wxt prepare",
+    "dev": "concurrently -k -n assets,wxt \"node scripts/watch-assets.mjs\" \"wxt\"",
+    "dev:firefox": "concurrently -k -n assets,wxt \"node scripts/watch-assets.mjs\" \"wxt -b firefox\"",
+    "build": "wxt build",
+    "build:firefox": "wxt build -b firefox",
+    "zip": "wxt zip",
+    "zip:firefox": "wxt zip -b firefox",
+    "sign:firefox": "web-ext sign --channel=unlisted --source-dir=.output/firefox-mv3 --artifacts-dir=.output/firefox-signed",
+    "compile": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "golden:v5": "node test/golden/golden-v5.mjs",
+    "golden:v5:update": "node test/golden/golden-v5.mjs --update",
+    "test:v5": "node test/v5/run.mjs",
+    "test:basics": "node test/basics/check-basics.mjs",
+    "e2e": "npm run build && npm run build:firefox && node test/e2e/run.mjs",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"scripts/**/*.mjs\" \"test/**/*.{mjs,ts}\" \"*.{ts,js,json}\"",
+    "format:check": "prettier --check \"src/**/*.ts\" \"scripts/**/*.mjs\" \"test/**/*.{mjs,ts}\" \"*.{ts,js,json}\""
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "concurrently": "^9.2.5",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "fake-indexeddb": "^6.2.5",
+    "globals": "^17.13.0",
+    "happy-dom": "^20.14.6",
+    "playwright": "^1.60.0",
+    "prettier": "^3.9.9",
+    "selenium-webdriver": "^4.50.0",
+    "typescript": "^5.7.0",
+    "typescript-eslint": "^8.71.1",
+    "vitest": "^4.1.11",
+    "web-ext": "^8.0.0",
+    "wxt": "^0.20.0"
+  },
+  "license": "MPL-1.1 OR GPL-2.0 OR LGPL-2.1",
+  "author": "Opquast",
+  "homepage": "https://github.com/Opquast/opquast-devtools",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Opquast/opquast-devtools.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Opquast/opquast-devtools/issues"
+  }
+}

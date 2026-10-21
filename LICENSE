@@ -1,0 +1,56 @@
+Opquast DevTools
+Copyright (c) 2026 Opquast
+
+This program is tri-licensed under the terms of ANY of the following licenses,
+at your option (the same tri-license as Opquast Desktop, from which parts of the
+analysis engine and checklist data derive):
+
+  - Mozilla Public License, version 1.1        (see LICENSES/MPL-1.1.txt)
+  - GNU General Public License, version 2      (see LICENSES/GPL-2.0.txt)
+  - GNU Lesser General Public License, v2.1    (see LICENSES/LGPL-2.1.txt)
+
+SPDX-License-Identifier: MPL-1.1 OR GPL-2.0 OR LGPL-2.1
+
+You may use, modify and redistribute this software under the terms of whichever
+of the three licenses you prefer.
+
+-------------------------------------------------------------------------------
+Third-party / vendored components
+-------------------------------------------------------------------------------
+
+The Opquast test engine vendored under `packages/opquast-test-runner/` is a
+separate project by Temesis SAS, distributed under the Mozilla Public License,
+version 2.0 (MPL-2.0, see LICENSES/MPL-2.0.txt). Its own license and copyright
+notices are kept intact within that directory
+(packages/opquast-test-runner/LICENSE) and are unaffected by the tri-license
+above.
+
+The V5 engine overlay under `data/engine-overlay/` (rules, rulesets and
+`oqs-tests-overlay.js`), Copyright (c) 2026 Opquast, extends that engine and is
+distributed under the same Mozilla Public License, version 2.0 (MPL-2.0, see
+LICENSES/MPL-2.0.txt), not under the tri-license above. Its notice is in
+`oqs-tests-overlay.js`.
+
+Bundled engine libraries copied into `public/engine/` at build time retain their
+respective upstream licenses: jQuery 3.7.1 + jQuery Migrate 3.5.2 (MIT, OpenJS
+Foundation) and JSCSSP `cssParser.js` (MPL-1.1 / GPL-2.0 / LGPL-2.1). See
+THIRD-PARTY.md for the full attribution.
+
+-------------------------------------------------------------------------------
+Checklist content (Opquast referential)
+-------------------------------------------------------------------------------
+
+The checklist content under `data/checklists/**` and `public/checklists/**`
+(criterion titles, sections, tags and phases) is taken from the Opquast
+referential, © Opquast, distributed under the Creative Commons
+Attribution-ShareAlike 4.0 International license (CC BY-SA 4.0, see
+LICENSES/CC-BY-SA-4.0.txt and
+https://checklists.opquast.com/fr/qualite-numerique/licence/).
+
+Required attribution:
+  "Référentiel Opquast - Qualité Numérique" by Opquast, used under CC BY-SA 4.0.
+
+This content is redistributed verbatim (not adapted); the ShareAlike obligation
+applies to any adaptation you may make of the referential itself.
+
+SPDX-License-Identifier for the checklist content: CC-BY-SA-4.0

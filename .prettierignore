@@ -1,0 +1,13 @@
+public/
+.output/
+.wxt/
+node_modules/
+packages/
+data/
+docs/
+**/*.generated.*
+package-lock.json
+test/golden/baseline-v5.json
+test/v5/cases.json
+CHANGELOG.md
+test/e2e/fixtures/

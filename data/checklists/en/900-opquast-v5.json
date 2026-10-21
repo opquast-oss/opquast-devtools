@@ -1,0 +1,3770 @@
+{
+  "53921": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "15",
+    "thema": "Données personnelles",
+    "description": "The privacy and confidentiality policy is available from any page.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53923": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "38",
+    "thema": "E-Commerce",
+    "description": "Users can still modify each item’s quantity, and add or delete one or more items, before the final validation of the order.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53924": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "39",
+    "thema": "E-Commerce",
+    "description": "The nature and quantifiable characteristics of products and services are indicated.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53925": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "49",
+    "thema": "E-Commerce",
+    "description": "The identity of third parties involved in transactions is specified.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53926": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "42",
+    "thema": "E-Commerce",
+    "description": "The conditions of financing are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53927": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "89",
+    "thema": "Formulaires",
+    "description": "Each step in a complex process allows the user to go back to the previous step.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53928": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "112",
+    "thema": "Identification et contact",
+    "description": "There is at least one way to contact customer service or support.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53929": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "114",
+    "thema": "Identification et contact",
+    "description": "The identity of the person or department responsible for the content is indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53930": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "139",
+    "thema": "Liens",
+    "description": "Underlining is reserved for links.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53931": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "145",
+    "thema": "Liens",
+    "description": "Telephone numbers can be enabled using the appropriate protocol.",
+    "tags": [
+      "Accessibilité",
+      "Mobile"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53935": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "235",
+    "thema": "Structure et code",
+    "description": "Elements that are visually displayed as lists are tagged in an appropriate way in the source code.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "53937": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "169",
+    "thema": "Navigation",
+    "description": "Each search results page can be reached via a web address.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53938": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "86",
+    "thema": "Formulaires",
+    "description": "The user is alerted at the beginning of a complex process to the nature of the required data and documents.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "53939": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "25",
+    "thema": "Données personnelles",
+    "description": "The headers sent by the server specify the communication policy of the referrers.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53940": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "20",
+    "thema": "Données personnelles",
+    "description": "Accounts and subscriptions opened online can be closed online by the same method.",
+    "tags": [
+      "Accessibilité",
+      "Privacy",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53942": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "33",
+    "thema": "E-Commerce",
+    "description": "Registration for ancillary services is not enabled by default.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53943": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "78",
+    "thema": "Formulaires",
+    "description": "The contextual information relating to a form field has a close visual-proximity to it.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "53944": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "122",
+    "thema": "Images et médias",
+    "description": "Videos have synchronized subtitles.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53945": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "37",
+    "thema": "E-Commerce",
+    "description": "The method for retrieving a dematerialised or digital product is specified before placing the order.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53947": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "170",
+    "thema": "Navigation",
+    "description": "It is possible to relaunch a search from its results page.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53949": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "67",
+    "thema": "E-Commerce",
+    "description": "Each complaint is issued with an acknowledgment of receipt.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53950": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "1",
+    "thema": "Contenus",
+    "description": "It is possible to find out about new content or services.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53968": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "150",
+    "thema": "Liens",
+    "description": "Internal names for downloadable files make it possible to identify their content and origin.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53971": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "94",
+    "thema": "Formulaires",
+    "description": "The lists of form options are presented in an identifiable order.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53972": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "143",
+    "thema": "Liens",
+    "description": "Internal links to restricted content are differentiated.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53976": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "127",
+    "thema": "Images et médias",
+    "description": "The running of video or any animation does not block access to navigation or content.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53977": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "82",
+    "thema": "Formulaires",
+    "description": "Custom error messages are expressed in the language of the form.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "53978": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "88",
+    "thema": "Formulaires",
+    "description": "The current step in a complex process is indicated.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "53986": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "56",
+    "thema": "E-Commerce",
+    "description": "The displayed prices show the applied taxes and any additional charges, as well as tax-exclusive prices.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "53988": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "47",
+    "thema": "E-Commerce",
+    "description": "The information relating to the delivery zones of the products or the realization of the services are indicated.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53992": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "40",
+    "thema": "E-Commerce",
+    "description": "The period of validity and conditions of special offers and promotions are indicated.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "53994": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "215",
+    "thema": "Sécurité",
+    "description": "Secure operations can be validated by at least two means.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "53998": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "32",
+    "thema": "E-Commerce",
+    "description": "No additional products or services are added to the shopping cart without being user triggered.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54004": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "46",
+    "thema": "E-Commerce",
+    "description": "The terms of sale or use are available from all pages.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54005": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "155",
+    "thema": "Navigation",
+    "description": "It is possible to return to the homepage from any page.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54011": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "45",
+    "thema": "E-Commerce",
+    "description": "Warranty conditions are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54017": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "55",
+    "thema": "E-Commerce",
+    "description": "The hardware and software necessary for the operation of the service are indicated before final validation of the order.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54036": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "144",
+    "thema": "Liens",
+    "description": "Links which cause external software to open have an explicit label.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54043": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "202",
+    "thema": "Sécurité",
+    "description": "Passwords can be chosen and changed by the user",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54045": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "36",
+    "thema": "E-Commerce",
+    "description": "The estimated delivery costs are indicated before the final validation of the order.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54049": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "106",
+    "thema": "Identification et contact",
+    "description": "The registration number issued to companies or organizations under the legal registration procedures in force in their country is indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54054": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "176",
+    "thema": "Newsletter",
+    "description": "It is possible to unsubscribe from newsletters from the website.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54056": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "231",
+    "thema": "Structure et code",
+    "description": "The date of publication or update of the contents is made available in a programmatic form.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54057": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "153",
+    "thema": "Navigation",
+    "description": "If the content or service is not reserved for a specific audience, access to the content is immediate.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54059": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "183",
+    "thema": "Présentation",
+    "description": "The content and meaning of each page are not altered when styles are disabled.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54060": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "134",
+    "thema": "Internationalisation",
+    "description": "Links to equivalent versions of content are written in their target language.",
+    "tags": [],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54061": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "85",
+    "thema": "Formulaires",
+    "description": "Form submission is followed by a message indicating whether or not the action was successful.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54063": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "43",
+    "thema": "E-Commerce",
+    "description": "The operating conditions of the after-sales service are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54064": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "34",
+    "thema": "E-Commerce",
+    "description": "Product availability is indicated before final validation of the order.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54087": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "214",
+    "thema": "Sécurité",
+    "description": "Integrity control of third party resources is present and valid.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54095": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "70",
+    "thema": "Formulaires",
+    "description": "Information supplementing a field’s label is associated with that field in the source code.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54103": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "193",
+    "thema": "Présentation",
+    "description": "The zoom features are not blocked.",
+    "tags": [
+      "Accessibilité",
+      "Mobile"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54112": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "161",
+    "thema": "Navigation",
+    "description": "Mechanisms for closing windows are immediately available.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54113": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "172",
+    "thema": "Navigation",
+    "description": "The time limits imposed on an action or access are indicated.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54114": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "44",
+    "thema": "E-Commerce",
+    "description": "Debit and payment conditions are indicated before final order placement.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54136": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "209",
+    "thema": "Sécurité",
+    "description": "The server does not send the file listing of directories with no index page.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54138": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "180",
+    "thema": "Présentation",
+    "description": "The graphic charter is consistent across all pages.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54144": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "152",
+    "thema": "Liens",
+    "description": "All internal links are valid.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54146": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "35",
+    "thema": "E-Commerce",
+    "description": "The estimated delivery time is indicated before the final validation of the order.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54154": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "29",
+    "thema": "Données personnelles",
+    "description": "The purpose of using cookies, as well as the limitations inherent in refusing them, are explained.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54155": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "109",
+    "thema": "Identification et contact",
+    "description": "The operating hours and prices for the services made available to users are indicated.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54158": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "107",
+    "thema": "Identification et contact",
+    "description": "At least two means of contact are offered.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54159": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "237",
+    "thema": "Structure et code",
+    "description": "Copying of content is not blocked.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54165": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "157",
+    "thema": "Navigation",
+    "description": "Active menu items are identifiable.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54167": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "211",
+    "thema": "Sécurité",
+    "description": "The server sends information that indicates which domains are allowed to embed its pages in frames",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54170": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "188",
+    "thema": "Présentation",
+    "description": "Content generated via styles is provided with a suitable alternative.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54173": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "189",
+    "thema": "Présentation",
+    "description": "Typographic symbols have an appropriate alternative.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54174": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "167",
+    "thema": "Navigation",
+    "description": "Keyboard navigation is set up in a predictable order.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54176": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "138",
+    "thema": "Liens",
+    "description": "Links of the same nature have identical colors, shapes and behaviors on all pages.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54180": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "119",
+    "thema": "Images et médias",
+    "description": "Thumbnails and previews are not larger images resized on the client side.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54192": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "162",
+    "thema": "Navigation",
+    "description": "Newly dimensioned windows and modal windows are equipped with an explicit close button.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54202": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "48",
+    "thema": "E-Commerce",
+    "description": "The means of payment accepted, and the corresponding procedures are indicated.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54204": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "108",
+    "thema": "Identification et contact",
+    "description": "Response times for information requests are indicated.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54247": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "221",
+    "thema": "Serveur et performances",
+    "description": "The server does not force redirects from the desktop version to the mobile version or application.",
+    "tags": [
+      "Mobile"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54259": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "177",
+    "thema": "Newsletter",
+    "description": "The latest edition of the newsletter is available online.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54260": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "206",
+    "thema": "Sécurité",
+    "description": "The headers sent by the server disable automatic detection of each resource’s MIME type.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54269": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "91",
+    "thema": "Formulaires",
+    "description": "Navigating through a complex process does not cause any previously-submitted data to be lost.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54359": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "9",
+    "thema": "Contenus",
+    "description": "The conditions for moderation of public spaces are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54360": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "6",
+    "thema": "Contenus",
+    "description": "The publication date of the contents is indicated when needed.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54371": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "179",
+    "thema": "Newsletter",
+    "description": "The newsletters’ frequency can be found before subscribing.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54372": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "115",
+    "thema": "Identification et contact",
+    "description": "If one or more standards or guidelines are declared as compliant, a link is provided to each of them.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54373": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "131",
+    "thema": "Internationalisation",
+    "description": "The main language of a link’s target page can be identified when it differs from the main language of the original page.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54374": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "81",
+    "thema": "Formulaires",
+    "description": "If any data entered in the form are rejected, all the data entered can be modified by the user.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54375": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "54",
+    "thema": "E-Commerce",
+    "description": "The conditions for reimbursement are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54376": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "50",
+    "thema": "E-Commerce",
+    "description": "The recourse in cases of dispute are indicated in the general terms and conditions of sale or of use.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54377": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "154",
+    "thema": "Navigation",
+    "description": "Navigating does not cause pop-ups to open.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54378": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "190",
+    "thema": "Présentation",
+    "description": "A generic font family is listed as the last alternative in font family lists.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54379": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "222",
+    "thema": "Serveur et performances",
+    "description": "The server sends a 404 HTTP error code for resources not found",
+    "tags": [
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54380": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "207",
+    "thema": "Sécurité",
+    "description": "The server indicates each resource’s MIME type.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54381": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "233",
+    "thema": "Structure et code",
+    "description": "The character encoding is UTF-8.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54382": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "210",
+    "thema": "Sécurité",
+    "description": "The server sends activation information for protection against cross-site scripting.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54383": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "205",
+    "thema": "Sécurité",
+    "description": "Passwords are not communicated in plain text.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54384": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "192",
+    "thema": "Présentation",
+    "description": "Capitalization for decorative purposes is done using styles.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54385": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "225",
+    "thema": "Serveur et performances",
+    "description": "The main navigation menu is displayed on custom error pages.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54386": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "120",
+    "thema": "Images et médias",
+    "description": "Included objects have an appropriate text alternative.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54387": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "113",
+    "thema": "Identification et contact",
+    "description": "There is at least one way to contact the moderator of public spaces.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54388": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "99",
+    "thema": "Identification et contact",
+    "description": "The homepage explains the nature of the content and services offered.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54389": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "135",
+    "thema": "Internationalisation",
+    "description": "The server respects the preferred order of languages specified by user agents.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54390": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "41",
+    "thema": "E-Commerce",
+    "description": "The detailed sub-total is indicated before final validation of the order.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54391": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "84",
+    "thema": "Formulaires",
+    "description": "The page displayed after the form’s submission allows the user to return to their navigation directly.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54392": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "200",
+    "thema": "Sécurité",
+    "description": "Pages using the HTTPS protocol do not offer HTTP resources.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54396": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "184",
+    "thema": "Présentation",
+    "description": "Content is not only designated by its shape or its position on the screen.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54398": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "57",
+    "thema": "E-Commerce",
+    "description": "Different shipping and billing addresses can be specified.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54399": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "242",
+    "thema": "Structure et code",
+    "description": "Cells in data tables are linked to their headers",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54400": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "243",
+    "thema": "Structure et code",
+    "description": "Captions for data tables are provided",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54403": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "129",
+    "thema": "Internationalisation",
+    "description": "The country is specified for all mailing addresses.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54404": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "4",
+    "thema": "Contenus",
+    "description": "Dates are presented in an explicit format.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54405": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "10",
+    "thema": "Contenus",
+    "description": "Content and files intended for public spaces can be checked before upload.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54406": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "5",
+    "thema": "Contenus",
+    "description": "The first occurrence of an abbreviation or an acronym in the body of any page gives access to an explanation of its meaning.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54407": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "2",
+    "thema": "Contenus",
+    "description": "Information about copyrights and reuse rights is available from every page.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54408": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "51",
+    "thema": "E-Commerce",
+    "description": "The address and the terms and conditions for returns are indicated before the final validation of the return order.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54409": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "12",
+    "thema": "Contenus",
+    "description": "Each graph is accompanied by its numerical data.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54410": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "186",
+    "thema": "Présentation",
+    "description": "The size of the clickable elements is sufficient.",
+    "tags": [
+      "Accessibilité",
+      "Mobile"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54411": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "142",
+    "thema": "Liens",
+    "description": "Internal and external links are differentiated.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54412": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "208",
+    "thema": "Sécurité",
+    "description": "Information relative to transaction security is indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54413": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "123",
+    "thema": "Images et médias",
+    "description": "The length of video and audio content is indicated.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54414": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "95",
+    "thema": "Formulaires",
+    "description": "Email, URL, telephone number, search, password, and date and time input fields are assigned an appropriate input type.",
+    "tags": [
+      "Accessibilité",
+      "Mobile"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54415": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "238",
+    "thema": "Structure et code",
+    "description": "Access to the context menu is not blocked.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54416": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "101",
+    "thema": "Identification et contact",
+    "description": "The identity of the author, the company or the organization is indicated.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54417": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "160",
+    "thema": "Navigation",
+    "description": "Mechanisms for closing windows are visually linked to their content.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54418": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "175",
+    "thema": "Newsletter",
+    "description": "Unsubscribing from within the newsletter does not require email confirmation.",
+    "tags": [
+      "Privacy",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54419": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "31",
+    "thema": "E-Commerce",
+    "description": "The details of each item can be viewed from the shopping cart.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54420": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "21",
+    "thema": "Données personnelles",
+    "description": "If a personal or subscriber space is offered, it is possible to download personal content.",
+    "tags": [
+      "Privacy",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54421": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "141",
+    "thema": "Liens",
+    "description": "Visited and unvisited links are visually differentiated.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54422": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "151",
+    "thema": "Liens",
+    "description": "The creation of inbound links is neither prohibited nor restricted.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54423": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "11",
+    "thema": "Contenus",
+    "description": "Public spaces offer at least one way to report abuse.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54424": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "22",
+    "thema": "Données personnelles",
+    "description": "Connection to all the services offered is possible with the same identifiers.",
+    "tags": [
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54425": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "24",
+    "thema": "Données personnelles",
+    "description": "Email aliases containing the + sign are accepted.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54427": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "28",
+    "thema": "Données personnelles",
+    "description": "Sensitive data is not transmitted unencrypted through URLs.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54428": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "52",
+    "thema": "E-Commerce",
+    "description": "The cost of the return is indicated before the final validation of the return order.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54429": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "53",
+    "thema": "E-Commerce",
+    "description": "The mode of filing and the procedure for handling complaints are indicated.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54430": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "61",
+    "thema": "E-Commerce",
+    "description": "The transaction’s reference number is displayed to the customer, once the order has been placed.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54431": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "64",
+    "thema": "E-Commerce",
+    "description": "Any mention of an affiliation with a professional association, or endorsement by a label or an award, features a link to the source.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54432": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "72",
+    "thema": "Formulaires",
+    "description": "The input format for form fields which require it is indicated.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54433": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "73",
+    "thema": "Formulaires",
+    "description": "The user is warned whenever a field is case-sensitive.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54434": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "77",
+    "thema": "Formulaires",
+    "description": "Each form label is visually associated to the field that it describes.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54435": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "93",
+    "thema": "Formulaires",
+    "description": "The items in a drop-down list are grouped together appropriately, where applicable.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54436": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "116",
+    "thema": "Images et médias",
+    "description": "Each decorative image has an appropriate text alternative.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54437": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "126",
+    "thema": "Images et médias",
+    "description": "Video content and animations, sounds and flashes can be paused.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54438": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "130",
+    "thema": "Internationalisation",
+    "description": "Each page’s source code indicates the content’s main language.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54439": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "132",
+    "thema": "Internationalisation",
+    "description": "Each language change is identified.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54440": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "146",
+    "thema": "Liens",
+    "description": "The user is notified when new windows are to be opened.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54441": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "158",
+    "thema": "Navigation",
+    "description": "Navigation blocks of the same nature are in the same place on every page.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54442": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "159",
+    "thema": "Navigation",
+    "description": "Navigation icons are provided with an explicit legend.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54443": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "164",
+    "thema": "Navigation",
+    "description": "Each page contains quick-access links placed at the beginning of the source code.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54444": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "185",
+    "thema": "Présentation",
+    "description": "Content that needs to be reproduced by screen readers is not hidden from them.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54445": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "178",
+    "thema": "Newsletter",
+    "description": "Newsletter archives are available online.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54446": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "174",
+    "thema": "Newsletter",
+    "description": "An unsubscribe link is provided in each newsletter.",
+    "tags": [
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54447": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "187",
+    "thema": "Présentation",
+    "description": "Texts that can be formatted via styles are not replaced by images.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54448": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "196",
+    "thema": "Présentation",
+    "description": "The content of each page can be printed without printing the navigation blocks.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54449": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "228",
+    "thema": "Serveur et performances",
+    "description": "Headers sent by the server contain information pertaining to the character set used",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54450": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "232",
+    "thema": "Structure et code",
+    "description": "Each page’s source code contains metadata which defines the character set used.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54451": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "236",
+    "thema": "Structure et code",
+    "description": "Each HTML ID is only used once per page.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54452": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "241",
+    "thema": "Structure et code",
+    "description": "Internal PDF documents are given a structure based on titles.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54454": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "8",
+    "thema": "Contenus",
+    "description": "Advertisements and sponsored content are identified as such.",
+    "tags": [
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54455": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "7",
+    "thema": "Contenus",
+    "description": "A lexicon or a glossary adapted to the target audience explains the industry-specific or technical vocabulary used.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54456": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "13",
+    "thema": "Contenus",
+    "description": "The search result page indicates the number of results, the number of pages of results, and the number of results per page.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54457": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "105",
+    "thema": "Identification et contact",
+    "description": "The complete address and telephone number of companies and organizations are available from all pages.",
+    "tags": [
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54458": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "100",
+    "thema": "Identification et contact",
+    "description": "If the content or services are reserved for or intended for a specific audience, this audience is mentioned at least on the home page.",
+    "tags": [],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54459": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "201",
+    "thema": "Sécurité",
+    "description": "Password operations can be carried out in their entirety online.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54460": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "65",
+    "thema": "E-Commerce",
+    "description": "Unavailable products are differentiated by visual and textual means.",
+    "tags": [],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54461": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "111",
+    "thema": "Identification et contact",
+    "description": "All emails provide at least one means of contact.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54462": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "147",
+    "thema": "Liens",
+    "description": "The format of the files available for download is indicated.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54463": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "213",
+    "thema": "Sécurité",
+    "description": "The server doesn't communicate information on the software and languages used.",
+    "tags": [],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54464": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "245",
+    "thema": "Structure et code",
+    "description": "Data tables are not simulated.",
+    "tags": [
+      "Accessibilité",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54465": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "128",
+    "thema": "Internationalisation",
+    "description": "The international dialling codes are available for all phone numbers.",
+    "tags": [],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54466": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "133",
+    "thema": "Internationalisation",
+    "description": "Links to translated versions point directly to the current page’s translation.",
+    "tags": [],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54467": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "83",
+    "thema": "Formulaires",
+    "description": "For forms divided over several pages, an overall summary is displayed before the final version is submitted.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54468": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "218",
+    "thema": "Serveur et performances",
+    "description": "The address of the website and of its subdomains works with and without a www prefix.",
+    "tags": [
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54469": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "163",
+    "thema": "Navigation",
+    "description": "Mechanisms for closing windows are shown in the same location on every page.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54470": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "181",
+    "thema": "Présentation",
+    "description": "Information is not conveyed by color alone.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54471": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "18",
+    "thema": "Données personnelles",
+    "description": "Account creation is subject to a confirmation process.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54472": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "23",
+    "thema": "Données personnelles",
+    "description": "It is possible to log out from private areas.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54473": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "60",
+    "thema": "E-Commerce",
+    "description": "Stored bank details can be modified or deleted.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54474": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "80",
+    "thema": "Formulaires",
+    "description": "If any data entered in the form are rejected, the reason(s) why are indicated to the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54475": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "90",
+    "thema": "Formulaires",
+    "description": "The user is warned when they will lose information if they go back using their browser’s history during a complex process.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54476": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "92",
+    "thema": "Formulaires",
+    "description": "Copy-and-paste is possible in the form’s fields.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54477": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "223",
+    "thema": "Serveur et performances",
+    "description": "The server sends a customised 404 Not found error page",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54478": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "240",
+    "thema": "Structure et code",
+    "description": "The text of internal PDF documents can be selected.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54479": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "69",
+    "thema": "Formulaires",
+    "description": "Each form field has its own label associated with it in the source code.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54480": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "124",
+    "thema": "Images et médias",
+    "description": "Videos are user-triggered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54481": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "199",
+    "thema": "Sécurité",
+    "description": "Pages using HTTPS have a strict transport header.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54482": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "63",
+    "thema": "E-Commerce",
+    "description": "Each invoice is subject to a confirmation email.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54483": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "166",
+    "thema": "Navigation",
+    "description": "Keyboard navigation allows users to interact with all content and services.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54484": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "194",
+    "thema": "Présentation",
+    "description": "There is at least one mechanism dedicated to adaptation to mobile devices.",
+    "tags": [
+      "Basics",
+      "Mobile"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54485": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "79",
+    "thema": "Formulaires",
+    "description": "If any data entered in the form are rejected, the fields containing the rejected data are indicated for the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54486": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "224",
+    "thema": "Serveur et performances",
+    "description": "The server sends a customised 403 “Forbidden” error page.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54487": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "62",
+    "thema": "E-Commerce",
+    "description": "The invoices issued are also available online",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54488": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "71",
+    "thema": "Formulaires",
+    "description": "Each form field’s label indicates whether or not it is a required field.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54489": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "16",
+    "thema": "Données personnelles",
+    "description": "The process of accessing and modifying personal data is described.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54490": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "195",
+    "thema": "Présentation",
+    "description": "Styles dedicated to printing are offered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54491": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "136",
+    "thema": "Liens",
+    "description": "Each link has a title in the source code.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54492": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "220",
+    "thema": "Serveur et performances",
+    "description": "The website provides a sitemap file listing the content to be crawled.",
+    "tags": [
+      "Basics",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54493": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "227",
+    "thema": "Serveur et performances",
+    "description": "The server sends information to enable the caching of contents",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54494": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "118",
+    "thema": "Images et médias",
+    "description": "Each information-carrying image has an appropriate text alternative.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54495": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "203",
+    "thema": "Sécurité",
+    "description": "A mechanism raises the user's awareness regarding their password's level of security",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54496": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "173",
+    "thema": "Newsletter",
+    "description": "Subscribing to newsletters is subject to a confirmation process.",
+    "tags": [
+      "Basics",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54497": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "110",
+    "thema": "Identification et contact",
+    "description": "Each request for information is followed by an acknowledgement receipt.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54498": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "3",
+    "thema": "Contenus",
+    "description": "Each page’s source code contains metadata that describes the content.",
+    "tags": [
+      "Basics",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54499": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "148",
+    "thema": "Liens",
+    "description": "The size of the internal files available for downloading is indicated.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54500": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "171",
+    "thema": "Navigation",
+    "description": "The site map is available from every page.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54501": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "229",
+    "thema": "Serveur et performances",
+    "description": "Style sheets are minified.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54502": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "168",
+    "thema": "Navigation",
+    "description": "An internal search engine is provided.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54503": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "104",
+    "thema": "Identification et contact",
+    "description": "The source code of the pages contains a valid call to a favourite icon (“favicon”)",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54504": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "149",
+    "thema": "Liens",
+    "description": "The language of downloadable files is mentioned when it differs from the original page.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54505": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "219",
+    "thema": "Serveur et performances",
+    "description": "The website’s root contains instructions for web crawlers.",
+    "tags": [
+      "Basics",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54506": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "226",
+    "thema": "Serveur et performances",
+    "description": "The server transmits compressed contents to the clients which accept them.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54507": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "156",
+    "thema": "Navigation",
+    "description": "Each page displays information indicating its location in the tree structure.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54508": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "137",
+    "thema": "Liens",
+    "description": "Each link’s label describes either its function or the nature of the content of its target.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54509": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "30",
+    "thema": "E-Commerce",
+    "description": "A product or service can be purchased without creating an account.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy",
+      "Écoconception"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54510": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "198",
+    "thema": "Sécurité",
+    "description": "Security certificates are signed and currently valid",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54511": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "182",
+    "thema": "Présentation",
+    "description": "Content is presented with sufficient contrast to its background.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54512": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "66",
+    "thema": "E-Commerce",
+    "description": "An email providing the transaction’s reference number and the order details is sent after order placement.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54513": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "234",
+    "thema": "Structure et code",
+    "description": "Each page’s content is organized according to a hierarchical structure of headings and sub-headings.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54514": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "165",
+    "thema": "Navigation",
+    "description": "Keyboard focus isn't removed or masked.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54515": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "59",
+    "thema": "E-Commerce",
+    "description": "Personal banking information is only stored after the explicit consent of the user.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54516": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "27",
+    "thema": "Données personnelles",
+    "description": "Exchanges of sensitive data are securely transmitted and reported as such.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54517": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "58",
+    "thema": "E-Commerce",
+    "description": "At least two payment methods are accepted.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54518": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "117",
+    "thema": "Images et médias",
+    "description": "Each image link has an appropriate text alternative.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54519": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "125",
+    "thema": "Images et médias",
+    "description": "Sounds are user-triggered.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54520": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "140",
+    "thema": "Liens",
+    "description": "Links are visually differentiated from the rest of the content.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54521": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "230",
+    "thema": "Serveur et performances",
+    "description": "Scripts of the website are minified.",
+    "tags": [
+      "Basics",
+      "Écoconception"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54522": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "103",
+    "thema": "Identification et contact",
+    "description": "Each page provides a title that enables one to identify its content",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54523": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "75",
+    "thema": "Formulaires",
+    "description": "The creation of a password by the user is subject to a mechanism for the prevention of input errors.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54524": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "239",
+    "thema": "Structure et code",
+    "description": "No automatic redirection or auto-refresh is imposed on the client side.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54525": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "121",
+    "thema": "Images et médias",
+    "description": "Each audio and video content is accompanied by a text transcription.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Écoconception",
+      "SEO"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54526": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "87",
+    "thema": "Formulaires",
+    "description": "Complex processes are accompanied by a list of their steps.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception"
+    ]
+  },
+  "54527": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "19",
+    "thema": "Données personnelles",
+    "description": "A mechanism for preventing account or identity theft is proposed.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54528": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "76",
+    "thema": "Formulaires",
+    "description": "The characters entered in a password field can be displayed in an un-encrypted text.",
+    "tags": [
+      "Basics",
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54529": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "102",
+    "thema": "Identification et contact",
+    "description": "Each page provides a title that enables one to identify the website",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54530": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "204",
+    "thema": "Sécurité",
+    "description": "Passwords can be reset.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54531": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "197",
+    "thema": "Sécurité",
+    "description": "All pages use the HTTPS protocol.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54532": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "212",
+    "thema": "Sécurité",
+    "description": "A security mechanism restricts the origin of content.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54533": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "244",
+    "thema": "Structure et code",
+    "description": "Linearising tables used for layout does not impede the understanding of contents",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54534": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "17",
+    "thema": "Données personnelles",
+    "description": "Account creation is possible without the need to use a third-party identification system.",
+    "tags": [
+      "Basics",
+      "Accessibilité",
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54535": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "191",
+    "thema": "Présentation",
+    "description": "Styles do not justify the text.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement",
+      "Editorial"
+    ]
+  },
+  "54536": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "74",
+    "thema": "Formulaires",
+    "description": "The label of each form field indicates the maximum number of characters allowed, where applicable.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54541": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "68",
+    "thema": "E-Commerce",
+    "description": "The origin of the products is indicated.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Editorial"
+    ]
+  },
+  "54547": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "216",
+    "thema": "Sécurité",
+    "description": "The browser address bar display is not blocked.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54548": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "96",
+    "thema": "Formulaires",
+    "description": "Two-factor authentication procedures can be restarted.",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54551": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "98",
+    "thema": "Formulaires",
+    "description": "Disabled buttons are not hidden from screen readers.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54553": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "26",
+    "thema": "Données personnelles",
+    "description": "No information is displayed regarding the existence of a user account.",
+    "tags": [
+      "Privacy"
+    ],
+    "phases": [
+      "Conception",
+      "Développement"
+    ]
+  },
+  "54555": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "14",
+    "thema": "Contenus",
+    "description": "The content does not misuse characters to simulate visual formatting.",
+    "tags": [
+      "Accessibilité",
+      "SEO"
+    ],
+    "phases": [
+      "Editorial"
+    ]
+  },
+  "54589": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "97",
+    "thema": "Formulaires",
+    "description": "Fields that support autocompletion are marked in the source code.",
+    "tags": [
+      "Accessibilité"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  },
+  "54591": {
+    "checklist": {
+      "id": 900,
+      "name": "Qualité Web - Opquast V5"
+    },
+    "name": "217",
+    "thema": "Sécurité",
+    "description": "The email domain is authenticated",
+    "tags": [
+      "Basics"
+    ],
+    "phases": [
+      "Développement"
+    ]
+  }
+}

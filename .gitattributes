@@ -1,0 +1,4 @@
+# The overlay version guard (scripts/sync-assets.mjs) hashes these files' bytes: a CRLF checkout
+# (Windows, core.autocrlf=true) would change the hash and stop the build. Keep them LF everywhere.
+data/engine-overlay/** text eol=lf
+scripts/** text eol=lf

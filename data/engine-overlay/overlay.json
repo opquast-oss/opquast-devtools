@@ -1,0 +1,5 @@
+{
+  "version": "0.8.0",
+  "contentHash": "6e92fd1306d00f7ab2b6dfb90ca213a98adf4dc07449cc5ec2b12bf4e0288bb4",
+  "note": "Bump `version` (semver) whenever a rule, a ruleset or a function changes behaviour, then paste the contentHash that `npm run sync-assets` prints. The build refuses to run if the overlay sources moved and this file did not record their new hash. It checks the hash, not the version: raising `version` at the same time is the author's part."
+}
