@@ -6,6 +6,8 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+## [0.7.2] - 2026-10-28
+
 ### Fixed
 
 - **Firefox: an analysis of a page in a background tab no longer runs out of time.** The engine
@@ -227,5 +229,6 @@ Add-ons from a private repository. In short:
   V5, scores, per-criterion detail, manual overrides, feedback journal and CSV
   export, all data kept on the device.
 
+[0.7.2]: https://github.com/opquast-oss/opquast-devtools/releases/tag/v0.7.2
 [0.7.1]: https://github.com/opquast-oss/opquast-devtools/releases/tag/v0.7.1
 [0.7.0]: https://github.com/opquast-oss/opquast-devtools/releases/tag/v0.7.0

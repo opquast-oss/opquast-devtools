@@ -1,7 +1,7 @@
 {
   "name": "opquast-devtools",
   "description": "Opquast web quality checks in the browser DevTools (Chrome + Firefox, Manifest V3)",
-  "version": "0.7.1",
+  "version": "0.7.2",
   "type": "module",
   "private": true,
   "engines": {
