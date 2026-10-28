@@ -122,13 +122,19 @@ export interface FeedbackCsvRow {
  * preamble: a metadata block above the header breaks the import in every spreadsheet, and denormal
  * but machine-readable is the whole point of choosing CSV over the email.
  */
+/** ISO 8601, or '' for a record whose date is missing or corrupt (toISOString() would throw). */
+function isoDate(ts: number): string {
+  const d = new Date(ts);
+  return Number.isNaN(d.getTime()) ? '' : d.toISOString();
+}
+
 export function buildFeedbackCsv(rows: FeedbackCsvRow[], lang: Lang): string {
   const grid: string[][] = [
     FB_HEADERS[lang],
     ...rows.map((r) => [
       r.origin,
       r.typeLabel,
-      new Date(r.createdAt).toISOString(),
+      isoDate(r.createdAt),
       r.slug ?? '',
       r.ref ?? '',
       r.description ?? '',

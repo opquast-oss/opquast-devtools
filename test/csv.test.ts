@@ -121,4 +121,10 @@ describe('buildFeedbackCsv', () => {
     // Three empty cells would read as a broken export; the wording says it is simply unknown.
     expect(csv).toMatch(/non tracé/);
   });
+
+  it('leaves the date empty for a corrupt record instead of failing the whole export', async () => {
+    const { buildFeedbackCsv } = await import('@/lib/csv');
+    const csv = buildFeedbackCsv([{ ...row, createdAt: Number.NaN }], 'fr');
+    expect(csv.split('\r\n')[1]).toContain('"";');
+  });
 });

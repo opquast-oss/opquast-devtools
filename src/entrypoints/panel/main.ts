@@ -23,7 +23,7 @@ import { renderTable, wireSorting } from './table-view';
 import { setupModal, openModal, closeModal, renderModalDetail } from './modal-view';
 import { setupFeedbacks, renderFeedbacks, loadAppFeedbacks, toast } from './feedbacks-view';
 import { renderAbout } from './about-view';
-import { downloadText } from './download';
+import { downloadText, fileDate, fileHost, fileName } from './download';
 import { renderAccessError } from './access-view';
 import { inspectedUrl } from './inspected';
 import { isAccessFailure, isAnalysableUrl, type AccessFailure } from '@/lib/page-access';
@@ -419,7 +419,9 @@ function exportCsv() {
   const slug = els.checklist.value;
   const name = checklistName(state.manifest, slug, state.lang);
   const csv = buildCsv(state.rows, state.lang, name);
-  downloadText(`opquast-${slug}.csv`, csv);
+  // Host and date of the analysis: two exports no longer overwrite each other in Downloads.
+  const date = state.analysisTimestamp ? fileDate(state.analysisTimestamp) : '';
+  downloadText(fileName(['opquast', slug, fileHost(state.currentUrl), date], 'csv'), csv);
 }
 
 els.search.addEventListener('input', () => {

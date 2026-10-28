@@ -12,7 +12,7 @@ import { esc } from './html';
 import type { CombinedResultRow, FeedbackKind } from '@/lib/result-store';
 import type { Status } from '@/lib/types';
 import { buildFeedbackCsv } from '@/lib/csv';
-import { downloadText } from './download';
+import { downloadText, fileDate, fileName } from './download';
 import { updateTabLabels } from './scores-view';
 import { checklistName } from '@/lib/checklists';
 import {
@@ -514,7 +514,7 @@ function exportSelected() {
     })),
     L,
   );
-  downloadText(`opquast-feedbacks-${new Date().toISOString().slice(0, 10)}.csv`, csv);
+  downloadText(fileName(['opquast-feedbacks', fileDate()], 'csv'), csv);
 }
 
 // ---- small helpers ---------------------------------------------------------
@@ -607,9 +607,8 @@ export function pageAddress(url: string): string {
 }
 
 function formatDate(ts: number): string {
-  try {
-    return new Date(ts).toLocaleString(state.lang === 'fr' ? 'fr-FR' : 'en-US');
-  } catch {
-    return String(ts);
-  }
+  const d = new Date(ts);
+  // An invalid date formats as "Invalid Date" rather than throwing: show nothing instead.
+  if (Number.isNaN(d.getTime())) return '';
+  return d.toLocaleString(state.lang === 'fr' ? 'fr-FR' : 'en-US');
 }

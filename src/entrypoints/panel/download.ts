@@ -19,3 +19,25 @@ export function downloadText(filename: string, text: string, mime = 'text/csv;ch
   a.remove();
   setTimeout(() => URL.revokeObjectURL(url), 10_000);
 }
+
+/** `YYYY-MM-DD` of `ts` in the user's time zone, for file names ('' for an invalid date). */
+export function fileDate(ts: number = Date.now()): string {
+  const d = new Date(ts);
+  if (Number.isNaN(d.getTime())) return '';
+  const pad = (n: number) => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())}`;
+}
+
+/** The page's host for a file name: `www.example.com`, `localhost-8080`, '' when there is none. */
+export function fileHost(url: string): string {
+  try {
+    return new URL(url).host.replace(/[^\w.-]+/g, '-');
+  } catch {
+    return '';
+  }
+}
+
+/** Join the non-empty parts of a file name with '-'. */
+export function fileName(parts: string[], ext: string): string {
+  return `${parts.filter(Boolean).join('-')}.${ext}`;
+}

@@ -17,6 +17,11 @@ project aims to follow [Semantic Versioning](https://semver.org/).
   permission error now and then. Firefox reports the tab's initial blank page "loaded" with its
   address hidden, which was taken for the page itself; when the extension holds the permission
   for the page, a hidden address now means the page is not there yet.
+- **Exported files are named after the page and the date**: `opquast-v5-www.example.com-2026-10-28.csv`
+  instead of `opquast-v5.csv`, so a second export no longer overwrites the first one. The date is
+  the local one, not UTC's.
+- A feedback with a corrupt date no longer breaks the CSV export of all of them, nor shows
+  "Invalid Date".
 
 ### Internal
 
