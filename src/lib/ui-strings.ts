@@ -39,6 +39,18 @@ const STRINGS = {
     en: 'Clear every stored analysis? Your manual changes and feedbacks are kept.',
   },
   optHistoryCleared: { fr: 'Historique effacé', en: 'History cleared' },
+  optKeepOneChecklist: {
+    fr: 'Gardez au moins un référentiel : le panneau en a besoin pour analyser.',
+    en: 'Keep at least one checklist: the panel needs one to analyse.',
+  },
+  optSaveFailed: {
+    fr: "Échec de l'enregistrement. Le détail est dans la console de cette page.",
+    en: 'Could not save. The details are in this page’s console.',
+  },
+  optLoadFailed: {
+    fr: 'Impossible de lire les préférences. Le détail est dans la console de cette page.',
+    en: 'Could not read the preferences. The details are in this page’s console.',
+  },
   // Panel chrome (static markup, filled through data-i18n attributes)
   relaunch: { fr: 'Relancer', en: 'Relaunch' },
   checklistLabel: { fr: 'Checklist', en: 'Checklist' },

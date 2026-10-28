@@ -30,8 +30,10 @@ const participateKept = document.getElementById('participateKept') as HTMLParagr
 const ALL_SITES = { origins: ['<all_urls>'] };
 
 const SAVED_FEEDBACK_MS = 1500;
+const ERROR_FEEDBACK_MS = 6000;
 
 let fullManifest: ChecklistInfo[] = [];
+let statusTimer: ReturnType<typeof setTimeout> | undefined;
 // Nothing is saved before init() has filled the form: an early change would save it empty.
 let ready = false;
 
@@ -46,9 +48,21 @@ function localize(): void {
     withLangs: true,
     defaultSlug: slug.value,
   });
-  void renderHostAccess();
-  void renderHistoryCount();
-  void renderParticipateKept();
+  void renderHostAccess().catch(logError);
+  void renderHistoryCount().catch(logError);
+  void renderParticipateKept().catch(logError);
+}
+
+function logError(e: unknown) {
+  console.error('Opquast:', e);
+}
+
+/** Say something in the status line under the form, for `ms` (for good without it). */
+function showStatus(text: string, ms?: number) {
+  if (!saved) return;
+  saved.textContent = text;
+  clearTimeout(statusTimer);
+  if (ms !== undefined) statusTimer = setTimeout(() => (saved.textContent = ''), ms);
 }
 
 /** Read the slugs whose referential checkbox is currently ticked. */
@@ -90,10 +104,10 @@ grantHosts.addEventListener('click', () => {
   browser.permissions
     .request(ALL_SITES)
     .catch((e) => console.error('Opquast: permission request failed', e))
-    .finally(() => void renderHostAccess());
+    .finally(() => void renderHostAccess().catch(logError));
 });
-browser.permissions.onAdded.addListener(() => void renderHostAccess());
-browser.permissions.onRemoved.addListener(() => void renderHostAccess());
+browser.permissions.onAdded.addListener(() => void renderHostAccess().catch(logError));
+browser.permissions.onRemoved.addListener(() => void renderHostAccess().catch(logError));
 
 // The options page shares the extension's origin, hence the background's IndexedDB: it reads and
 // clears the analysis history directly.
@@ -106,10 +120,17 @@ async function renderHistoryCount(): Promise<void> {
 clearHistory.addEventListener('click', async () => {
   // A regular tab, unlike the DevTools panel: the native confirm dialog is reliable here.
   if (!window.confirm(t(uiLang(), 'optClearHistoryConfirm'))) return;
-  await clearAnalyses();
-  await renderHistoryCount();
-  historyCleared.textContent = `✓ ${t(uiLang(), 'optHistoryCleared')}`;
-  setTimeout(() => (historyCleared.textContent = ''), SAVED_FEEDBACK_MS);
+  let message: string;
+  try {
+    await clearAnalyses();
+    message = `✓ ${t(uiLang(), 'optHistoryCleared')}`;
+  } catch (e) {
+    logError(e);
+    message = `✗ ${t(uiLang(), 'optSaveFailed')}`;
+  }
+  await renderHistoryCount().catch(logError);
+  historyCleared.textContent = message;
+  setTimeout(() => (historyCleared.textContent = ''), ERROR_FEEDBACK_MS);
 });
 
 /**
@@ -135,8 +156,8 @@ async function init() {
   const prefs = { ...stored, ...shippedSelection(manifest, stored.enabledChecklists, stored.slug) };
   lang.value = prefs.lang;
   localizeDocument(uiLang());
-  void renderHostAccess();
-  void renderHistoryCount();
+  void renderHostAccess().catch(logError);
+  void renderHistoryCount().catch(logError);
   renderChecklistOptions(prefs.enabledChecklists);
   populateChecklistDropdown(slug, fullManifest, prefs.enabledChecklists, lang.value, {
     withLangs: true,
@@ -147,7 +168,7 @@ async function init() {
   showThemas.checked = prefs.showThemas;
   participateFeedback.checked = prefs.participateFeedback;
   document.title = t(uiLang(), 'optTitle');
-  void renderParticipateKept();
+  void renderParticipateKept().catch(logError);
   ready = true;
 }
 
@@ -157,11 +178,14 @@ async function init() {
  */
 async function save(changes: Partial<Prefs>) {
   if (!ready) return;
-  await setPrefs(changes);
-  if (saved) {
-    saved.textContent = `✓ ${t(uiLang(), 'saved')}`;
-    setTimeout(() => saved && (saved.textContent = ''), SAVED_FEEDBACK_MS);
+  try {
+    await setPrefs(changes);
+  } catch (e) {
+    logError(e);
+    showStatus(`✗ ${t(uiLang(), 'optSaveFailed')}`, ERROR_FEEDBACK_MS);
+    return;
   }
+  showStatus(`✓ ${t(uiLang(), 'saved')}`, SAVED_FEEDBACK_MS);
 }
 
 function onChecklistsChange(e: Event) {
@@ -171,6 +195,7 @@ function onChecklistsChange(e: Event) {
     // Keep at least one referential: revert the box that was just unticked.
     const target = e.target as HTMLInputElement;
     target.checked = true;
+    showStatus(t(uiLang(), 'optKeepOneChecklist'), ERROR_FEEDBACK_MS);
     return;
   }
   populateChecklistDropdown(slug, fullManifest, enabled, lang.value, {
@@ -187,7 +212,7 @@ autoRun.addEventListener('change', () => void save({ autoRun: autoRun.checked })
 showThemas.addEventListener('change', () => void save({ showThemas: showThemas.checked }));
 participateFeedback.addEventListener('change', () => {
   void save({ participateFeedback: participateFeedback.checked });
-  void renderParticipateKept();
+  void renderParticipateKept().catch(logError);
 });
 lang.addEventListener('change', localize);
 
@@ -201,4 +226,8 @@ onPrefsChanged((p) => {
   if ([...slug.options].some((o) => o.value === p.slug)) slug.value = p.slug;
 });
 checklists.addEventListener('change', onChecklistsChange);
-void init();
+init().catch((e) => {
+  // Nothing is saved (ready stays false): say why the form does not answer.
+  logError(e);
+  showStatus(`✗ ${t(uiLang(), 'optLoadFailed')}`);
+});

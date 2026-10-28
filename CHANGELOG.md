@@ -33,6 +33,9 @@ project aims to follow [Semantic Versioning](https://semver.org/).
   leaving the criterion marked "changed"; saving a comment unchanged no longer records a change;
   after changing both the result and the comment, in either order, "Back to automatic" restores
   both.
+- **The options page says when something goes wrong**: a preference that could not be saved, the
+  history that could not be cleared, preferences that could not be read. Unticking the last
+  checklist is still refused, and now says why.
 
 ### Internal
 
