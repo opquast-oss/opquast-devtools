@@ -92,6 +92,13 @@ describe('tab readiness', () => {
     expect(isTabReady({ status: 'complete' }, page)).toBe(true);
     expect(isTabReady({ status: 'complete', url: 'about:blank' })).toBe(true);
   });
+
+  it('keeps waiting on a hidden URL when the permission covers the page (Firefox)', () => {
+    // Firefox reports the initial about:blank "complete" with its URL hidden.
+    expect(isTabReady({ status: 'complete' }, page, true)).toBe(false);
+    expect(isTabReady({ status: 'complete', url: page }, page, true)).toBe(true);
+    expect(isTabReady({ status: 'complete', url: 'about:blank' }, page, true)).toBe(false);
+  });
 });
 
 describe('access view', () => {

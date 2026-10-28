@@ -13,6 +13,10 @@ project aims to follow [Semantic Versioning](https://semver.org/).
   behind an undocked DevTools, for instance): a V5 analysis took about 25 seconds and the panel
   gave up after 30. Those timers now run unthrottled while the engine works (about 1 second), and
   the page's own timers are given back afterwards.
+- Firefox: an analysis started while a new tab was still opening the page no longer fails with a
+  permission error now and then. Firefox reports the tab's initial blank page "loaded" with its
+  address hidden, which was taken for the page itself; when the extension holds the permission
+  for the page, a hidden address now means the page is not there yet.
 
 ### Internal
 

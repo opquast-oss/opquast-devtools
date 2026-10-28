@@ -146,12 +146,23 @@ async function diagnoseAccess(tabId: number, hintUrl?: string): Promise<AccessFa
 /** Wait until the tab holds the page to analyse (see isTabReady); after a while, go anyway. */
 async function waitForTabReady(tabId: number, expectedUrl?: string): Promise<string> {
   const end = Date.now() + TAB_READY_TIMEOUT_MS;
+  const urlVisible = await expectsVisibleUrl(tabId, expectedUrl);
   while (Date.now() < end) {
     const tab = await browser.tabs.get(tabId);
-    if (isTabReady(tab, expectedUrl)) return tab.url ?? '';
+    if (isTabReady(tab, expectedUrl, urlVisible)) return tab.url ?? '';
     await new Promise((r) => setTimeout(r, TAB_READY_POLL_MS));
   }
   return (await browser.tabs.get(tabId)).url ?? '';
+}
+
+/** Whether the browser will show us the URL of `expectedUrl` once the tab holds it. Never throws. */
+async function expectsVisibleUrl(tabId: number, expectedUrl?: string): Promise<boolean> {
+  if (!expectedUrl || !isAnalysableUrl(expectedUrl)) return false;
+  const tab = await browser.tabs.get(tabId).catch(() => undefined);
+  if (tab?.incognito && !(await browser.extension.isAllowedIncognitoAccess().catch(() => false))) {
+    return false;
+  }
+  return browser.permissions.contains({ origins: [originPattern(expectedUrl)] }).catch(() => false);
 }
 
 /**

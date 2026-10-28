@@ -55,11 +55,18 @@ export function classifyAccessFailure(f: AccessFacts): AccessFailure {
  * makes Firefox refuse the injection ("Missing host permission") and lets Chrome analyse that
  * empty document as if it were the page. `expectedUrl` is the panel's view of the URL; a
  * different final URL (redirect) is fine, about:blank in its place is not. Without the host
- * permission tab.url is hidden and only the status can be trusted.
+ * permission tab.url is hidden and only the status can be trusted — unless `urlVisible` says the
+ * permission covers the expected page: a hidden URL is then Firefox's initial about:blank, which
+ * it reports "complete" with no URL, and the page is not there yet.
  */
-export function isTabReady(tab: { status?: string; url?: string }, expectedUrl?: string): boolean {
+export function isTabReady(
+  tab: { status?: string; url?: string },
+  expectedUrl?: string,
+  urlVisible = false,
+): boolean {
   if (tab.status !== 'complete') return false;
-  if (!tab.url || !expectedUrl) return true;
+  if (!tab.url) return !urlVisible;
+  if (!expectedUrl) return true;
   return !(tab.url === 'about:blank' && expectedUrl !== 'about:blank');
 }
 
