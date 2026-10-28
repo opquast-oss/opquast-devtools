@@ -55,8 +55,9 @@ control: its panel is only tested through the stub.
 
 - Driven by Selenium + geckodriver (Marionette). WebDriver BiDi, and therefore Puppeteer, cannot
   reach `moz-extension://` pages.
-- Firefox starts with `-remote-allow-system-access`. Without it, its remote agent refuses
-  extension pages too.
+- Firefox gets system access for its remote agent: the `-remote-allow-system-access` argument
+  (up to Firefox 157) and `MOZ_REMOTE_ALLOW_SYSTEM_ACCESS=1` in its environment (Firefox 159
+  reads only that). Without it, the remote agent refuses extension pages too.
 - The `moz-extension://` UUID is fixed by the `extensions.webextensions.uuids` preference.
 - Site access is granted at install time by `extensions.originControls.grantByDefault`, as a user
   accepting it would.

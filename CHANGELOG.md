@@ -10,6 +10,8 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 
 - The type-check leaves the engine submodule out: on a fresh clone it failed on the engine's
   own build config, whose dependencies are not installed.
+- The end-to-end tests run on Firefox 159, which takes the remote agent's system access from the
+  environment only (`MOZ_REMOTE_ALLOW_SYSTEM_ACCESS`); every Firefox scenario failed there.
 
 ## [0.7.1] - 2026-10-28
 
