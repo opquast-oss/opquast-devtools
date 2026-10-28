@@ -159,7 +159,8 @@ function buildRows(): FbRow[] {
       origin: 'app',
       id: a.id,
       typeKey: a.category,
-      typeLabel: t(L, CATEGORY_KEY[a.category]),
+      // A category this version does not know (a later one wrote it) reads as "other".
+      typeLabel: t(L, CATEGORY_KEY[a.category] ?? CATEGORY_KEY.other),
       createdAt: a.createdAt,
       body: a.message,
     });
@@ -169,6 +170,8 @@ function buildRows(): FbRow[] {
 }
 
 export function renderFeedbacks() {
+  // A re-render (feedbacks reloaded, language changed) must not wipe what is being typed.
+  const draft = readEditDraft();
   const rows = buildRows();
   const keys = new Set(rows.map((r) => r.key));
   for (const k of [...state.fbSelected]) if (!keys.has(k)) state.fbSelected.delete(k);
@@ -190,7 +193,34 @@ export function renderFeedbacks() {
     else if (state.fbExpanded.has(r.key)) frag.appendChild(detailRow(r));
   }
   els.fbTbody.replaceChildren(frag);
+  if (draft && draft.key === state.fbEditing) restoreEditDraft(draft);
   updateBulkState();
+}
+
+interface EditDraft {
+  key: string;
+  values: string[];
+}
+
+/** The fields of the open edit form, in order. */
+function editFields(): (HTMLTextAreaElement | HTMLSelectElement)[] {
+  return [
+    ...els.fbTbody.querySelectorAll<HTMLTextAreaElement | HTMLSelectElement>(
+      '.fb-edit-form select, .fb-edit-form textarea',
+    ),
+  ];
+}
+
+function readEditDraft(): EditDraft | null {
+  const form = els.fbTbody.querySelector<HTMLFormElement>('.fb-edit-form');
+  if (!form?.dataset.key) return null;
+  return { key: form.dataset.key, values: editFields().map((f) => f.value) };
+}
+
+function restoreEditDraft(draft: EditDraft) {
+  editFields().forEach((f, i) => {
+    if (draft.values[i] !== undefined) f.value = draft.values[i]!;
+  });
 }
 
 function mainRow(r: FbRow): HTMLTableRowElement {
@@ -310,6 +340,7 @@ function editRow(r: FbRow): HTMLTableRowElement {
   td.colSpan = 5;
   const form = document.createElement('form');
   form.className = 'fb-edit-form';
+  form.dataset.key = r.key;
 
   let getChanges: () => { done: boolean };
 
@@ -327,14 +358,21 @@ function editRow(r: FbRow): HTMLTableRowElement {
     getChanges = () => {
       const message = ta.value.trim();
       if (!message) return { done: false };
+      save.disabled = true; // one write at a time: a second click waits for the first
       void updateAppFeedback(r.id, {
         category: select.value as AppFeedbackCategory,
         message,
-      }).then((list) => {
-        state.appFeedbacks = list;
-        state.fbEditing = null;
-        renderFeedbacks();
-      });
+      })
+        .then((list) => {
+          state.appFeedbacks = list;
+          state.fbEditing = null;
+          renderFeedbacks();
+        })
+        .catch((e) => {
+          console.error('Opquast: app feedback', e);
+          toast(t(L, 'actionFailed'));
+          save.disabled = false;
+        });
       return { done: true };
     };
   } else {

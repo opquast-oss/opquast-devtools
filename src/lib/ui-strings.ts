@@ -378,6 +378,8 @@ export type StringKey = keyof typeof STRINGS;
 
 export function t(lang: Lang, key: StringKey): string {
   const entry = STRINGS[key];
+  // A key missing from the table (a typo in markup) shows as itself rather than breaking the page.
+  if (!entry) return key;
   return entry[lang] ?? entry.fr;
 }
 

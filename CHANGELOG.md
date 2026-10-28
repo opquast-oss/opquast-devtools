@@ -22,6 +22,13 @@ project aims to follow [Semantic Versioning](https://semver.org/).
   the local one, not UTC's.
 - A feedback with a corrupt date no longer breaks the CSV export of all of them, nor shows
   "Invalid Date".
+- **A feedback being written is no longer lost** when the panel redraws: changing the language
+  kept neither the open "Give my opinion" form nor its text, and the Feedbacks tab threw away an
+  edit in progress whenever the list was reloaded.
+- A double click on a save button files the feedback once. A failed save says so and keeps the
+  text.
+- A feedback category this version does not know shows as "Other" instead of breaking the
+  Feedbacks tab; an unknown text key no longer stops a page from being translated.
 
 ### Internal
 

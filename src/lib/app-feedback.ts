@@ -26,7 +26,8 @@ export async function addAppFeedback(
 ): Promise<AppFeedback[]> {
   const list = await getAppFeedbacks();
   const feedback: AppFeedback = {
-    id: `${now}-${list.length}`,
+    // The length alone repeats after a deletion (and in two concurrent adds): add a random part.
+    id: `${now}-${list.length}-${Math.random().toString(36).slice(2, 8)}`,
     category: entry.category,
     message: entry.message,
     createdAt: now,

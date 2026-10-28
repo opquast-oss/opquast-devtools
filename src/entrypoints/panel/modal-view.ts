@@ -428,11 +428,15 @@ export function renderModalDetail() {
     saveBtn.textContent = t(L, 'fbSend');
     saveBtn.addEventListener('click', () => {
       const text = fbComment.value.trim();
-      if (!text) return;
+      if (!text || saveBtn.disabled) return;
+      // One at a time: a second click while the first is pending would file it twice.
+      saveBtn.disabled = true;
       // Cleared only once sent: a refused replacement or an unknown page keeps what was typed.
-      void sendFeedback(row, 'note', text).then((sent) => {
-        if (sent) fbComment.value = '';
-      });
+      void sendFeedback(row, 'note', text)
+        .then((sent) => {
+          if (sent) fbComment.value = '';
+        })
+        .finally(() => (saveBtn.disabled = false));
     });
 
     const hint = document.createElement('p');

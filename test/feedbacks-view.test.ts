@@ -131,6 +131,33 @@ describe('feedbacks-view — unified table', () => {
     expect(stored[0]!.message).toBe('updated');
   });
 
+  it('keeps an edit in progress when the table is drawn again', async () => {
+    const { els, state, setupFeedbacks, renderFeedbacks, appLib } = await loadView();
+    setupFeedbacks();
+    state.appFeedbacks = await appLib.addAppFeedback({ category: 'bug', message: 'old' }, 1);
+    renderFeedbacks();
+    (els.fbTbody.querySelectorAll('tr.fb-row .fb-action')[1] as HTMLButtonElement).click();
+    (els.fbTbody.querySelector('tr.fb-edit textarea') as HTMLTextAreaElement).value = 'typing…';
+    (els.fbTbody.querySelector('tr.fb-edit select') as HTMLSelectElement).value = 'idea';
+
+    renderFeedbacks(); // e.g. the result feedbacks came back from the background
+
+    expect((els.fbTbody.querySelector('tr.fb-edit textarea') as HTMLTextAreaElement).value).toBe(
+      'typing…',
+    );
+    expect((els.fbTbody.querySelector('tr.fb-edit select') as HTMLSelectElement).value).toBe(
+      'idea',
+    );
+  });
+
+  it('lists a feedback whose category it does not know as "other"', async () => {
+    const { els, state, renderFeedbacks } = await loadView();
+    state.lang = 'en';
+    state.appFeedbacks = [{ id: 'a1', category: 'praise' as never, message: 'x', createdAt: 1 }];
+    renderFeedbacks();
+    expect(els.fbTbody.querySelector('.fb-type-badge')?.textContent).toBe('Other');
+  });
+
   it('deletes an app feedback row after confirming in the dialog', async () => {
     const { els, state, setupFeedbacks, renderFeedbacks, appLib } = await loadView();
     setupFeedbacks();

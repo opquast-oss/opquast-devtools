@@ -24,6 +24,8 @@ const ACKNOWLEDGMENTS: StringKey[] = [
 
 export function renderAbout() {
   const L = state.lang;
+  // Re-rendered on every language change: keep a feedback being written.
+  const draft = readFormDraft();
   const version = browser.runtime.getManifest().version;
   // Not state.versions: this answers "what am I running", not "what produced the shown results".
   const engineLine = formatVersions(currentVersions(), L).replace(/^\S+\s/, '');
@@ -109,7 +111,28 @@ export function renderAbout() {
   // Attach event handlers if feedback section is rendered
   if (state.participateFeedback) {
     setupAppFeedbackForm();
+    if (draft) restoreFormDraft(draft);
   }
+}
+
+interface FormDraft {
+  open: boolean;
+  category: string;
+  message: string;
+}
+
+function readFormDraft(): FormDraft | null {
+  const form = document.getElementById('app-feedback-form') as HTMLFormElement | null;
+  const category = document.getElementById('app-feedback-category') as HTMLSelectElement | null;
+  const message = document.getElementById('app-feedback-message') as HTMLTextAreaElement | null;
+  if (!form || !category || !message) return null;
+  return { open: !form.hidden, category: category.value, message: message.value };
+}
+
+function restoreFormDraft(draft: FormDraft) {
+  (document.getElementById('app-feedback-form') as HTMLFormElement).hidden = !draft.open;
+  (document.getElementById('app-feedback-category') as HTMLSelectElement).value = draft.category;
+  (document.getElementById('app-feedback-message') as HTMLTextAreaElement).value = draft.message;
 }
 
 /** Set up event handlers for the app feedback form (called after rendering). */
@@ -119,8 +142,9 @@ function setupAppFeedbackForm() {
   const cancelBtn = document.getElementById('app-feedback-cancel') as HTMLButtonElement | null;
   const messageEl = document.getElementById('app-feedback-message') as HTMLTextAreaElement | null;
   const categoryEl = document.getElementById('app-feedback-category') as HTMLSelectElement | null;
+  const saveBtn = document.getElementById('app-feedback-save') as HTMLButtonElement | null;
 
-  if (!openBtn || !form || !cancelBtn || !messageEl || !categoryEl) return;
+  if (!openBtn || !form || !cancelBtn || !messageEl || !categoryEl || !saveBtn) return;
 
   const toggleForm = (open: boolean) => {
     form.hidden = !open;
@@ -134,8 +158,18 @@ function setupAppFeedbackForm() {
     e.preventDefault();
     const message = messageEl.value.trim();
     if (!message) return;
+    if (saveBtn.disabled) return; // already saving: a second click (or Enter) must not add it twice
     const category = categoryEl.value as AppFeedbackCategory;
-    state.appFeedbacks = await addAppFeedback({ category, message }, Date.now());
+    saveBtn.disabled = true;
+    try {
+      state.appFeedbacks = await addAppFeedback({ category, message }, Date.now());
+    } catch (err) {
+      console.error('Opquast: app feedback', err);
+      toast(t(state.lang, 'actionFailed'));
+      return; // what was typed stays
+    } finally {
+      saveBtn.disabled = false;
+    }
     messageEl.value = '';
     toggleForm(false);
     toast(t(state.lang, 'appFbSaved'));
