@@ -4,6 +4,17 @@ All notable changes to Opquast DevTools are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and the
 project aims to follow [Semantic Versioning](https://semver.org/).
 
+## [0.7.1] - 2026-10-28
+
+The source code is published on GitHub, in the `opquast-oss` organisation. No change to the
+extension itself.
+
+### Changed
+
+- The repository, the engine submodule and the links of the documentation point to
+  github.com/opquast-oss. The engine repository there carries its whole history, up to the
+  commit 0.7.0 is built from.
+
 ## [0.7.0] - 2026-10-21
 
 First public release of the source code. The history of this repository starts
@@ -166,4 +177,5 @@ Add-ons from a private repository. In short:
   V5, scores, per-criterion detail, manual overrides, feedback journal and CSV
   export, all data kept on the device.
 
-[0.7.0]: https://github.com/Opquast/opquast-devtools/releases/tag/v0.7.0
+[0.7.1]: https://github.com/opquast-oss/opquast-devtools/releases/tag/v0.7.1
+[0.7.0]: https://github.com/opquast-oss/opquast-devtools/releases/tag/v0.7.0

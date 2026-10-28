@@ -8,9 +8,9 @@ Open the developer tools on any page, pick the **Opquast** tab, and the extensio
 criterion, the elements concerned (highlighted in the page), and room for your own notes and
 corrections. Everything stays on your device.
 
-It carries on [Opquast Desktop](https://github.com/Opquast/opquast-desktop), the Firefox add-on
+It carries on [Opquast Desktop](https://github.com/opquast-oss/opquast-desktop), the Firefox add-on
 Opquast built around 2013, and runs the same analysis engine,
-[opquast-test-runner](https://github.com/Opquast/opquast-test-runner).
+[opquast-test-runner](https://github.com/opquast-oss/opquast-test-runner).
 
 ## Features
 
@@ -50,7 +50,7 @@ to a few files at the root of its site (`robots.txt`, `sitemap.xml`…). See
 Requirements: Node.js 22 and git.
 
 ```bash
-git clone --recurse-submodules https://github.com/Opquast/opquast-devtools.git
+git clone --recurse-submodules https://github.com/opquast-oss/opquast-devtools.git
 cd opquast-devtools
 npm ci
 

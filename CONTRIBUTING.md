@@ -14,7 +14,7 @@ Issues and pull requests can be written in English or French.
 Node.js 22 and git.
 
 ```bash
-git clone --recurse-submodules https://github.com/Opquast/opquast-devtools.git
+git clone --recurse-submodules https://github.com/opquast-oss/opquast-devtools.git
 cd opquast-devtools
 npm ci
 npm run sync-assets    # generates public/ and src/engine/*.generated.ts (dev and build also do)
@@ -25,7 +25,7 @@ If you cloned without `--recurse-submodules`: `git submodule update --init`.
 
 The analysis engine is the `packages/opquast-test-runner` submodule. Do not edit it here: new V5
 rules go into `data/engine-overlay/` (see its README), changes to the engine itself into
-[opquast-test-runner](https://github.com/Opquast/opquast-test-runner).
+[opquast-test-runner](https://github.com/opquast-oss/opquast-test-runner).
 
 ## Before you open a pull request
 

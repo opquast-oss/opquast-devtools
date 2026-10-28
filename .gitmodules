@@ -1,3 +1,3 @@
 [submodule "packages/opquast-test-runner"]
 	path = packages/opquast-test-runner
-	url = https://github.com/Opquast/opquast-test-runner.git
+	url = https://github.com/opquast-oss/opquast-test-runner.git

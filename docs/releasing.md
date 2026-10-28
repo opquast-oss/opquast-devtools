@@ -59,7 +59,7 @@ mkdir -p dist && cp .output/opquast-devtools-*-{chrome,firefox,sources}.zip dist
   instructions for reviewers are the commands above.
 - **GitHub**: tag `v<version>`, push the tag, and create a release with the three archives and
   the changelog entry. Before that, the engine commit pinned in `scripts/submodule-pins.json` must
-  be on github.com/Opquast/opquast-test-runner (see below).
+  be on github.com/opquast-oss/opquast-test-runner (see below).
 
 ## Updating the engine
 

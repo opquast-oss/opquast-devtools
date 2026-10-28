@@ -73,7 +73,7 @@ records without breaking the upgrade transaction.
 
 ## The engine and the overlay
 
-The engine, [opquast-test-runner](https://github.com/Opquast/opquast-test-runner), is a git
+The engine, [opquast-test-runner](https://github.com/opquast-oss/opquast-test-runner), is a git
 submodule under `packages/` and is never edited here. Its building blocks:
 
 - **rules** (`rules.json`): named tests, each an XPath, a regular expression or a JavaScript
