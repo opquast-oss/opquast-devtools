@@ -16,6 +16,10 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 
 ### Internal
 
+- The V5 corpus passes again, and CI runs it. Its 23 failures were out-of-date cases, not engine
+  defects: 20 pages without the element a rule looks at expected "compliant" where 0.6.5 answers
+  "not applicable", rule 5 now answers "undetermined" by design, and the print stylesheet cases
+  were still filed under rule 196 while 0.6.5 moved that test to rule 195.
 - The type-check leaves the engine submodule out: on a fresh clone it failed on the engine's
   own build config, whose dependencies are not installed.
 - The end-to-end tests run on Firefox 159, which takes the remote agent's system access from the

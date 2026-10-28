@@ -19,7 +19,7 @@ npm run sync-assets        # generated files; checks the engine pin and the over
 npm run compile && npm run lint && npm run format:check && npm test
 npm run test:basics
 npm run golden:v5          # engine regression baseline
-npm run test:v5            # the V5 corpus: compare the failures with the previous release's
+npm run test:v5            # the V5 rules on their fixture pages: every case must pass
 npm run e2e                # builds both targets, runs Chrome and Firefox
 ```
 

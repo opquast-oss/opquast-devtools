@@ -80,7 +80,7 @@
     "id": "54551",
     "num": "98",
     "rule": "disabled-control",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><form><input type=\"text\" name=\"q\"><button type=\"submit\">Envoyer</button></form></body></html>"
   },
   {
@@ -332,7 +332,7 @@
     "id": "54360",
     "num": "6",
     "rule": "no article/time content (clean → onfalse: na)",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><div><h1>Page de contact</h1><p>Texte statique sans contenu daté.</p></div></body></html>"
   },
   {
@@ -388,7 +388,7 @@
     "id": "54399",
     "num": "242",
     "rule": "table-th-scope",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><p>Aucun tableau sur cette page.</p></body></html>"
   },
   {
@@ -472,7 +472,7 @@
     "id": "54533",
     "num": "244",
     "rule": "table-layout",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=fr><head><meta charset=utf-8><title>t</title></head><body><table><caption>Donnees</caption><tbody><tr><th>H</th></tr><tr><td>x</td></tr></tbody></table></body></html>"
   },
   {
@@ -556,7 +556,7 @@
     "id": "54180",
     "num": "119",
     "rule": "no-img",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>119 na</title></head><body><p>Page sans image.</p></body></html>"
   },
   {
@@ -584,7 +584,7 @@
     "id": "54525",
     "num": "121",
     "rule": "no-audio-video",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>121 na</title></head><body><p>Page sans media temporel.</p></body></html>"
   },
   {
@@ -598,7 +598,7 @@
     "id": "54413",
     "num": "123",
     "rule": "no-audio-video",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>123 na</title></head><body><p>Page sans media temporel.</p></body></html>"
   },
   {
@@ -612,7 +612,7 @@
     "id": "54437",
     "num": "126",
     "rule": "no-moving-content",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>126 na</title></head><body><p>Contenu statique.</p></body></html>"
   },
   {
@@ -626,7 +626,7 @@
     "id": "53976",
     "num": "127",
     "rule": "no-animated-content",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>127 na</title></head><body><p>Contenu statique sans animation.</p></body></html>"
   },
   {
@@ -668,7 +668,7 @@
     "id": "54406",
     "num": "5",
     "rule": "abbr-without-title",
-    "verdict": "c",
+    "verdict": "i",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>5 na</title></head><body><p>Le <abbr>HTML</abbr> structure la page.</p></body></html>"
   },
   {
@@ -752,7 +752,7 @@
     "id": "54170",
     "num": "188",
     "rule": "css-generated-content",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans image CSS</title></head><body><p>Contenu</p></body></html>"
   },
   {
@@ -766,7 +766,7 @@
     "id": "54173",
     "num": "189",
     "rule": "css-content",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans contenu CSS</title></head><body><p>Contenu</p></body></html>"
   },
   {
@@ -812,15 +812,15 @@
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Casse normale</title></head><body><p>Soldes</p></body></html>"
   },
   {
-    "id": "54448",
-    "num": "196",
+    "id": "54490",
+    "num": "195",
     "rule": "media-print",
     "verdict": "c",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Feuille impression</title><style media=\"print\">body{color:#000}</style></head><body><p>Contenu</p></body></html>"
   },
   {
-    "id": "54448",
-    "num": "196",
+    "id": "54490",
+    "num": "195",
     "rule": "media-print",
     "verdict": "nc",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Sans feuille impression</title></head><body><p>Contenu</p></body></html>"
@@ -850,7 +850,7 @@
     "id": "54440",
     "num": "146",
     "rule": "new-window",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Nouvelle fenetre 146</title></head><body><a href=\"/page\">Ouvrir la page dans le meme onglet</a></body></html>"
   },
   {
@@ -892,7 +892,7 @@
     "id": "53971",
     "num": "94",
     "rule": "select-option-order",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Ordre des options 94</title></head><body><p>Aucune liste deroulante sur cette page.</p></body></html>"
   },
   {
@@ -906,7 +906,7 @@
     "id": "54414",
     "num": "95",
     "rule": "input-type",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>Type de champ 95</title></head><body><p>Aucun champ texte sur cette page.</p></body></html>"
   },
   {
@@ -1686,7 +1686,7 @@
     "id": "54462",
     "num": "147",
     "rule": "oqsV5DownloadLinks",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
   },
   {
@@ -1700,7 +1700,7 @@
     "id": "54499",
     "num": "148",
     "rule": "oqsV5DownloadLinks",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
   },
   {
@@ -1714,7 +1714,7 @@
     "id": "54504",
     "num": "149",
     "rule": "oqsV5DownloadLinks",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
   },
   {
@@ -1728,7 +1728,7 @@
     "id": "54478",
     "num": "240",
     "rule": "oqsV5PdfLinks",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
   },
   {
@@ -1742,7 +1742,7 @@
     "id": "54452",
     "num": "241",
     "rule": "oqsV5PdfLinks",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>t</title></head><body><a href=\"/page.html\">Page</a></body></html>"
   },
   {
@@ -1791,7 +1791,7 @@
     "id": "54411",
     "num": "142",
     "rule": "no-external-links",
-    "verdict": "c",
+    "verdict": "na",
     "html": "<!doctype html><html lang=\"fr\"><head><meta charset=\"utf-8\"><title>142 c</title></head><body><a href=\"/a\">Un</a> <a href=\"/b\">Deux</a></body></html>"
   },
   {
