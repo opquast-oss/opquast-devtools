@@ -4,6 +4,13 @@ All notable changes to Opquast DevTools are documented here.
 The format is based on [Keep a Changelog](https://keepachangelog.com/), and the
 project aims to follow [Semantic Versioning](https://semver.org/).
 
+## [Unreleased]
+
+### Internal
+
+- The type-check leaves the engine submodule out: on a fresh clone it failed on the engine's
+  own build config, whose dependencies are not installed.
+
 ## [0.7.1] - 2026-10-28
 
 The source code is published on GitHub, in the `opquast-oss` organisation. No change to the
