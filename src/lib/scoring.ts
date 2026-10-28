@@ -11,7 +11,9 @@ export function computeScores(rows: ResultRow[]): Scores {
   const counts: Record<Status, number> = { c: 0, nc: 0, i: 0, na: 0, nt: 0 };
   let automated = 0;
   for (const r of rows) {
-    counts[r.result]++;
+    // A status from a record this version does not know (corrupt, or written by a later one)
+    // counts in the total only: as a key it would add NaN to the counts.
+    if (Object.hasOwn(counts, r.result)) counts[r.result]++;
     if (r.auto) automated++;
   }
   const decided = counts.c + counts.nc;

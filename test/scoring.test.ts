@@ -67,4 +67,11 @@ describe('computeScores', () => {
     expect(s.automated).toBe(2);
     expect(s.total).toBe(4);
   });
+
+  it('ignores a status it does not know instead of producing NaN', () => {
+    const s = computeScores([row('c'), row('bogus' as Status), row('toString' as Status)]);
+    expect(s.counts).toEqual({ c: 1, nc: 0, i: 0, na: 0, nt: 0 });
+    expect(s.total).toBe(3);
+    expect(s.conformance).toBe(1);
+  });
 });
