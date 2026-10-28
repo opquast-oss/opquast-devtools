@@ -6,6 +6,14 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 
 ## [Unreleased]
 
+### Fixed
+
+- **Firefox: an analysis of a page in a background tab no longer runs out of time.** The engine
+  waits on short timers between criteria, which Firefox slows down in background tabs (the page
+  behind an undocked DevTools, for instance): a V5 analysis took about 25 seconds and the panel
+  gave up after 30. Those timers now run unthrottled while the engine works (about 1 second), and
+  the page's own timers are given back afterwards.
+
 ### Internal
 
 - The type-check leaves the engine submodule out: on a fresh clone it failed on the engine's

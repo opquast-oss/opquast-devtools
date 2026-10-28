@@ -193,24 +193,78 @@ export function runEngineInPage(payload: RunPayload): Promise<EngineResult> {
   g.tests = payload.rules;
   g.criteria = payload.rulesets;
 
-  return g.analyze(g.criteria).then((results: unknown) => {
-    const out = g.synthesize_results(results);
-    // The results must cross back to the background; page info and resources are extras that are
-    // dropped (with a warning) if they cannot be serialised.
-    const serialized = JSON.parse(JSON.stringify(out));
-    try {
-      return {
-        results: serialized,
-        pageInfo: JSON.parse(JSON.stringify(pageInfo)),
-        resources: JSON.parse(JSON.stringify(resources)),
-      };
-    } catch (e) {
-      return {
-        results: serialized,
-        pageInfo: {},
-        resources: [],
-        _serializeWarning: String(e),
-      };
-    }
-  });
+  // --- timers: the engine schedules each criterion with setTimeout(fn, 1) and polls for the end
+  // with setInterval(fn, 5). Firefox throttles the timers of a background tab (the inspected page
+  // behind an undocked DevTools, or behind the panel in the e2e tests): a V5 analysis took 25 s
+  // instead of 1 s. Short timers run through a MessageChannel instead, which is not throttled, and
+  // the page's own timers are given back once the engine is done.
+  const native = {
+    setTimeout: g.setTimeout,
+    clearTimeout: g.clearTimeout,
+    setInterval: g.setInterval,
+    clearInterval: g.clearInterval,
+  };
+  const SHORT_MS = 50;
+  const FIRST_ID = 1e9; // above any id the browser hands out
+  let nextId = FIRST_ID;
+  const cancelled = new Set<number>();
+  const queue: (() => void)[] = [];
+  const channel = new g.MessageChannel();
+  channel.port1.onmessage = () => queue.shift()?.();
+  const post = (task: () => void) => {
+    queue.push(task);
+    channel.port2.postMessage(0);
+  };
+  const isShort = (fn: unknown, delay: unknown) =>
+    typeof fn === 'function' && !(Number(delay) > SHORT_MS);
+  const clear = (id: number, nativeClear: (id: number) => void) =>
+    id >= FIRST_ID ? cancelled.add(id) : nativeClear(id);
+  g.setTimeout = (fn: (...a: unknown[]) => void, delay?: number, ...args: unknown[]) => {
+    if (!isShort(fn, delay)) return native.setTimeout(fn, delay, ...args);
+    const id = nextId++;
+    post(() => {
+      if (!cancelled.delete(id)) fn(...args);
+    });
+    return id;
+  };
+  g.setInterval = (fn: (...a: unknown[]) => void, delay?: number, ...args: unknown[]) => {
+    if (!isShort(fn, delay)) return native.setInterval(fn, delay, ...args);
+    const id = nextId++;
+    const tick = () => {
+      if (!cancelled.has(id)) fn(...args);
+      if (cancelled.has(id)) cancelled.delete(id);
+      else post(tick);
+    };
+    post(tick);
+    return id;
+  };
+  g.clearTimeout = (id: number) => clear(id, native.clearTimeout);
+  g.clearInterval = (id: number) => clear(id, native.clearInterval);
+  const restoreTimers = () => {
+    Object.assign(g, native);
+    channel.port1.close();
+  };
+
+  return new Promise((resolve) => resolve(g.analyze(g.criteria)))
+    .finally(restoreTimers)
+    .then((results: unknown) => {
+      const out = g.synthesize_results(results);
+      // The results must cross back to the background; page info and resources are extras that are
+      // dropped (with a warning) if they cannot be serialised.
+      const serialized = JSON.parse(JSON.stringify(out));
+      try {
+        return {
+          results: serialized,
+          pageInfo: JSON.parse(JSON.stringify(pageInfo)),
+          resources: JSON.parse(JSON.stringify(resources)),
+        };
+      } catch (e) {
+        return {
+          results: serialized,
+          pageInfo: {},
+          resources: [],
+          _serializeWarning: String(e),
+        };
+      }
+    });
 }
