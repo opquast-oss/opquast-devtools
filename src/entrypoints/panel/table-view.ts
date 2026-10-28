@@ -1,7 +1,7 @@
 // Results table: filtering + sorting (`visibleRows`), row rendering with hover status-change buttons
 // (`renderTable`), and the sortable-header wiring (`wireSorting`).
 
-import { els, state, STATUS_ICONS, CHANGE_STATUSES } from './context';
+import { els, state, STATUS_ICONS, STATUSES, CHANGE_STATUSES } from './context';
 import { t, statusLabel } from '@/lib/ui-strings';
 import { esc } from './html';
 import type { ResultRow, Status } from '@/lib/types';
@@ -14,8 +14,9 @@ export function visibleRows(): CombinedResultRow[] {
     if (state.hiddenStatuses.has(r.result)) return false;
     // Filter by search
     if (state.search) {
+      const c = r.criterion;
       const hay =
-        `${r.id} ${r.criterion?.name ?? ''} ${r.criterion?.thema ?? ''} ${r.criterion?.description ?? ''}`.toLowerCase();
+        `${r.id} ${c?.name ?? ''} ${c?.thema ?? ''} ${c?.description ?? ''} ${(c?.tags ?? []).join(' ')}`.toLowerCase();
       if (!hay.includes(state.search)) return false;
     }
     return true;
@@ -25,7 +26,7 @@ export function visibleRows(): CombinedResultRow[] {
     key === 'ref'
       ? (r.criterion?.name ?? '').padStart(10, '0') // Numeric sort for ref
       : key === 'result'
-        ? r.result
+        ? String(STATUSES.indexOf(r.result as never)).padStart(2, '0') // panel order, not the codes'
         : key === 'thema'
           ? (r.criterion?.thema ?? '')
           : (r.criterion?.description ?? '');

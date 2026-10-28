@@ -36,6 +36,9 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 - **The options page says when something goes wrong**: a preference that could not be saved, the
   history that could not be cleared, preferences that could not be read. Unticking the last
   checklist is still refused, and now says why.
+- **Results table**: the score links ("12 failed") clear the search, so they show all twelve; the
+  search also matches a criterion's tags; sorting by result follows the panel's order
+  (compliant, non-compliant, undetermined, not applicable, not tested) instead of the status codes'.
 
 ### Internal
 

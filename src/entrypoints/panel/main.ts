@@ -192,6 +192,9 @@ function setupScoresLinks() {
 
 /** Apply a single-status filter and navigate to the Results tab. */
 function filterAndSwitchToResults(status: Status) {
+  // "12 failed" must show those twelve: a search left in the box would hide some of them.
+  state.search = '';
+  els.search.value = '';
   state.hiddenStatuses.clear();
   for (const [s, box] of statusFilters()) {
     box.checked = s === status;

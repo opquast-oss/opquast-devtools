@@ -146,6 +146,26 @@ describe('panel controller', () => {
     expect(state.analysisInFlight).toBe(false);
   });
 
+  it('shows every failed criterion from the score link, whatever was searched before', async () => {
+    const { els, state } = await bootPanel();
+    portLog.deliver({
+      type: 'ANALYSIS_LOADED',
+      rows: [row('1', 'nc'), row('2', 'nc'), row('3', 'c')],
+      scores: {
+        counts: { c: 1, nc: 2, i: 0, na: 0, nt: 0 },
+        automated: 3,
+        total: 3,
+        conformance: 1 / 3,
+      },
+      requestId: state.requestId,
+    });
+    els.search.value = 'criterion 1';
+    els.search.dispatchEvent(new Event('input'));
+    (els.scoreDetails.querySelector('[data-filter="nc"]') as HTMLButtonElement).click();
+    expect(els.search.value).toBe('');
+    expect(els.body.querySelectorAll('tr[data-id]')).toHaveLength(2);
+  });
+
   it('keeps the results when a side action fails', async () => {
     const { els, state } = await bootPanel();
     portLog.deliver({
