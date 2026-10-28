@@ -29,6 +29,10 @@ project aims to follow [Semantic Versioning](https://semver.org/).
   text.
 - A feedback category this version does not know shows as "Other" instead of breaking the
   Feedbacks tab; an unknown text key no longer stops a page from being translated.
+- **Manual changes**: setting a result back to the automatic one undoes the change instead of
+  leaving the criterion marked "changed"; saving a comment unchanged no longer records a change;
+  after changing both the result and the comment, in either order, "Back to automatic" restores
+  both.
 
 ### Internal
 

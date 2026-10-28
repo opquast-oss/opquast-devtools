@@ -5,29 +5,29 @@ import { els, state, port } from './context';
 import { computeScores } from '@/lib/scoring';
 import { pickLang } from '@/lib/checklists';
 import type { Status } from '@/lib/types';
+import type { CombinedResultRow } from '@/lib/result-store';
 import { renderScoresView } from './scores-view';
 import { renderTable } from './table-view';
 import { renderModalDetail } from './modal-view';
 
 export function changeResult(criterionId: string, newResult: Status) {
   if (!state.currentUrl) return;
-  // Status feedback handled by UI
-
   const row = state.rows.find((r) => r.id === criterionId);
   if (row) {
-    if (!row.userModified) {
-      row.originalResult = row.result;
-    }
+    if (newResult === row.result) return;
+    // The automatic value is kept the first time the result changes, whatever else changed before.
+    if (row.originalResult === undefined) row.originalResult = row.result;
     row.result = newResult;
-    row.userModified = true;
+    if (newResult === row.originalResult) delete row.originalResult; // back where it started
+    persistOverride(row);
+  } else {
+    port.postMessage({
+      type: 'SET_OVERRIDE',
+      url: state.currentUrl,
+      criterionId,
+      result: newResult,
+    });
   }
-
-  port.postMessage({
-    type: 'SET_OVERRIDE',
-    url: state.currentUrl || undefined,
-    criterionId,
-    result: newResult,
-  });
 
   state.scores = computeScores(state.rows);
   renderScoresView();
@@ -36,27 +36,43 @@ export function changeResult(criterionId: string, newResult: Status) {
 
 export function saveComment(criterionId: string, comment: string) {
   if (!state.currentUrl) return;
-  // Status feedback handled by UI
-
   const row = state.rows.find((r) => r.id === criterionId);
   if (row) {
-    if (!row.userModified && row.comment !== comment) {
-      row.originalComment = row.comment;
-    }
+    if (comment === (row.comment ?? '')) return; // nothing to save: no override for nothing
+    if (row.originalComment === undefined) row.originalComment = row.comment ?? '';
     row.comment = comment;
-    if (row.comment !== row.originalComment) {
-      row.userModified = true;
-    }
+    if (comment === row.originalComment) delete row.originalComment;
+    persistOverride(row);
+  } else {
+    port.postMessage({ type: 'SET_OVERRIDE', url: state.currentUrl, criterionId, comment });
   }
 
-  port.postMessage({
-    type: 'SET_OVERRIDE',
-    url: state.currentUrl || undefined,
-    criterionId,
-    comment,
-  });
-
   renderTable();
+}
+
+/**
+ * Store what the user changed on `row`, or drop the override once both the result and the comment
+ * are back to their automatic values. Returns whether the row is still modified.
+ */
+function persistOverride(row: CombinedResultRow): boolean {
+  const wasModified = !!row.userModified;
+  row.userModified = row.originalResult !== undefined || row.originalComment !== undefined;
+  port.postMessage(
+    row.userModified
+      ? {
+          type: 'SET_OVERRIDE',
+          url: state.currentUrl,
+          criterionId: row.id,
+          result: row.result,
+          comment: row.comment ?? '',
+        }
+      : { type: 'CLEAR_OVERRIDE', url: state.currentUrl, criterionId: row.id },
+  );
+  // The detail shows the "changed" note and the undo button only while the row is modified.
+  if (row.userModified !== wasModified && state.modalOpen && state.selectedId === row.id) {
+    renderModalDetail();
+  }
+  return row.userModified;
 }
 
 export function reanalyzeCriterion(criterionId: string) {
