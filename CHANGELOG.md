@@ -39,6 +39,9 @@ project aims to follow [Semantic Versioning](https://semver.org/).
 - **Results table**: the score links ("12 failed") clear the search, so they show all twelve; the
   search also matches a criterion's tags; sorting by result follows the panel's order
   (compliant, non-compliant, undetermined, not applicable, not tested) instead of the status codes'.
+- A future update that changes the local database no longer waits on a page that still holds it
+  open (the options page, the panel): every page now lets go of it. A save is reported only once
+  it is written.
 
 ### Internal
 

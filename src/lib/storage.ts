@@ -108,7 +108,18 @@ function openDB(): Promise<IDBDatabase> {
     const request = indexedDB.open(DB_NAME, DB_VERSION);
 
     request.onerror = () => reject(request.error);
-    request.onsuccess = () => resolve(request.result);
+    request.onsuccess = () => {
+      const db = request.result;
+      // A newer version opened elsewhere (the extension was updated while a page held the base):
+      // let it upgrade, and open again on the next call.
+      db.onversionchange = () => {
+        db.close();
+        if (dbPromise === p) dbPromise = null;
+      };
+      resolve(db);
+    };
+    // Another page still holds the old version open: the open waits until it lets go.
+    request.onblocked = () => console.warn('Opquast: storage upgrade waiting for another page');
 
     request.onupgradeneeded = (event) => {
       const db = (event.target as IDBOpenDBRequest).result;
@@ -156,7 +167,11 @@ function openDB(): Promise<IDBDatabase> {
 
 type StoreName = 'analyses' | 'userOverrides' | 'feedbacks';
 
-/** Run one request against one object store, in its own transaction. */
+/**
+ * Run one request against one object store, in its own transaction. A read answers as soon as the
+ * request does; a write only once its transaction has committed, so a caller never reports saved
+ * what an abort then threw away.
+ */
 async function request<T>(
   store: StoreName,
   mode: IDBTransactionMode,
@@ -164,9 +179,15 @@ async function request<T>(
 ): Promise<T> {
   const db = await openDB();
   return new Promise((resolve, reject) => {
-    const req = make(db.transaction(store, mode).objectStore(store));
+    const tx = db.transaction(store, mode);
+    const req = make(tx.objectStore(store));
     req.onerror = () => reject(req.error);
-    req.onsuccess = () => resolve(req.result);
+    if (mode === 'readonly') {
+      req.onsuccess = () => resolve(req.result);
+      return;
+    }
+    tx.oncomplete = () => resolve(req.result);
+    tx.onabort = () => reject(tx.error ?? req.error ?? new Error('transaction aborted'));
   });
 }
 

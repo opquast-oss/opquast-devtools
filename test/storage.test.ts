@@ -242,3 +242,34 @@ describe('IndexedDB v2 -> v3 migration', () => {
     expect((await s.getAnalysis('fresh'))?.versions).toEqual(stamped);
   });
 });
+
+describe('database connection', () => {
+  it('lets a newer version of the extension upgrade the database it holds open', async () => {
+    const storage = await freshStorage();
+    await storage.countAnalyses(); // the connection is open
+    const outcome = await new Promise<string>((resolve) => {
+      const req = globalThis.indexedDB.open('opquast-devtools', 100);
+      req.onblocked = () => resolve('blocked');
+      req.onsuccess = () => {
+        req.result.close();
+        resolve('upgraded');
+      };
+      req.onerror = () => resolve('error');
+    });
+    expect(outcome).toBe('upgraded');
+  });
+
+  it('reports a write saved only once it is committed', async () => {
+    const storage = await freshStorage();
+    await storage.saveAnalysis(analysis('a', URL, 's', 1));
+    // Read from a separate connection: the write must already be there.
+    const seen = await new Promise((resolve) => {
+      const req = globalThis.indexedDB.open('opquast-devtools');
+      req.onsuccess = () => {
+        const get = req.result.transaction('analyses').objectStore('analyses').get('a');
+        get.onsuccess = () => resolve(get.result?.id);
+      };
+    });
+    expect(seen).toBe('a');
+  });
+});
